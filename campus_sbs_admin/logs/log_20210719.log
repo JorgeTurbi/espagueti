@@ -1,0 +1,6 @@
+14:05:15:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:05:15: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:05:15: - INNEREXC:
+14:07:06:  ERROR - Se ha producido un error al añadir la suscripción al usuario 143
+17:49:15:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/104 resultó en un error.

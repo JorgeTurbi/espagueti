@@ -1,0 +1,16 @@
+16:02:29:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:02:29: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:02:29: - INNEREXC:
+16:02:47:  ERROR - login.cs::btn_Acceder_Click()
+16:02:47: - MSG: Se ha producido un error al buscar la investigación.
+16:05:10:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:05:10: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:05:10: - INNEREXC:
+16:42:29:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:42:29: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:42:29: - INNEREXC:
+16:42:37:  ERROR - login.cs::btn_Acceder_Click()
+16:42:37: - MSG: Se ha producido un error al buscar la investigación.

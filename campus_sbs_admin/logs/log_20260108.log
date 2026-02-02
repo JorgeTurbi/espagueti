@@ -1,0 +1,138 @@
+10:34:46:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:34:46: - MSG:Value cannot be null.
+Parameter name: String
+10:34:46: - INNEREXC:
+10:35:06:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:35:06: - MSG:Value cannot be null.
+Parameter name: String
+10:35:06: - INNEREXC:
+10:44:19:  ERROR - DataAccess.cs::getResearch()
+10:44:19: - MSG:The underlying provider failed on Open.
+10:44:19: - INNEREXC:Login failed for user 'sa'.
+10:44:19:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:44:19: - MSG:Value cannot be null.
+Parameter name: String
+10:44:19: - INNEREXC:
+10:44:34:  ERROR - DataAccess.cs::getCorrectUser()
+10:44:34: - MSG:The underlying provider failed on Open.
+10:44:34: - INNEREXC:Login failed for user 'sa'.
+10:44:39:  ERROR - DataAccess.cs::getCorrectUser()
+10:44:39: - MSG:The underlying provider failed on Open.
+10:44:39: - INNEREXC:Login failed for user 'sa'.
+10:44:43:  ERROR - DataAccess.cs::getCorrectUser()
+10:44:43: - MSG:The underlying provider failed on Open.
+10:44:43: - INNEREXC:Login failed for user 'sa'.
+10:44:51:  ERROR - DataAccess.cs::getResearch()
+10:44:51: - MSG:The underlying provider failed on Open.
+10:44:51: - INNEREXC:Login failed for user 'sa'.
+10:44:51:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:44:51: - MSG:Value cannot be null.
+Parameter name: String
+10:44:51: - INNEREXC:
+10:45:02:  ERROR - DataAccess.cs::getCorrectUser()
+10:45:02: - MSG:The underlying provider failed on Open.
+10:45:02: - INNEREXC:Login failed for user 'sa'.
+10:51:40:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:51:40: - MSG:Value cannot be null.
+Parameter name: String
+10:51:40: - INNEREXC:
+11:31:11:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:31:11: - MSG:Value cannot be null.
+Parameter name: String
+11:31:11: - INNEREXC:
+12:37:47:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:37:47: - MSG:Value cannot be null.
+Parameter name: String
+12:37:47: - INNEREXC:
+12:39:27:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:39:27: - MSG:Value cannot be null.
+Parameter name: String
+12:39:27: - INNEREXC:
+12:39:31:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:39:31: - MSG:Value cannot be null.
+Parameter name: String
+12:39:31: - INNEREXC:
+12:39:38:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:39:38: - MSG:Value cannot be null.
+Parameter name: String
+12:39:38: - INNEREXC:
+12:41:52:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:41:52: - MSG:Value cannot be null.
+Parameter name: String
+12:41:52: - INNEREXC:
+12:52:10:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:52:10: - MSG:Value cannot be null.
+Parameter name: String
+12:52:10: - INNEREXC:
+13:08:50:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:08:50: - MSG:Value cannot be null.
+Parameter name: String
+13:08:50: - INNEREXC:
+13:13:59:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:13:59: - MSG:Value cannot be null.
+Parameter name: String
+13:13:59: - INNEREXC:
+13:17:13:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:17:13: - MSG:Value cannot be null.
+Parameter name: String
+13:17:13: - INNEREXC:
+13:22:47:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:22:47: - MSG:Value cannot be null.
+Parameter name: String
+13:22:47: - INNEREXC:
+13:41:34:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:41:34: - MSG:Value cannot be null.
+Parameter name: String
+13:41:34: - INNEREXC:
+13:53:33:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:53:33: - MSG:Value cannot be null.
+Parameter name: String
+13:53:33: - INNEREXC:
+14:08:33:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:08:33: - MSG:Value cannot be null.
+Parameter name: String
+14:08:33: - INNEREXC:
+14:26:32:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:26:32: - MSG:Value cannot be null.
+Parameter name: String
+14:26:32: - INNEREXC:
+14:40:51:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:40:51: - MSG:Value cannot be null.
+Parameter name: String
+14:40:51: - INNEREXC:
+14:52:49:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:52:49: - MSG:Value cannot be null.
+Parameter name: String
+14:52:49: - INNEREXC:
+15:00:37:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:00:37: - MSG:Value cannot be null.
+Parameter name: String
+15:00:37: - INNEREXC:
+15:15:51:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:15:51: - MSG:Value cannot be null.
+Parameter name: String
+15:15:51: - INNEREXC:
+15:30:44:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:30:44: - MSG:Value cannot be null.
+Parameter name: String
+15:30:44: - INNEREXC:
+15:33:19:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:33:19: - MSG:Value cannot be null.
+Parameter name: String
+15:33:19: - INNEREXC:
+15:37:40:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:37:40: - MSG:Value cannot be null.
+Parameter name: String
+15:37:40: - INNEREXC:
+16:02:02:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:02:02: - MSG:Value cannot be null.
+Parameter name: String
+16:02:02: - INNEREXC:
+16:17:47:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:17:47: - MSG:Value cannot be null.
+Parameter name: String
+16:17:47: - INNEREXC:
+17:03:19:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:03:19: - MSG:Value cannot be null.
+Parameter name: String
+17:03:19: - INNEREXC:

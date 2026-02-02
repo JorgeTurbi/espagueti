@@ -1,0 +1,576 @@
+16:00:23:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:00:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:00:23: - INNEREXC:
+16:11:37:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:11:37: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:11:37: - INNEREXC:
+16:12:09:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:12:09: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:12:09: - INNEREXC:
+16:17:41:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:17:41: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:17:41: - INNEREXC:
+16:17:45:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:17:45: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:17:45: - INNEREXC:
+16:26:03:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:26:03: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:26:03: - INNEREXC:
+16:26:05:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:26:05: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:26:05: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:20:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:20: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:20: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:21:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:21: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:21: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:22: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:22: - INNEREXC:
+16:26:22:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:23:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:23: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:23: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:24: - INNEREXC:
+16:26:24:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:25:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:25: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:26:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:26: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+16:26:27:  ERROR - DataAccess.cs::deleteRD_Doc()
+16:26:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: entity
+16:26:27: - INNEREXC:
+18:45:08:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:45:08: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:45:09: - INNEREXC:

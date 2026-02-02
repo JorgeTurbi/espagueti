@@ -1,0 +1,28 @@
+http://www.alitravel.com/flightssaleprocess/availability?spc=&ciaAerea=&ciasCon=&vueloslowcost=on&hidOrigenSV=LHR&hidDestinoSV=TXL&searchTypeSV=OneWay&origenSV=Londres+%28LHR%29&destinoSV=Berl%C3%ADn+%28TXL%29&fechaIdaSV=11%2F01%2F2016&fechaVueltaSV=15%2F01%2F2016&pasajerosSV=1+Adulto&tipoClase_vuelos=Todas+las+clases&clase=0&descuentos=0&adultos=1&pasajerosNinyos_vuelos=0+Ni%C3%B1os&ninos=0&pasajerosBebes_vuelos=0+Beb%C3%A9s&bebes=0
+
+
+--------------------  BRAVOFLY -----------------------------------------------------------------------
+
+
+/// 1ª LLamada para conseguir el idRequest ///
+http://www.bravofly.es/vg1/searching.do?departureAirport=LHR&departureAirport_label=Londres+%28LHR%29+Heathrow+-+Reino+Unido&arrivalAirport=TXL&arrivalAirport_label=Berl%C3%ADn+%28TXL%29+Tegel+-+Alemania&outboundDayMonthYear=Lun+11+Enero+2016&returnDayMonthYear=&adults=1&childs=0&infants=0&classFlight=&roundtrip=false&search1_airports_hidden=&search1_focusctrl=&search1_keywords=&search2_airports_hidden=&search2_focuctrl=&search2_keywords=&filter1=TXT&filter1=TXT&bf_subsource=S02HPF10S02RR01&routeFilter=&url=search3.do&outboundDay=11&outboundMonthYear=012016&returnDay=&returnMonthYear=
+
+/// 2ª LLamada para conseguir los datos
+http://www.bravofly.es/vg1/search/retrievejsonresults.action?autoclick=false&resultType=html&idRequest=18529826661&orderBy=6&order=1&currentPage=1&pageSize=300&currency=EUR&requestType=init&autoclick=false&tripTemplate=blue
+
+/// Hay que hacer una llamada por cada vuelo para recuperar los datos de compañia, nº vuelo, etc.
+
+
+---------------------  FLYSIESTA --------------------------------------------------------------------
+***** No deja para el dia de hoy.
+
+/// 1ª LLamada
+http://www.flysiesta.es/MAD/TXL/2016-01-12/adt-1/chd-0/inf-0/
+
+Sacamos un idRecuperado de la respuuesta
+
+http://www.flysiesta.es/xhr2/search/request/idRecuperado/0/
+
+
+http://vuelos.viajar.com/vg1/searching.do?infants=0&departureAirport=LHR&utm_campaign=results&adults=1&utm_medium=metasearchers&outboundDay=11&classFlight=Y&childs=0&msr=1&url=search3.do&utm_term=LHRTXL&roundtrip=false&outboundMonthYear=012016&currency=EUR&bf_subsource=-----WS0S02RR01&fareType=&arrivalAirport=TXL&COBRANDED=RMBVJR_JETCOSTES&utm_source=RMBVJR_JETCOSTES
+

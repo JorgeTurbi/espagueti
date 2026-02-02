@@ -1,0 +1,42 @@
+10:34:11:  ERROR - DataAccess.cs::getResearch()
+10:34:11: - MSG:Error del proveedor subyacente en Open.
+10:34:11: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+10:34:11:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:34:11: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:34:11: - INNEREXC:
+10:34:41:  ERROR - DataAccess.cs::getCorrectUser()
+10:34:41: - MSG:Error del proveedor subyacente en Open.
+10:34:41: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+10:35:08:  ERROR - DataAccess.cs::getCorrectUser()
+10:35:08: - MSG:Error del proveedor subyacente en Open.
+10:35:08: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+10:35:19:  ERROR - DataAccess.cs::getCorrectUser()
+10:35:19: - MSG:Error del proveedor subyacente en Open.
+10:35:19: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+10:35:24:  ERROR - DataAccess.cs::getCorrectUser()
+10:35:24: - MSG:Error del proveedor subyacente en Open.
+10:35:24: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+10:37:42:  ERROR - DataAccess.cs::getCorrectUser()
+10:37:42: - MSG:Error del proveedor subyacente en Open.
+10:37:42: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+10:38:47:  ERROR - DataAccess.cs::getCorrectUser()
+10:38:47: - MSG:Error del proveedor subyacente en Open.
+10:38:47: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+10:43:09:  ERROR - recurso-mantenimiento.cs::btnGuardar_Click()
+10:43:09: - MSG:Índice fuera de los límites de la matriz.
+10:43:09: - INNEREXC:
+10:51:06:  ERROR - recurso-mantenimiento.cs::btnGuardar_Click()
+10:51:55: - MSG:Índice fuera de los límites de la matriz.
+10:52:02: - INNEREXC:
+11:14:35:  ERROR - recurso-mantenimiento.cs::btnGuardar_Click()
+11:14:35: - MSG:Índice fuera de los límites de la matriz.
+11:14:35: - INNEREXC:
+11:14:39:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:14:39: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:14:39: - INNEREXC:
+11:39:16:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:39:16: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:39:16: - INNEREXC:

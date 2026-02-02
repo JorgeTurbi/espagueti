@@ -1,0 +1,88 @@
+09:51:30:  ERROR - Cookie_Page.cs::searchIdCliente()
+09:51:30: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+09:51:30: - INNEREXC:
+10:01:42:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:01:42: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:01:42: - INNEREXC:
+10:24:47:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:24:47: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:24:47: - INNEREXC:
+10:36:30:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:36:30: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:36:30: - INNEREXC:
+10:38:50:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:38:50: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:38:50: - INNEREXC:
+10:55:04:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:55:04: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:55:04: - INNEREXC:
+11:32:41:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:32:41: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:32:41: - INNEREXC:
+11:35:55:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:35:55: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:35:55: - INNEREXC:
+11:38:13:  ERROR - DataAccess.cs::getActionsByUser()
+11:38:13: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+11:38:13: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+12:01:18:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:01:18: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:01:18: - INNEREXC:
+12:07:00:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:07:00: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:07:00: - INNEREXC:
+12:07:32:  ERROR - DataAccess.cs::getAP()
+12:07:32: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+12:07:32: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+12:08:10:  ERROR - DataAccess.cs::getActionsByUser()
+12:08:10: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+12:08:10: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+12:09:09:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:09:09: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:09:09: - INNEREXC:
+12:11:03:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:11:03: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:11:03: - INNEREXC:
+12:11:35:  ERROR - DataAccess.cs::getAP()
+12:11:35: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+12:11:35: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+12:15:58:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:15:58: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:15:58: - INNEREXC:
+12:28:52:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:28:52: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:28:52: - INNEREXC:
+12:37:33:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:37:33: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:37:33: - INNEREXC:
+12:44:26:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:44:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:44:26: - INNEREXC:
+12:50:29:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:50:29: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:50:29: - INNEREXC:
+12:54:11:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:54:11: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:54:11: - INNEREXC:
+12:58:05:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:58:05: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:58:05: - INNEREXC:

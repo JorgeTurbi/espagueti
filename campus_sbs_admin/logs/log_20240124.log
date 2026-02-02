@@ -1,0 +1,58 @@
+17:13:45:  ERROR - DataAccess.cs::getResearch()
+17:13:45: - MSG:Error del proveedor subyacente en Open.
+17:13:45: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+17:13:45:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:13:45: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:13:45: - INNEREXC:
+17:14:26:  ERROR - DataAccess.cs::getResearch()
+17:14:26: - MSG:Error del proveedor subyacente en Open.
+17:14:26: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+17:14:26:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:14:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:14:26: - INNEREXC:
+17:14:36:  ERROR - DataAccess.cs::getCorrectUser()
+17:14:36: - MSG:Error del proveedor subyacente en Open.
+17:14:36: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+17:14:59:  ERROR - DataAccess.cs::getCorrectUser()
+17:14:59: - MSG:Error del proveedor subyacente en Open.
+17:14:59: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+17:14:59:  ERROR - DataAccess.cs::getCorrectUser()
+17:14:59: - MSG:Error del proveedor subyacente en Open.
+17:14:59: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+17:15:11:  ERROR - DataAccess.cs::getCorrectUser()
+17:15:11: - MSG:Error del proveedor subyacente en Open.
+17:15:11: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+17:16:18:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:16:18: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:16:18: - INNEREXC:
+17:28:54:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:28:54: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:28:54: - INNEREXC:
+17:31:54:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:31:54: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:31:54: - INNEREXC:
+17:32:13:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:32:13: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:32:13: - INNEREXC:
+17:36:57:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:36:57: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:36:57: - INNEREXC:
+17:37:11:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:37:11: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:37:11: - INNEREXC:
+17:45:08:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:45:08: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:45:08: - INNEREXC:
+17:45:15:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:45:15: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:45:15: - INNEREXC:

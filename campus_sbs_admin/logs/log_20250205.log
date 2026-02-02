@@ -1,0 +1,8 @@
+18:40:32:  ERROR - DataAccess.cs::insertRD_Doc()
+18:40:32: - MSG:Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles.
+18:40:32: - INNEREXC:Violation of PRIMARY KEY constraint 'PK_campus_RD_Doc'. Cannot insert duplicate key in object 'dbo.campus_RD_Doc'. The duplicate key value is (995, 715).
+The statement has been terminated.
+18:40:32:  ERROR - DataAccess.cs::insertRD_Doc()
+18:40:32: - MSG:Se produjo un error mientras se actualizaban las entradas. Vea la excepción interna para obtener detalles.
+18:40:32: - INNEREXC:Violation of PRIMARY KEY constraint 'PK_campus_RD_Doc'. Cannot insert duplicate key in object 'dbo.campus_RD_Doc'. The duplicate key value is (995, 693).
+The statement has been terminated.

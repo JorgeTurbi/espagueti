@@ -1,0 +1,33 @@
+13:19:06:  ERROR - DataAccess.cs::getResearch()
+13:19:06: - MSG:Error del proveedor subyacente en Open.
+13:19:06: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+13:19:07:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:19:07: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+13:19:07: - INNEREXC:
+13:20:10:  ERROR - login.cs::btn_Acceder_Click()
+13:20:10: - MSG: Se ha producido un error al buscar la investigación.
+13:40:40:  ERROR - login.cs::btn_Acceder_Click()
+13:40:40: - MSG: Se ha producido un error al buscar la investigación.
+13:44:58:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:44:58: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+13:44:58: - INNEREXC:
+13:47:56:  ERROR - login.cs::btn_Acceder_Click()
+13:47:56: - MSG: Se ha producido un error al buscar la investigación.
+13:57:48:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:57:48: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+13:57:48: - INNEREXC:
+14:03:06:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:03:06: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:03:06: - INNEREXC:
+14:03:20:  ERROR - login.cs::btn_Acceder_Click()
+14:03:20: - MSG: Se ha producido un error al buscar la investigación.
+14:03:51:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:03:51: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:03:51: - INNEREXC:
+14:09:56:  ERROR - login.cs::btn_Acceder_Click()
+14:09:56: - MSG: Se ha producido un error al buscar la investigación.

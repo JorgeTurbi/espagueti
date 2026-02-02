@@ -1,0 +1,775 @@
+﻿/* Estilos generales */
+
+body
+{
+	margin-top: 89px;
+    z-index: 10001;
+    background-color: White;
+	font-family:Helvetica,Arial,sans-serif;
+}
+a
+{
+   	color: #006699;
+   	outline: medium none;
+   	text-decoration: none;
+	font-size: 13px;
+}
+a:hover {text-decoration : underline;}
+
+/* Cabecera */
+
+.chrome .global-nav
+{	
+	left: 0;
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10002;	    
+}
+.global-nav{font-family:sans-serif}
+.os-win .global-nav{font-family:Arial,sans-serif}
+.os-mac .global-nav{font-family:Helvetica,Arial,sans-serif}
+.os-linux .global-nav{font-family:Helvetica,FreeSans,"Liberation Sans",Helmet,Arial,sans-serif}
+.chrome .global-nav p, .global-nav li{margin-bottom:0}
+.chrome .global-nav a:hover{text-decoration:none}
+.chrome .global-nav ul,.global-nav li,.global-nav p,.global-nav fieldset,#section-header ul,#section-header li,#section-header p,#section-header,.global-search fieldset,.global-search select,.global-search input,#footer ul,#footer li,#footer p
+{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	border:0;
+	outline:0;
+	background:none;
+	vertical-align:middle;
+}
+.chrome .global-nav .top-nav
+{
+	background-color: Black;
+	height:40px;
+	margin:0;
+	*zoom:1;	
+}
+.chrome .global-nav .bottom-nav
+{
+	background-color: Black;
+	height:36px;
+	margin:0;
+	*zoom:1;	
+}
+.chrome .global-nav .wrapper
+{
+	margin:0 auto;
+	width:974px;
+	z-index:10004;
+	*zoom:1;
+}
+.chrome .global-nav .wrapper:after
+{
+	content:"\0020";
+	display:block;
+	height:0;
+	clear:both;
+	overflow:hidden;
+	visibility:hidden;
+}
+.chrome .global-nav .logo
+{
+	float:left;
+	margin:5px 10px 0 3px;
+}
+.chrome .global-nav .logo a
+{
+	background:url('IMG/Logo_114x35.png') 0 0 no-repeat;
+	display:block;
+	height:35px;
+	text-indent:-12345px;
+	width:114px;
+}
+.chrome .global-nav .tab
+{
+	float:left;
+	_border:none;
+	_clear:none;
+	_padding:0;
+	position:relative;
+	z-index:10010;
+}
+.chrome .global-nav .tab a
+{
+	color: #71C5EF;
+    	display: inline;
+    	padding: 0 3px;
+    	vertical-align: super;
+}
+.chrome .global-nav .tab a:hover
+{
+	color:White;
+}
+.chrome .global-nav .tab .tab-name
+{
+	color:#71c5ef;
+	display:block;
+	padding:0 10px;
+	text-decoration: none;
+}
+.chrome .global-nav .tab .tab-name span
+{
+	position:relative;
+	z-index:10011;
+}
+.chrome .global-nav .tab:hover,.chrome .global-nav .tab .hover
+{
+	background:#000;
+}
+.chrome .global-nav .tab:hover .tab-name,.chrome .global-nav .tab .hover .tab-name,.chrome .global-nav .tab .selected .tab-name
+{
+	color:#fff;
+}
+.chrome .global-nav .util
+{
+	float:right;
+}
+.chrome .global-nav .util span
+{
+	color: White;
+    	float: left;
+	font-size: 14px;
+}
+.chrome .global-nav .util .tab
+{
+	line-height:40px;
+}
+.chrome .global-nav .util .username
+{
+	color:#fff;
+	float: left;
+	text-decoration: none;
+}
+.chrome .global-nav .util .sing-out
+{
+	float:left;
+	margin:3px 0 0 10px;
+}
+.chrome .global-nav .util .sing-out .end
+{
+	background-color: transparent;
+    	border: 0 none;
+    	color: #71C5EF;
+    	cursor: pointer;
+    	margin-right: 5px;	
+	text-decoration: none;
+	vertical-align: super;
+}
+.chrome .global-nav .nav
+{
+	float:left;
+	margin-left:-9px;
+	*zoom:1;
+}
+.chrome .global-nav .nav:after
+{
+	content:"";
+	display:table;
+	clear:both;
+}
+.chrome .global-nav .nav .tab
+{
+	margin:2px 0 0 10px;
+	line-height:12px;
+}
+
+/* Fin Cabecera */
+/* Cuerpo */
+.wrapper
+{
+	margin: 0 auto;
+    	padding: 0;
+    	width: 974px;
+}
+.Sesion
+{
+	-moz-border-bottom-colors: none;
+   	-moz-border-left-colors: none;
+   	-moz-border-right-colors: none;
+   	-moz-border-top-colors: none;
+   	background: none repeat scroll 0 0 #F8F8F8;
+   	border-color: #DEDEDE;
+   	border-image: none;
+   	border-style: solid;
+   	border-width: 1px 0;
+   	clear: both;
+   	min-height: 34px;
+   	margin-bottom: 5px;
+   	padding: 5px 10px;
+	font-size:14px;
+	font-weight: bold;
+}
+.Sesion img {
+    	float: left;
+    	margin-right: 10px;
+    	margin-top: -5px;
+}
+.Sesion img.Plus {
+    float: right;
+}
+.Sesion span {
+    	vertical-align: top;
+}
+.Cuerpo_sesion
+{
+	background-color: White;
+	float: left;
+	font-size: 15px;	
+	width: 80%;
+}
+/* Fin Cuerpo */
+/* EL menu de Administración */
+
+/*#sidebar {
+    float: left;
+    margin-right: 25px;
+    width: 15%;
+}*/
+
+/*#sidebar {
+    float: left;
+    margin-right: 20px;
+    width: 17%;
+}*/
+#sidebar {
+    float: left;
+    margin-right: 2%;
+    width: 18%;
+}
+#inbox-nav {
+    margin-bottom: 10px;
+}
+ol, ul {
+    list-style: none outside none;
+}
+#inbox-nav .active {
+    background: none repeat scroll 0 0 #CAE5FF;
+}
+#inbox-nav li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #DDDDDD;
+    border-image: none;
+}
+#inbox-nav li a, #inbox-nav li em {
+    display: block;
+    font-size: 100%;
+    text-decoration: none;
+    padding: 5px;
+    color: #006699;
+    font-style: normal;
+}
+#inbox-nav ul
+{
+	background-color:White;    
+    list-style: none outside none;
+    margin:0;
+    padding:0;
+}
+.Campo
+{
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;    
+    border-width: 0 1px 1px;
+    border-style: solid;
+    padding-left: 6px;
+}
+.Campo img
+{
+    float: left;
+    height: 22px;
+    margin-right: 5px;
+    margin-top: 3px;
+    width: 23px;
+}
+.CampoIni
+{
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 6px;
+}
+.CampoIni img
+{
+    float: left;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.CampoFin
+{
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding-left: 26px;
+}
+.Selec
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.calendar
+{
+    margin-bottom: 20px;    
+}
+.calendar input
+{
+	margin-left: 7px;
+	width: 200px;
+}
+.asunto
+{
+	min-height: 110px;
+}
+.asunto input
+{
+	margin-bottom: 10px;
+	margin-left: 15px;
+    	width: 400px;
+}	
+.asunto textarea
+{
+	margin-left: 4px;
+	min-height: 80px;
+    	position: absolute;
+    	width: 400px;
+}
+.DropDown
+{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.DropDown input
+{
+	vertical-align: middle;
+}
+.publicar
+{
+	margin-bottom: 20px;
+    	margin-left: 20%;
+    	/*margin-top: 40px;*/
+    	margin-top: 30px;
+}
+.Content_Grid
+{
+	margin-left: 10px;
+}
+.Selec input {
+    margin-bottom: 10px;
+}
+.DropGrupo {
+    margin-left: 23px;
+}
+.LabelAgenda
+{
+	font-weight: bold;
+}
+.TexboxTitulo
+{
+	margin-left: 13px;
+    	width: 400px;
+}
+.RespuestaMens
+{
+	background-color: #90EE90;
+    	margin: -29px auto 10px;
+    	text-align: center;
+    	width: 974px;
+}
+.ImageButtons
+{
+	border: 0 none;
+    	margin-top: -4px;
+    	float: right;
+}
+.submenu {
+    font-size: 12px;
+    list-style-position: outside;
+    list-style-type: disc;
+    margin-left: 19%;
+}
+
+/* Perfil */
+.loginspan
+{
+	font-size: 14px;
+	font-weight: bold;
+    	margin-left: 50px;
+    	margin-right: 50px;
+}
+.LabelRecuperada
+{
+	font-size: 14px;
+}
+/* Fin Perfil */
+/* Menú Administrador */
+.Buscar span
+{
+	font-size: 14px;
+	margin-right: 2px;
+}
+.Buscar input
+{
+	margin-right: 4px;
+}
+.txtAlta
+{
+	width: 97%;
+}
+/* Fin Administrador */
+/* Admin_Mail */
+.Contenido_Texarea
+{
+	background-color: #FFFFFF;
+    	border: 1px solid #CCCCCC;
+    	clear: both;
+    	font-size: 14px;
+    	height: 375px;
+    	padding: 10px;
+}
+.Text_Cuerpo
+{
+	width:100%;
+	border: 0 none;
+	height:300px;
+}
+.Labels
+{
+	margin-right: 33px;
+}
+.IMG_Class
+{
+	margin-left: 33%;
+}
+.Contet_but
+{
+	background: url("IMG/bg_grey.png") repeat-x scroll left top transparent;
+    	margin-bottom: 20px;
+    	margin-top: 10px;
+    	padding: 15px 5px 0;
+}
+/*Fin */
+/* Admin_Crear_Foro */
+.Tit_Foro input
+{
+	margin-left: 50px;
+    	width: 50%;
+}
+.Tit_Foro span
+{
+	font-weight:bold;	
+}
+.Tit_Foro textarea
+{
+	height: 70px;
+    	margin-left: 7px;
+    	vertical-align: top;
+    	width: 85%;		
+}
+/* Fin */
+/* Admin_Cambiar_Password */
+.BotonPassWord
+{
+	border-width: 0;
+    	margin-left: 30%;
+    	margin-top: 20px;
+}
+/* Fin */
+/* Admin_Alta_Grupo */
+.GroupDiv
+{
+	margin-bottom: 10px;
+    	margin-left: 35px;
+    	margin-top: 10px;
+}
+.PanelAGroup
+{
+	margin-left: 50px;
+    	margin-top: 10px;
+}
+.BtnAGroup
+{
+	margin-left: 20px;
+}
+/* Fin */
+/* Admin_Administración */
+.BuscarOtros
+{
+	margin-right: 5px;
+}
+.DDL_Docencia
+{
+	margin-right: 10px;
+	max-width: 250px;
+	vertical-align: super	
+}
+.LBL_Docencia
+{
+	font-weight: bold;
+	/*margin-bottom: 20px;*/
+	margin-right: 10px;
+	vertical-align: super;
+}
+.ImgBut
+{
+	float: right;
+}
+.Posicion
+{
+	float:left;
+	margin-left: 5px;
+	padding-top: 2px;
+}
+.Posicion2
+{
+	float:left;
+	margin-left: 5px;
+	width: 140px;
+}
+.Posicion_Primero
+{
+	float:left;
+	padding-top: 2px;
+}
+/* Fin */
+/* Admin_Ver_Alumnos */
+.Medias
+{
+	margin-left: 7px;
+}
+.TablaEncuestas
+{
+	border-collapse: collapse;
+	margin: 0 auto;
+    width: 95%;
+}
+.FilaCabecera
+{
+	background-color: #F8F8F8;
+    border-color: Transparent;
+    font-weight: bold;
+}
+.TablaEncuestas td
+{
+	text-align: center;
+	padding: 5px;
+}
+.Sombreado
+{
+	border: solid 1px;
+}
+/* Fin */
+/* Admin_Recurso */
+.TXT_Descripcion
+{
+	width: 100%;	
+}
+.LBL_Tabla
+{
+	font-size: 14px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+.BTN_Delete
+{
+	vertical-align: middle;
+}
+/* Fin */
+/* Admin_Historial_Visitas */
+.Contenido_Grid
+{
+	margin-left: 50px;
+}
+.TD_Contenido
+{
+	width: 25%;
+}
+/* Admin_Contenido_Curso */
+.NotaTecnica
+{
+	list-style: square outside url("IMG/icono_pdf.png");
+}
+.Multimedia
+{
+	list-style: square outside url("IMG/icono_multimedia.png");	
+}
+.CasoPractico
+{
+	list-style: square outside url("IMG/icono_cp.png");	
+}
+.Examen
+{
+	list-style: square outside url("IMG/icono_listado_examen.png");
+}
+/* Admin_MatriculacionRapida */
+.tblMatriculacion {
+	background-color: #000000;
+    border-collapse: collapse;
+    border-color: #000000;
+    margin: 0 auto;
+    width: 98%;
+}
+.tblMatriculacion tr {
+    background-color: #F8F8F8;
+    border-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+}
+/*  */
+.BuscarOtros.Busqueda {
+    width: 350px;
+}
+.Sesion img.ImgVolver {
+    margin: 0;
+}
+.SpanNegrita {
+    font-weight: bold;
+}
+.RadBtn {
+    float: left;
+    margin-top: -4px;
+    width: 80%;
+}
+.spanTit {
+    float: left;
+    margin-right: 10px;
+}
+.OcultarInput {
+    visibility: hidden;
+    width: 0;
+}
+
+/* Seguimiento Comercial */
+.Half {
+    float: left;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.spanSeg {
+    font-size: 14px;
+    font-weight: bold;
+}
+.Half textarea {
+    width: 98%;
+}
+.Half select {
+    width: 99%;
+}
+.Half select.Origin {
+    margin-left: 3%;
+    /*width: 60%;*/
+    width: 57%;
+}
+.Half div table {
+    margin: 0 auto;
+    width: 96%;
+}
+.Contenido_sesion.Grid table {
+    margin: 0 auto;
+    width: 98%;
+}
+.Half #lblSeg {
+    width: 38%;
+}
+
+.submenuDoc {
+    margin-left: 8%;
+}
+.submenuDoc > img {
+    width: 14%;
+}
+.CampoIni > span {
+    color: #006699;
+    font-size: 14px;
+    margin-left: 8%;
+}
+#chkClosed, #chkOpen {
+    margin-left: 10%;
+    vertical-align: middle;
+}
+.AddDocencia select {
+    width: 99%;
+}
+.AddDocencia textarea, .AddDocencia #txtName {
+    width: 98%;
+}
+.Contenido_Grid.AddTeaching {
+    margin: 0 auto;
+    width: 98%;
+}
+.AddTutor select {
+    width: 99%;
+}
+.AddTutor textarea {
+    height: 45px;
+    width: 98%;
+}
+#AddTutor br {
+    margin-bottom: 7%;
+}
+#GVTutor {
+    margin: 0 auto;
+    width: 98%;
+}
+.Contenido_Grid.AdminUser {
+    margin: 0;
+}
+#GVUsers input[type="image"] {
+    width: 30px;
+}
+.FechaTutor {
+    width: 60%;
+}
+.PctTutor {
+    width: 80%;
+}
+
+/* CSS Bloque Prácticas */
+
+.replyOK {
+    background-color: limegreen;
+    border-radius: 2%;
+    height: 20px;
+    margin-bottom: 0.5%;
+    text-align: center;
+}
+.replyKO {
+    background-color: red;
+    border-radius: 2%;    
+    margin-bottom: 0.5%;
+    min-height: 20px;
+    text-align: center;
+}
+.tblBlock {
+    margin: 0 auto 5px;
+    width: 95%;
+}
+.tblBlock span {
+    font-weight: bold;
+}
+.tblBlock input[type="text"] {
+    width: 98%;
+}
+.tblBlock textarea {
+    width: 98%;
+}
+.tblBlock img {
+    vertical-align: sub;
+}
+.tblBlock select {
+    width: 99%;
+}
+.hideBlock {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+.Error {color : #ff2525;}

@@ -1,0 +1,59 @@
+﻿.wrapper {width: auto;}
+.container {max-width: 970px;}
+.h4, .h5, .h6, h4, h5, h6 {margin-bottom: 0; margin-top: 0;}
+.datepicker {margin-top: 94px;}
+
+.green {background-color: green; border-color: green;}  
+.green:hover {background-color: green; border-color: green; opacity: 0.5;}
+.orange {background-color: #ea9e32; border-color: #ea9e32;}
+.orange:hover {background-color: #ea9e32; border-color: #ea9e32; opacity: 0.5;}
+.red {background-color: red; border-color: red;}
+.red:hover {background-color: red; border-color: red; opacity: 0.5;}
+
+.error {background-color: tomato; border-radius: 5px; color: white; height: 30px;}
+.correct {background-color: limegreen; border-radius: 5px; color: white; height: 30px;}
+#lbl_result {margin-top: 6px;}
+
+.checkbox input[type="checkbox"] {margin-left: 0;}
+
+.form-group input[type="file"] {border: 0 none; height: 34px; width: 97%;}
+.form-group > label {margin-top: 9px;}
+
+/*********************************************************************************************************************
+								CLASES ESPECIALES PARA MARGIN Y PADDING DE PARRAFOS
+**********************************************************************************************************************/ 
+.padding-tb-5 {padding-bottom: 5px; padding-top: 5px;}
+.padding-tb-10 {padding-bottom: 10px; padding-top: 10px;}
+.padding-tb-20 {padding-bottom: 20px; padding-top: 20px;}
+.padding-tb-30 {padding-bottom: 30px; padding-top: 30px;}
+.padding-tb-40 {padding-bottom: 40px; padding-top: 40px;}
+
+.padding-b-5 {padding-bottom: 5px;}
+.padding-b-10 {padding-bottom: 10px;}
+.padding-b-20 {padding-bottom: 20px;}
+.padding-b-30 {padding-bottom: 30px;}
+.padding-b-40 {padding-bottom: 40px;}
+
+.margin-tb-5 {margin-bottom: 5px; margin-top: 5px;}
+.margin-tb-10 {margin-bottom: 10px; margin-top: 10px;}
+.margin-tb-20 {margin-bottom: 20px; margin-top: 20px;}
+.margin-tb-30 {margin-bottom: 30px; margin-top: 30px;}
+.margin-tb-40 {margin-bottom: 40px; margin-top: 40px;}
+
+.margin-b-5 {margin-bottom: 5px;}
+.margin-b-10 {margin-bottom: 10px;}
+.margin-b-20 {margin-bottom: 20px;}
+.margin-b-30 {margin-bottom: 30px;}
+.margin-b-40 {margin-bottom: 40px;}
+
+/*********************************************************************************************************************
+										CLASES ESPECIALES PARA BLOQUES
+**********************************************************************************************************************/ 
+.col-sm-25 {float: left; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; width: 20%;}
+.col-sm-1 img {float: right; margin: 0; width: 25px;}
+/*********************************************************************************************************************
+										CLASES ESPECIALES PARA TEXTOS
+**********************************************************************************************************************/ 
+.center {text-align: center;}    
+.left {text-align: left;}
+.strong {font-weight: bold;}

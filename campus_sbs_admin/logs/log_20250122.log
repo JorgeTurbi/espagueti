@@ -1,0 +1,67 @@
+16:12:03:  ERROR - DataAccess.cs::getResearch()
+16:12:03: - MSG:Error del proveedor subyacente en Open.
+16:12:03: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+16:12:03:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:12:03: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:12:03: - INNEREXC:
+16:12:28:  ERROR - DataAccess.cs::getCorrectUser()
+16:12:28: - MSG:Error del proveedor subyacente en Open.
+16:12:28: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+16:13:00:  ERROR - DataAccess.cs::getCorrectUser()
+16:13:00: - MSG:Error del proveedor subyacente en Open.
+16:13:00: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+16:14:57:  ERROR - DataAccess.cs::getCorrectUser()
+16:14:57: - MSG:Error del proveedor subyacente en Open.
+16:14:57: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+16:16:29:  ERROR - DataAccess.cs::getResearch()
+16:16:29: - MSG:Error del proveedor subyacente en Open.
+16:16:29: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:16:29:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:16:29: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:16:29: - INNEREXC:
+16:16:37:  ERROR - DataAccess.cs::getCorrectUser()
+16:16:37: - MSG:Error del proveedor subyacente en Open.
+16:16:37: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:16:44:  ERROR - DataAccess.cs::getCorrectUser()
+16:16:44: - MSG:Error del proveedor subyacente en Open.
+16:16:44: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:17:47:  ERROR - DataAccess.cs::getCorrectUser()
+16:17:47: - MSG:Error del proveedor subyacente en Open.
+16:17:47: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:18:22:  ERROR - DataAccess.cs::getCorrectUser()
+16:18:22: - MSG:Error del proveedor subyacente en Open.
+16:18:22: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:21:58:  ERROR - DataAccess.cs::getResearch()
+16:21:58: - MSG:Error del proveedor subyacente en Open.
+16:21:58: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:21:58:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:21:58: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:21:58: - INNEREXC:
+16:25:45:  ERROR - DataAccess.cs::getResearch()
+16:25:45: - MSG:Error del proveedor subyacente en Open.
+16:25:45: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:25:45:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:25:45: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:25:45: - INNEREXC:
+16:30:44:  ERROR - DataAccess.cs::getResearch()
+16:30:44: - MSG:Error del proveedor subyacente en Open.
+16:30:44: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:30:44:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:30:44: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:30:44: - INNEREXC:
+16:33:56:  ERROR - DataAccess.cs::getResearch()
+16:33:56: - MSG:Error del proveedor subyacente en Open.
+16:33:56: - INNEREXC:Error de inicio de sesión del usuario 'sa'.
+16:33:56:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:33:56: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:33:56: - INNEREXC:
+16:37:08:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:37:08: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:37:08: - INNEREXC:

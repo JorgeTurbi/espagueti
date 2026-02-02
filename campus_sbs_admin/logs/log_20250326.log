@@ -1,0 +1,3 @@
+16:21:28:  ERROR - DataAccess.cs::getResourcesViewed()
+16:21:28: - MSG:LINQ to Entities no reconoce el método 'System.String ToString()' del método, y este método no se puede traducir en una expresión de almacén.
+16:21:28: - INNEREXC:

@@ -1,0 +1,4 @@
+19:01:48:  ERROR - Cookie_Page.cs::searchIdCliente()
+19:01:48: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+19:01:48: - INNEREXC:

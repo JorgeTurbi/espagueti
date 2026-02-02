@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "campus_sbs_admin", "campus_sbs_admin\campus_sbs_admin.csproj", "{8B6FF68A-85E9-4C83-9808-74FD6A14557C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solicitud_opinion_process", "Solicitud_opinion_process\Solicitud_opinion_process.csproj", "{47FAF79D-6FB1-4B3C-958D-E517158E5BE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B6FF68A-85E9-4C83-9808-74FD6A14557C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6FF68A-85E9-4C83-9808-74FD6A14557C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6FF68A-85E9-4C83-9808-74FD6A14557C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6FF68A-85E9-4C83-9808-74FD6A14557C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47FAF79D-6FB1-4B3C-958D-E517158E5BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47FAF79D-6FB1-4B3C-958D-E517158E5BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47FAF79D-6FB1-4B3C-958D-E517158E5BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47FAF79D-6FB1-4B3C-958D-E517158E5BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

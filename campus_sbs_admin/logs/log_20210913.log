@@ -1,0 +1,17 @@
+09:48:11:  ERROR - DataAccess.cs::getAuxiliars()
+09:48:11: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+09:48:11: - INNEREXC:Error en el nivel del transporte al recibir los resultados del servidor. (provider: Session Provider, error: 19 - No se puede utilizar la conexión física)
+09:48:26:  ERROR - DataAccess.cs::getCourses()
+09:48:26: - MSG:Error del proveedor subyacente en Open.
+09:48:26: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+09:48:26:  ERROR - DataAccess.cs::getActionsByAP()
+09:48:26: - MSG:Error del proveedor subyacente en Open.
+09:48:26: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+09:54:42:  ERROR - Cookie_Page.cs::searchIdCliente()
+09:54:42: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+09:54:42: - INNEREXC:
+15:25:39:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:25:39: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+15:25:39: - INNEREXC:

@@ -1,0 +1,13 @@
+10:43:36: Inicio del proceso
+10:46:14: Fin del proceso
+12:02:19: Inicio del proceso
+12:05:32:  ERROR - Program.cs::Main()
+12:05:32: - MSG:No se puede encontrar una parte de la ruta de acceso 'C:\Proyectos\SBS Admin\campus_sbs_admin\Campaign_plan_process\Debuglogs\log_20200131.log'.
+12:05:32: - INNEREXC:
+12:11:49: Inicio del proceso
+12:20:27: Fin del proceso
+12:28:53: Inicio del proceso
+12:29:13:  ERROR - No hay suscriptores no opens y activos en la campaña Acto Apertura y Bienvenida Promoción 201910
+12:29:20: Fin del proceso
+12:32:19: Inicio del proceso
+12:33:54: Fin del proceso

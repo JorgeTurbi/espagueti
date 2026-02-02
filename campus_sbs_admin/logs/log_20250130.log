@@ -1,0 +1,27 @@
+15:57:57:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:57:57: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+15:57:57: - INNEREXC:
+16:09:45:  ERROR - DataAccess.cs::getCampaignsStatusByList()
+16:09:45: - MSG:Intento no válido de llamar a IsDBNull cuando el lector está cerrado.
+16:09:45: - INNEREXC:
+16:49:59:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:49:59: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:49:59: - INNEREXC:
+17:02:45:  ERROR - DataAccess.cs::getCampaigns()
+17:02:45: - MSG:Error del proveedor subyacente en Open.
+17:02:45: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+17:02:46:  ERROR - DataAccess.cs::getEmailListSubscriptions()
+17:02:46: - MSG:Error del proveedor subyacente en Open.
+17:02:46: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+17:02:46:  ERROR - DataAccess.cs::getInfLandings()
+17:02:46: - MSG:Error del proveedor subyacente en Open.
+17:02:46: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+17:02:46:  ERROR - DataAccess.cs::getCampaignsStatusByList()
+17:02:46: - MSG:Error del proveedor subyacente en Open.
+17:02:46: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+18:06:55:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:06:55: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:06:55: - INNEREXC:

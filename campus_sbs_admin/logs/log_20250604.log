@@ -1,0 +1,66 @@
+10:05:17:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:05:17: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:05:17: - INNEREXC:
+11:28:40:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:28:40: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:28:40: - INNEREXC:
+12:13:27:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:13:27: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:13:27: - INNEREXC:
+19:21:10:  ERROR - DataAccess.cs::getResearch()
+19:21:10: - MSG:Error del proveedor subyacente en Open.
+19:21:10: - INNEREXC:Login failed for user 'sa'.
+19:21:10:  ERROR - Cookie_Page.cs::searchIdCliente()
+19:21:10: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+19:21:10: - INNEREXC:
+19:21:20:  ERROR - DataAccess.cs::getCorrectUser()
+19:21:20: - MSG:Error del proveedor subyacente en Open.
+19:21:20: - INNEREXC:Login failed for user 'sa'.
+19:21:28:  ERROR - DataAccess.cs::getCorrectUser()
+19:21:28: - MSG:Error del proveedor subyacente en Open.
+19:21:28: - INNEREXC:Login failed for user 'sa'.
+19:21:32:  ERROR - DataAccess.cs::getCorrectUser()
+19:21:32: - MSG:Error del proveedor subyacente en Open.
+19:21:32: - INNEREXC:Login failed for user 'sa'.
+19:22:11:  ERROR - DataAccess.cs::getUserByKey()
+19:22:11: - MSG:Error del proveedor subyacente en Open.
+19:22:11: - INNEREXC:Login failed for user 'sa'.
+19:22:11:  ERROR - DataAccess.cs::getResearch()
+19:22:11: - MSG:Error del proveedor subyacente en Open.
+19:22:11: - INNEREXC:Login failed for user 'sa'.
+19:22:11:  ERROR - Cookie_Page.cs::searchIdCliente()
+19:22:11: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+19:22:11: - INNEREXC:
+19:23:00:  ERROR - DataAccess.cs::getResearch()
+19:23:00: - MSG:Error del proveedor subyacente en Open.
+19:23:00: - INNEREXC:Login failed for user 'sa'.
+19:23:00:  ERROR - Cookie_Page.cs::searchIdCliente()
+19:23:00: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+19:23:00: - INNEREXC:
+19:23:17:  ERROR - DataAccess.cs::getCorrectUser()
+19:23:17: - MSG:Error del proveedor subyacente en Open.
+19:23:17: - INNEREXC:Login failed for user 'sa'.
+19:26:26:  ERROR - DataAccess.cs::getCorrectUser()
+19:26:26: - MSG:Error del proveedor subyacente en Open.
+19:26:26: - INNEREXC:Login failed for user 'sa'.
+19:28:02:  ERROR - Cookie_Page.cs::searchIdCliente()
+19:28:02: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+19:28:02: - INNEREXC:
+19:30:14:  ERROR - Cookie_Page.cs::searchIdCliente()
+19:30:14: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+19:30:14: - INNEREXC:
+19:32:25:  ERROR - DataAccess.cs::getActionsByUser()
+19:32:25: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+19:32:25: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+19:40:01:  ERROR - Cookie_Page.cs::searchIdCliente()
+19:40:01: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+19:40:01: - INNEREXC:

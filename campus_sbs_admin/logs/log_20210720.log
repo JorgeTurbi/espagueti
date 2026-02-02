@@ -1,0 +1,9 @@
+09:54:11:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/104 resultó en un error.
+12:12:30:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:12:30: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:12:30: - INNEREXC:
+12:28:34:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:28:34: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:28:34: - INNEREXC:

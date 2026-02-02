@@ -1,0 +1,60 @@
+15:46:46:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:46:46: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+15:46:46: - INNEREXC:
+15:48:25:  ERROR - Cookie_Page.cs::searchIdCliente()
+15:48:25: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+15:48:25: - INNEREXC:
+15:50:31:  ERROR - DataAccess.cs::getUserBySearch()
+15:50:31: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+15:50:31: - INNEREXC:Error en el nivel del transporte al recibir los resultados del servidor. (provider: Session Provider, error: 19 - No se puede utilizar la conexión física)
+15:51:00:  ERROR - DataAccess.cs::getAuxForId()
+15:51:00: - MSG:Error del proveedor subyacente en Open.
+15:51:00: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:00:  ERROR - DataAccess.cs::getCountries()
+15:51:00: - MSG:Error del proveedor subyacente en Open.
+15:51:00: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:00:  ERROR - DataAccess.cs::getProvinceById()
+15:51:00: - MSG:Error del proveedor subyacente en Open.
+15:51:00: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:01:  ERROR - DataAccess.cs::getUserById()
+15:51:01: - MSG:Error del proveedor subyacente en Open.
+15:51:01: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:01:  ERROR - DataAccess.cs::getUserBySearch()
+15:51:01: - MSG:Error del proveedor subyacente en Open.
+15:51:01: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:01:  ERROR - DataAccess.cs::getUserBySearch()
+15:51:01: - MSG:Error del proveedor subyacente en Open.
+15:51:01: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:39:  ERROR - DataAccess.cs::getAuxForId()
+15:51:39: - MSG:Error del proveedor subyacente en Open.
+15:51:39: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:39:  ERROR - DataAccess.cs::getCountries()
+15:51:39: - MSG:Error del proveedor subyacente en Open.
+15:51:39: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:39:  ERROR - DataAccess.cs::getProvinceById()
+15:51:39: - MSG:Error del proveedor subyacente en Open.
+15:51:39: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+15:51:39:  ERROR - DataAccess.cs::getUserById()
+15:51:39: - MSG:Error del proveedor subyacente en Open.
+15:51:39: - INNEREXC:Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Named Pipes Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+16:23:10:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:23:10: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:23:10: - INNEREXC:
+16:30:18:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:30:18: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:30:18: - INNEREXC:
+16:54:51:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:54:51: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+16:54:51: - INNEREXC:
+16:57:27:  ERROR - recurso-mantenimiento.cs::btnGuardar_Click()
+16:57:27: - MSG:Índice fuera de los límites de la matriz.
+16:57:39: - INNEREXC:
+18:43:04:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:43:04: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:43:04: - INNEREXC:

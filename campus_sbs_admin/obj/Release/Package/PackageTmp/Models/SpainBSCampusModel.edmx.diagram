@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="88eba9e18f29415e8a8b049ef8307a6b" Name="Diagram1">
+        <EntityTypeShape EntityType="SpainBSCampusModel.C_EXPERTOS" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.AspNetRoleClaims" Width="1.5" PointX="14.25" PointY="43.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.AspNetRoles" Width="1.5" PointX="12" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.AspNetUserClaims" Width="1.5" PointX="16.5" PointY="55.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.AspNetUserLogins" Width="1.5" PointX="16.5" PointY="63.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.AspNetUsers" Width="1.5" PointX="14.25" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.AspNetUserTokens" Width="1.5" PointX="16.5" PointY="66.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Atribuciones" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.BEC_SOLICITUD_BECA" Width="1.5" PointX="8.25" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.BLOG_USU" Width="1.5" PointX="18" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ACCIONES_PERSONA" Width="1.5" PointX="25.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ACL" Width="1.5" PointX="8.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ACTIVACIONES" Width="1.5" PointX="7.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ACTIVACIONES_PDP" Width="1.5" PointX="5.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_AGENDA" Width="1.5" PointX="5.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ALERTAS" Width="1.5" PointX="2.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ANUNCIO" Width="1.5" PointX="7.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ANUNCIO_REL" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_AREA_FUNCIONAL" Width="1.5" PointX="10.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ASIG_COMERCIAL" Width="1.5" PointX="0.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUTO_CURSO" Width="1.5" PointX="12.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUTO_DOCENCIA" Width="1.5" PointX="2.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUTO_USER" Width="1.5" PointX="2.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUTORIA" Width="1.5" PointX="4.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUX" Width="1.5" PointX="9" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CLASE_ASISTENCIA" Width="1.5" PointX="12.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CLASE_ENCUESTA" Width="1.5" PointX="14.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CLIENTES_COMERCIAL" Width="1.5" PointX="11.25" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CLIENTES_DOC" Width="1.5" PointX="8.25" PointY="66.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CONTENIDO_CURSO" Width="1.5" PointX="6.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CONTENIDO_DOCENCIA" Width="1.5" PointX="8.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CONTENIDO_EXAMEN" Width="1.5" PointX="16.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CONTENIDO_PROGRAMA" Width="1.5" PointX="18.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CURSO" Width="1.5" PointX="0.75" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CURSO_EXAMEN" Width="1.5" PointX="20.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DATA_COMERCIAL" Width="1.5" PointX="22.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA" Width="1.5" PointX="0.75" PointY="63.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_ALUMNO_AUTO" Width="1.5" PointX="27.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_CONTENIDO_EXAMEN" Width="1.5" PointX="26.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_EXAMEN" Width="1.5" PointX="28.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_GRUPO" Width="1.5" PointX="29.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_GRUPO_EVALUACION" Width="1.5" PointX="29.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_GRUPO_REC_PRACT" Width="1.5" PointX="14.25" PointY="52.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_SUBGRUPO" Width="1.5" PointX="29.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_DOCENCIA_TUTORIAS" Width="1.5" PointX="30.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ED_ANTERIOR" Width="1.5" PointX="30.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_EDUCACION" Width="1.5" PointX="8.25" PointY="70.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ENCUESTA" Width="1.5" PointX="8.25" PointY="76" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_EXPERIENCIA_PROFESIONAL" Width="1.5" PointX="8.25" PointY="82.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_FORO" Width="1.5" PointX="27.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_FORO_ADJUNTOS" Width="1.5" PointX="30.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_FORO_MENSAJE" Width="1.5" PointX="31.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_FORO_RESPUESTA" Width="1.5" PointX="31.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_IMAGEN" Width="1.5" PointX="11.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_INVESTIGA" Width="1.5" PointX="31.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_LH" Width="1.5" PointX="31.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_LITERALES" Width="1.5" PointX="31.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_LOG" Width="1.5" PointX="22.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_OPINIONES" Width="1.5" PointX="16.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_OPINIONES_SOLICITUD" Width="1.5" PointX="32.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_OTROS" Width="1.5" PointX="8.25" PointY="88" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_PDP" Width="1.5" PointX="18.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_PDP_conex_paquete" Width="1.5" PointX="32.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_PDP_paquete" Width="1.5" PointX="24.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_PLANTILLA_MAIL" Width="1.5" PointX="32.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_PUBLICIDAD" Width="1.5" PointX="32.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RD_Asistencia" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RD_Doc" Width="1.5" PointX="3" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RD_DOC_CUR" Width="1.5" PointX="5.25" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RD_ListaSeg" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RD_R" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RD_Valoracion" Width="1.5" PointX="3" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_REC_CP" Width="1.5" PointX="26.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_REC_CP_TRABAJO" Width="1.5" PointX="29" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RECURSO" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RECURSO_DIRECTO" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_RECURSO_STATUS" Width="1.5" PointX="6" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_REGLAS_ACCIONES" Width="1.5" PointX="29.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_REGLAS_AUTOMATIZACION" Width="1.5" PointX="33.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_REGLAS_TIPO_ACCION" Width="1.5" PointX="33.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_SEG_COMERCIAL" Width="1.5" PointX="28" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_SEG_COMERCIAL_INF" Width="1.5" PointX="33.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_TIPO_ANUNCIO" Width="1.5" PointX="33.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_TIPO_AUTOMATIZACION" Width="1.5" PointX="31.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_TIPO_CURSO" Width="1.5" PointX="33.75" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_TIPO_RECURSO" Width="1.5" PointX="34.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_TIPO_SOLICITUD_OPINION" Width="1.5" PointX="13.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_TUTORIA" Width="1.5" PointX="34.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_WORKFLOW_AVANCE" Width="1.5" PointX="27.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_WORKFLOW_DOCENCIA" Width="1.5" PointX="20.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_WORKFLOW_GRUPO" Width="1.5" PointX="23" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_WORKFLOW_PASO" Width="1.5" PointX="25.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_WORKFLOW_PREGUNTAS" Width="1.5" PointX="20.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CampusCursoOnline" Width="1.5" PointX="3" PointY="56.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CampusCursoOnlineAfiliado" Width="1.5" PointX="21.75" PointY="55.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Carritos" Width="1.5" PointX="8.25" PointY="90.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CATEGORIA_CAT" Width="1.5" PointX="15.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Categorias" Width="1.5" PointX="4.5" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CLIENTES" Width="1.5" PointX="6" PointY="51.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CLIENTES_COMENTARIOS" Width="1.5" PointX="8.25" PointY="94" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Clientes_Intereses" Width="1.5" PointX="34.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CLIENTES_TAG" Width="1.5" PointX="26.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CodigoPostal" Width="1.5" PointX="34.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CODIGOS_PROMO" Width="1.5" PointX="23.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.COMENTARIOS_CMT" Width="1.5" PointX="16" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.componer_Curso" Width="1.5" PointX="22.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CVE_CERTIFICADO" Width="1.5" PointX="35.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CVE_PETICION" Width="1.5" PointX="35.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.CVE_SOLICITUD" Width="1.5" PointX="35.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Direcciones" Width="1.5" PointX="35.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EDU_Banners" Width="1.5" PointX="14.25" PointY="76.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EDU_Productos" Width="1.5" PointX="12" PointY="75.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EDU_Suscriptores" Width="1.5" PointX="14.25" PointY="64.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_ACTIVADORES" Width="1.5" PointX="35.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_CAMPAIGNS" Width="1.5" PointX="36.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_CAMPAIGNS_STATUS" Width="1.5" PointX="36.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_CAMPAIGNS_STATUS_REENVIO" Width="1.5" PointX="36.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_CLICKS" Width="1.5" PointX="31.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_CONTENT" Width="1.5" PointX="37.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_LISTADO_SUSCRIPCIONES" Width="1.5" PointX="37.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_SERVER" Width="1.5" PointX="5.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_SERVER_ESTADISTICAS" Width="1.5" PointX="8" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_SERVER_STATUS" Width="1.5" PointX="8" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EMAIL_SUSCRIPCIONES" Width="1.5" PointX="13.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.enc_ALUMNIO" Width="1.5" PointX="24.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.enc_ENCUESTA" Width="1.5" PointX="20.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.enc_PREGUNTA" Width="1.5" PointX="23" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.enc_TIPO_Pregunta_Valor" Width="1.5" PointX="37.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EVENTOS" Width="1.5" PointX="26.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EXPERTOS" Width="1.5" PointX="28.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.EXPERTOS_CARACTERISTICAS" Width="1.5" PointX="37.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.FICHERO_FIC" Width="1.5" PointX="16" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.FOT_FOTOGRAFIA" Width="1.5" PointX="18" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.GAL_GALERIA" Width="1.5" PointX="15.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Gastos_envio" Width="1.5" PointX="6" PointY="70.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.GEO_IP" Width="1.5" PointX="37.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Idiomas" Width="1.5" PointX="0.75" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Incidencias" Width="1.5" PointX="13.5" PointY="68.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_AUX" Width="1.5" PointX="37.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_ENCUESTA" Width="1.5" PointX="38.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_AREAS" Width="1.5" PointX="23" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_CAJA" Width="1.5" PointX="38.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_COSTES" Width="1.5" PointX="33.75" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_ESTRUCTURAS_VERSION" Width="1.5" PointX="20.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_FACTURAS" Width="1.5" PointX="35.75" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_SUBAREAS" Width="1.5" PointX="25.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_SUBAREAS2" Width="1.5" PointX="27.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_FIN_TAX_TYPES" Width="1.5" PointX="38.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_LHO_VENTA" Width="1.5" PointX="37.75" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_MK_DATA" Width="1.5" PointX="39.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.INF_MK_OBJETIVOS" Width="1.5" PointX="39.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Lineas_pedido" Width="1.5" PointX="13.5" PointY="71.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Modos_pago" Width="1.5" PointX="6.75" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.NOTICIAS_NOT" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Ofertas" Width="1.5" PointX="21" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OFF_sbs_Contacto" Width="1.5" PointX="17.25" PointY="43.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OFF_sbs_Empleo" Width="1.5" PointX="17.25" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OFF_sbs_Empresa" Width="1.5" PointX="15" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OFF_sbs_Practicas" Width="1.5" PointX="17.25" PointY="50.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OnlineAfiliado" Width="1.5" PointX="19.5" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OnlineBusqueda" Width="1.5" PointX="39.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OnlineCarrito" Width="1.5" PointX="11.25" PointY="59.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OnlineDeseo" Width="1.5" PointX="11.25" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OnlineOrden" Width="1.5" PointX="24.75" PointY="57.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OnlineOrdenProducto" Width="1.5" PointX="11.25" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.OnlineOrdenStatus" Width="1.5" PointX="22.5" PointY="62.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Pagos" Width="1.5" PointX="16.5" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Paises" Width="1.5" PointX="3.75" PointY="49.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PAR_PARTICIPANTES" Width="1.5" PointX="13.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Pedidos" Width="1.5" PointX="11.25" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PRA_CANDIDATOS" Width="1.5" PointX="13.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PRA_CONTACTO" Width="1.5" PointX="11" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PRA_EMPLEO" Width="1.5" PointX="11" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PRA_EMPRESA" Width="1.5" PointX="8.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PRA_PRACTICAS" Width="1.5" PointX="11" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PRA_SOLICITUD_PRACTICA" Width="1.5" PointX="11" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Productos" Width="1.5" PointX="6.75" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Productos_home" Width="1.5" PointX="9" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.PROMOCION" Width="1.5" PointX="26" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Provincias" Width="1.5" PointX="3.75" PointY="70.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Relaciones_oferta" Width="1.5" PointX="23.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Relaciones_restriccion" Width="1.5" PointX="6" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Restricciones" Width="1.5" PointX="0.75" PointY="53.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.RJL_Personal" Width="1.5" PointX="10.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.RJL_Registro" Width="1.5" PointX="13" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_comunidad_social" Width="1.5" PointX="39.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_inf_landing" Width="1.5" PointX="19.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_Landing" Width="1.5" PointX="39.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_Nurturing" Width="1.5" PointX="30.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_Task" Width="1.5" PointX="40.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_TP_Contrato" Width="1.5" PointX="17.25" PointY="59" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_TP_Cursos" Width="1.5" PointX="19.5" PointY="59.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_TP_Personas" Width="1.5" PointX="21.75" PointY="59.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_area_funcional" Width="1.5" PointX="15.75" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_conex_area_tematica" Width="1.5" PointX="0.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_conex_curso_area" Width="1.5" PointX="40.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_conex_curso_tematica" Width="1.5" PointX="40.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_empresas_alumnos" Width="1.5" PointX="40.75" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_faqs" Width="1.5" PointX="41.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_pagos_especiales" Width="1.5" PointX="41.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_preferencias" Width="1.5" PointX="41.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_questions" Width="1.5" PointX="41.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_tematica" Width="1.5" PointX="41.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_ticker" Width="1.5" PointX="24.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Socio" Width="1.5" PointX="24" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.SolicitudCambiarContrasenas" Width="1.5" PointX="41.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.SORTEO_BECA" Width="1.5" PointX="41.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.SORTEO_BECA_ENCUESTA" Width="1.5" PointX="37.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.SUBCATEGORIA_SBC" Width="1.5" PointX="18" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Subcategorias" Width="1.5" PointX="6.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.SUSCRIPCION_SCR" Width="1.5" PointX="18" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.TAG" Width="1.5" PointX="2.75" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.TAMANO_TAM" Width="1.5" PointX="16.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Categoria" Width="1.5" PointX="41.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Clientes" Width="1.5" PointX="42.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Examen" Width="1.5" PointX="42.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Examen_Contenido" Width="1.5" PointX="42.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Inventario_Pregunta" Width="1.5" PointX="39.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Subcategoria" Width="1.5" PointX="41.75" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Test" Width="1.5" PointX="43.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Test_Reglas" Width="1.5" PointX="43.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Test_Triada_Cerebral" Width="1.5" PointX="11.25" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tests_Categorias_Subcategorias" Width="1.5" PointX="43.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Textos_categorias" Width="1.5" PointX="9" PointY="59.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Textos_modo_pago" Width="1.5" PointX="9" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Textos_productos" Width="1.5" PointX="9" PointY="63.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Textos_restricciones" Width="1.5" PointX="3" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Textos_subcategorias" Width="1.5" PointX="9" PointY="53.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Textos_tipo_restriccion" Width="1.5" PointX="3" PointY="66.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tipos_iva" Width="1.5" PointX="4.5" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tipos_oferta" Width="1.5" PointX="18.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tipos_orden" Width="1.5" PointX="19.75" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.TIPOS_RELACION" Width="1.5" PointX="20.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tipos_relacion_oferta" Width="1.5" PointX="21" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tipos_relacion_restriccion" Width="1.5" PointX="3.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tipos_restriccion" Width="1.5" PointX="1.5" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.TipoSocio" Width="1.5" PointX="21.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.TipoVia" Width="1.5" PointX="43.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.UNI_ALUMNOS" Width="1.5" PointX="3" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.UNI_PROG_ASIGNATURA" Width="1.5" PointX="3" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.UNI_PROGRAMA" Width="1.5" PointX="0.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.URL_URL" Width="1.5" PointX="16" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.VIDEOS_VID" Width="1.5" PointX="19" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_CURSO_ASOCIADO" Width="1.5" PointX="30.75" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_PROGRAMA_ASOCIADO" Width="1.5" PointX="43.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.elEconomista_Cursos" Width="1.5" PointX="43.75" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.elEconomista_Noticias" Width="1.5" PointX="43.75" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.NOTICIAS_RELACION_REL" Width="1.5" PointX="23" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.RJL_DiasNoLab" Width="1.5" PointX="43.75" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs_inf_landing_n2" Width="1.5" PointX="43.75" PointY="45.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_control_curso" Width="1.5" PointX="44.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.sbs2_control_docencia" Width="1.5" PointX="44.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Tipos_conocimiento_web" Width="1.5" PointX="44.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.VW_INF_FIN_ESTRUCTURA_COMPLETA" Width="1.5" PointX="24.75" PointY="46.5" IsExpanded="true" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_AspNetUserClaims_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_AspNetUserLogins_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_AspNetUsers_CLIENTES_ClientesId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_AspNetUserTokens_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineAfiliado_AspNetUsers_ApplicationUserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_BEC_SOLICITUD_BECA_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_BLOG_USU_CATEGORIA_CAT" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_SEG_COMERCIAL_campus_ACCIONES_PERSONA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_ACL_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_CLIENTES_COMERCIAL_AUX" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Test_Triada_Cerebral_campus_AUX_Exp_Profesional" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Test_Triada_Cerebral_campus_AUX_Nivel_Estudio" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Test_Triada_Cerebral_campus_AUX_Situacion_Laboral" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_CLIENTES_COMERCIAL_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_CLIENTES_DOC_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_DOC_CUR_campus_CURSO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CampusCursoOnline_campus_CURSO_CampusCursoId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CampusCursoOnlineAfiliado_campus_CURSO_CampusCursoId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campusDOC_REC_pract_Curso" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_Doc_campus_DOCENCIA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CampusCursoOnline_campus_DOCENCIA_CampusDocenciaId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campusDOC_REC_pract_Docencia" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campusDOC_REC_pract_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_EDUCACION_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_ENCUESTA_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_EXPERIENCIA_PROFESIONAL_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_OTROS_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_Asistencia_campus_RECURSO_DIRECTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_Doc_campus_RECURSO_DIRECTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_DOC_CUR_campus_RD_Doc" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_ListaSeg_campus_RECURSO_DIRECTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_R_campus_RECURSO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_R_campus_RECURSO_DIRECTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RD_Valoracion_campus_RECURSO_DIRECTO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_REC_CP_TRABAJO_campus_REC_CP" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_RECURSO_STATUS_campus_RECURSO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_WORKFLOW_PASO_campus_WORKFLOW_AVANCE" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_WORKFLOW_DOCENCIA_campus_WORKFLOW_GRUPO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_campus_WORKFLOW_GRUPO_campus_WORKFLOW_PASO" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CampusCursoOnline_Idiomas_IdiomasId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CampusCursoOnline_OnlineAfiliado_OnlineAfiliadoId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineCarrito_CampusCursoOnline_CampusCursoOnlineId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineDeseo_CampusCursoOnline_CampusCursoOnlineId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineOrdenProducto_CampusCursoOnline_CampusCursoOnlineId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CampusCursoOnlineAfiliado_OnlineAfiliado_OnlineAfiliadoId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Carrito_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_SUBCATEGORIA_SBC_CATEGORIA_CAT" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_SUSCRIPCION_SCR_CATEGORIA_CAT" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Productos_Categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Subcategorias_Categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_categorias_Categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CLIENTES_COMENTARIOS_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Clientes_Idiomas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Clientes_Paises" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Clientes_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_EDU_Suscriptores_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineCarrito_CLIENTES_ClientesId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineDeseo_CLIENTES_ClientesId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineOrden_CLIENTES_ClientesId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Pedidos_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_TP_Contrato_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_CODIGOS_PROMOCION" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_COMENTARIOS_CMT_NOTICIAS_NOT" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_COMENTARIOS_CMT_PAR_PARTICIPANTES" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_EDU_Banners_EDU_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_EDU_Suscriptores_EDU_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_EMAIL_SERVER_EMAIL_SERVER_ESTADISTICAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_EMAIL_SERVER_EMAIL_SERVER_STATUS" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_enc_PREGUNTA_Encuesta" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_FICHERO_FIC_NOTICIAS_NOT" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_FOT_FOTOGRAFIA_GAL_GALERIA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Gastos_envio_Paises" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Gastos_envio_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_categorias_Idiomas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_modo_pago_Idiomas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_productos_Idiomas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_restricciones_Idiomas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_subcategorias_Idiomas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_tipo_restrinccion_Idiomas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Incidencias_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_INF_FIN_AREAS_VERSION" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_INF_FIN_SUBAREAS_AREA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_INF_FIN_SUBAREAS2_SUBAREA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Lineas_pedido_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Pagos_Modos_pago" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_modo_pago_Modos_pago" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_URL_URL_NOTICIAS_NOT" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_VIDEOS_VID_NOTICIAS_NOT" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Ofertas_Tipos_oferta" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Relaciones_oferta_Ofertas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Contacto_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Empleo_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Practicas_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_TP_Contrato_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineOrden_OnlineAfiliado_OnlineAfiliadoId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineOrden_OnlineOrdenStatus_OnlineStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_OnlineOrdenProducto_OnlineOrden_ShoppingOrderId" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Pagos_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Pedidos_Paises" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Test_Triada_Cerebral_Pais_Nacimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Test_Triada_Cerebral_Pais_Residencia" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Pedidos_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_PRA_CANDIDATOS_PRA_SOLICITUD_PRACTICA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_PRA_CONTACTO_PRA_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_PRA_EMPLEO_PRA_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_PRA_PRACTICAS_PRA_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_PRA_SOLICITUD_PRACTICA_PRA_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Productos_home_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Productos_Subcategorias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Productos_Tipos_iva" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_productos_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Relaciones_oferta_Tipos_relacion_oferta" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Relaciones_restriccion_Restricciones" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Relaciones_restriccion_Tipo_relacion_restriccion" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Restricciones_Tipos_restriccion" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_restricciones_Restricciones" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_RJL_Registro_RJL_Personal" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_TP_Cursos_TP_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_TP_Cursos_TP_Personas" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK__Socio__TipoSocio__55B597A7" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_subcategorias_Subcategorias" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_VIDEOS_VID_TAMANO_TAM" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_Textos_tipo_restrinccion_Tipos_restriccion" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_NOTICIAS_RELACION_REL_TIPOS_RELACION" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_UNI_ALUMNOS_UNI_PROGRAMA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_UNI_PROG_ASIGNATURA_UNI_PROGRAMA" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="SpainBSCampusModel.ClientesOnlineAfiliado" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

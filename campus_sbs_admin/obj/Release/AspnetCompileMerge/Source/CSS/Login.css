@@ -1,0 +1,87 @@
+﻿body 
+{    
+	background: url("IMG/fondo_login.jpg") no-repeat scroll center top #FFFFFF;    
+	font-family: Arial,Helvetica,sans-serif;
+}
+.content
+{
+	background:url("IMG/Login.png") no-repeat scroll center top;	
+	height: 227px;
+    left: 720px;
+    position: absolute;
+    top: 325px;
+    width: 253px;
+}
+.login
+{
+    margin-left: 30px;
+    margin-top: 47px;
+    margin-bottom: 8px;
+}
+.loginspan {
+    color: #000000;
+    float: right;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    padding-top: 1px;
+}
+.txt
+{
+    font-size: 11px;
+    height: 14px;
+    width: 106px; 
+}
+.button {    
+    background-color: transparent;
+    background-image: url("IMG/botonLogin.png");
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin-left: 83px;
+    margin-right: 13px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-decoration: none;
+    width: 88px;    
+}
+.Forget_Password
+{
+    border: 0;
+    position: absolute;
+    top: 163px; 
+    left: 47px;		
+}
+.Forget_Password input
+{
+    background-color: transparent;
+    border: 0 none;
+    color:#FFFFFF;
+    cursor: pointer;
+    display:block;
+    font-size:12px;	
+    font-weight: bold; 
+    text-decoration:none;
+}
+.Error
+{
+    color: Red;
+    width: 248px;
+    font-size:14px;
+}
+.Forget_Password a {
+    background-color: transparent;
+    border: 0 none;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}

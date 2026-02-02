@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<asuntos>
+  <remember-password>Spain Business School informa: Recordatorio de la contraseña</remember-password>
+  <admin-matricular-pdp>Spain Business School informa: Activación usuario</admin-matricular-pdp>
+  <admin-matricular-pdp-mails>Spain Business School informa: Activación usuario en PDP (###NUM_MAILS###)</admin-matricular-pdp-mails>
+  <opinion>Spain Business School informa: Opinión</opinion>
+  <change-password>Spain Business School informa: Cambio de la contraseña</change-password>
+</asuntos>

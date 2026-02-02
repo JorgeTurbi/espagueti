@@ -1,0 +1,25 @@
+10:46:42:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:46:42: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:46:42: - INNEREXC:
+10:51:08:  ERROR - Se ha producido un error al añadir la suscripción al usuario 31528
+10:56:00:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:56:00: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:56:00: - INNEREXC:
+10:57:22:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/31528 resultó en un error.
+10:57:29:  ERROR - Se ha producido un error al añadir la suscripción al usuario 31528
+11:29:24:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:29:24: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:29:24: - INNEREXC:
+11:30:52:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/31528 resultó en un error.
+11:30:56:  ERROR - Se ha producido un error al añadir la suscripción al usuario 31528
+11:36:43:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/31528 resultó en un error.
+11:37:20:  ERROR - Se ha producido un error al añadir la suscripción al usuario 31528
+14:32:07:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/7347 resultó en un error.
+14:32:18:  ERROR - Se ha producido un error al añadir la suscripción al usuario 7347
+15:02:54:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/7347 resultó en un error.
+15:02:58:  ERROR - Se ha producido un error al añadir la suscripción al usuario 7347
+15:23:55:  ERROR - La llamada al servidor remoto GET https://localhost:44349/api/migrate/register/7347 resultó en un error.
+15:24:01:  ERROR - Se ha producido un error al añadir la suscripción al usuario 7347

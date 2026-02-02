@@ -1,0 +1,3208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B6FF68A-85E9-4C83-9808-74FD6A14557C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>campus_sbs_admin</RootNamespace>
+    <AssemblyName>campus_sbs_admin</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LINQtoCSV, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LINQtoCSV.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.2.2.1\lib\net472\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Asio, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Asio.2.2.1\lib\netstandard2.0\NAudio.Asio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Core.2.2.1\lib\netstandard2.0\NAudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Midi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Midi.2.2.1\lib\netstandard2.0\NAudio.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Wasapi.2.2.1\lib\netstandard2.0\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinForms, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinForms.2.2.1\lib\net472\NAudio.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WinMM, Version=2.2.1.0, Culture=neutral, PublicKeyToken=e279aa5131008a41, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.WinMM.2.2.1\lib\netstandard2.0\NAudio.WinMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="sbs_blog_DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\sbs_blog_DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="sbs_DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\sbs_DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.9.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin-Balance-Acumulado.aspx" />
+    <Content Include="admin_facturas.aspx" />
+    <Content Include="admin_facturas_edit.aspx" />
+    <Content Include="admin_facturas_list.aspx" />
+    <Content Include="admin_gastos.aspx" />
+    <Content Include="admin_gastos_list.aspx" />
+    <Content Include="App_Themes\DataTable\css\dataTables.bootstrap.css" />
+    <Content Include="App_Themes\DataTable\css\dataTables.bootstrap.min.css" />
+    <Content Include="App_Themes\DataTable\css\dataTables.foundation.css" />
+    <Content Include="App_Themes\DataTable\css\dataTables.foundation.min.css" />
+    <Content Include="App_Themes\DataTable\css\dataTables.jqueryui.css" />
+    <Content Include="App_Themes\DataTable\css\dataTables.jqueryui.min.css" />
+    <Content Include="App_Themes\DataTable\css\jquery.dataTables.css" />
+    <Content Include="App_Themes\DataTable\css\jquery.dataTables.min.css" />
+    <Content Include="App_Themes\DataTable\css\jquery.dataTables_themeroller.css" />
+    <Content Include="App_Themes\DataTable\images\favicon.ico" />
+    <Content Include="App_Themes\DataTable\images\sort_asc.png" />
+    <Content Include="App_Themes\DataTable\images\sort_asc_disabled.png" />
+    <Content Include="App_Themes\DataTable\images\sort_both.png" />
+    <Content Include="App_Themes\DataTable\images\sort_desc.png" />
+    <Content Include="App_Themes\DataTable\images\sort_desc_disabled.png" />
+    <Content Include="App_Themes\DataTable\js\dataTables.bootstrap.js" />
+    <Content Include="App_Themes\DataTable\js\dataTables.bootstrap.min.js" />
+    <Content Include="App_Themes\DataTable\js\dataTables.dateFormat.js" />
+    <Content Include="App_Themes\DataTable\js\dataTables.foundation.js" />
+    <Content Include="App_Themes\DataTable\js\dataTables.foundation.min.js" />
+    <Content Include="App_Themes\DataTable\js\dataTables.jqueryui.js" />
+    <Content Include="App_Themes\DataTable\js\dataTables.jqueryui.min.js" />
+    <Content Include="App_Themes\DataTable\js\date-euro.js" />
+    <Content Include="App_Themes\DataTable\js\jquery.dataTables.js" />
+    <Content Include="App_Themes\DataTable\js\jquery.dataTables.min.js" />
+    <Content Include="App_Themes\DataTable\js\jquery.js" />
+    <Content Include="App_Themes\DataTable\resources\details_close.png" />
+    <Content Include="App_Themes\DataTable\resources\details_open.png" />
+    <Content Include="App_Themes\support\css\bootstrap-datepicker.min.css" />
+    <Content Include="App_Themes\support\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="App_Themes\support\css\bootstrap.min.css" />
+    <Content Include="App_Themes\support\css\crm.css" />
+    <Content Include="App_Themes\support\css\header.css" />
+    <Content Include="App_Themes\support\css\jquery-ui.css" />
+    <Content Include="App_Themes\support\css\sweetalert2.min.css" />
+    <Content Include="App_Themes\support\img\datatables\details_close.png" />
+    <Content Include="App_Themes\support\img\datatables\details_open.png" />
+    <Content Include="App_Themes\support\img\flags\AD.png" />
+    <Content Include="App_Themes\support\img\flags\AE.png" />
+    <Content Include="App_Themes\support\img\flags\AF.png" />
+    <Content Include="App_Themes\support\img\flags\AG.png" />
+    <Content Include="App_Themes\support\img\flags\AL.png" />
+    <Content Include="App_Themes\support\img\flags\AM.png" />
+    <Content Include="App_Themes\support\img\flags\AO.png" />
+    <Content Include="App_Themes\support\img\flags\AR.png" />
+    <Content Include="App_Themes\support\img\flags\AT.png" />
+    <Content Include="App_Themes\support\img\flags\AU.png" />
+    <Content Include="App_Themes\support\img\flags\AZ.png" />
+    <Content Include="App_Themes\support\img\flags\BA.png" />
+    <Content Include="App_Themes\support\img\flags\BB.png" />
+    <Content Include="App_Themes\support\img\flags\BD.png" />
+    <Content Include="App_Themes\support\img\flags\BE.png" />
+    <Content Include="App_Themes\support\img\flags\BF.png" />
+    <Content Include="App_Themes\support\img\flags\BG.png" />
+    <Content Include="App_Themes\support\img\flags\BH.png" />
+    <Content Include="App_Themes\support\img\flags\BI.png" />
+    <Content Include="App_Themes\support\img\flags\BJ.png" />
+    <Content Include="App_Themes\support\img\flags\BN.png" />
+    <Content Include="App_Themes\support\img\flags\BO.png" />
+    <Content Include="App_Themes\support\img\flags\BR.png" />
+    <Content Include="App_Themes\support\img\flags\BS.png" />
+    <Content Include="App_Themes\support\img\flags\BT.png" />
+    <Content Include="App_Themes\support\img\flags\BW.png" />
+    <Content Include="App_Themes\support\img\flags\BY.png" />
+    <Content Include="App_Themes\support\img\flags\BZ.png" />
+    <Content Include="App_Themes\support\img\flags\CA.png" />
+    <Content Include="App_Themes\support\img\flags\CD.png" />
+    <Content Include="App_Themes\support\img\flags\CF.png" />
+    <Content Include="App_Themes\support\img\flags\CG.png" />
+    <Content Include="App_Themes\support\img\flags\CH.png" />
+    <Content Include="App_Themes\support\img\flags\CI.png" />
+    <Content Include="App_Themes\support\img\flags\CL.png" />
+    <Content Include="App_Themes\support\img\flags\CM.png" />
+    <Content Include="App_Themes\support\img\flags\CN.png" />
+    <Content Include="App_Themes\support\img\flags\CO.png" />
+    <Content Include="App_Themes\support\img\flags\CR.png" />
+    <Content Include="App_Themes\support\img\flags\CU.png" />
+    <Content Include="App_Themes\support\img\flags\CV.png" />
+    <Content Include="App_Themes\support\img\flags\CY.png" />
+    <Content Include="App_Themes\support\img\flags\CZ.png" />
+    <Content Include="App_Themes\support\img\flags\DE.png" />
+    <Content Include="App_Themes\support\img\flags\DJ.png" />
+    <Content Include="App_Themes\support\img\flags\DK.png" />
+    <Content Include="App_Themes\support\img\flags\DM.png" />
+    <Content Include="App_Themes\support\img\flags\DO.png" />
+    <Content Include="App_Themes\support\img\flags\DZ.png" />
+    <Content Include="App_Themes\support\img\flags\EC.png" />
+    <Content Include="App_Themes\support\img\flags\EE.png" />
+    <Content Include="App_Themes\support\img\flags\EG.png" />
+    <Content Include="App_Themes\support\img\flags\ER.png" />
+    <Content Include="App_Themes\support\img\flags\ES.png" />
+    <Content Include="App_Themes\support\img\flags\ET.png" />
+    <Content Include="App_Themes\support\img\flags\FI.png" />
+    <Content Include="App_Themes\support\img\flags\FJ.png" />
+    <Content Include="App_Themes\support\img\flags\FM.png" />
+    <Content Include="App_Themes\support\img\flags\FR.png" />
+    <Content Include="App_Themes\support\img\flags\GA.png" />
+    <Content Include="App_Themes\support\img\flags\GB.png" />
+    <Content Include="App_Themes\support\img\flags\GD.png" />
+    <Content Include="App_Themes\support\img\flags\GE.png" />
+    <Content Include="App_Themes\support\img\flags\GH.png" />
+    <Content Include="App_Themes\support\img\flags\GI.png" />
+    <Content Include="App_Themes\support\img\flags\GM.png" />
+    <Content Include="App_Themes\support\img\flags\GN.png" />
+    <Content Include="App_Themes\support\img\flags\GQ.png" />
+    <Content Include="App_Themes\support\img\flags\GR.png" />
+    <Content Include="App_Themes\support\img\flags\GT.png" />
+    <Content Include="App_Themes\support\img\flags\GW.png" />
+    <Content Include="App_Themes\support\img\flags\GY.png" />
+    <Content Include="App_Themes\support\img\flags\HN.png" />
+    <Content Include="App_Themes\support\img\flags\HR.png" />
+    <Content Include="App_Themes\support\img\flags\HT.png" />
+    <Content Include="App_Themes\support\img\flags\HU.png" />
+    <Content Include="App_Themes\support\img\flags\ID.png" />
+    <Content Include="App_Themes\support\img\flags\IE.png" />
+    <Content Include="App_Themes\support\img\flags\IL.png" />
+    <Content Include="App_Themes\support\img\flags\IN.png" />
+    <Content Include="App_Themes\support\img\flags\IQ.png" />
+    <Content Include="App_Themes\support\img\flags\IR.png" />
+    <Content Include="App_Themes\support\img\flags\IS.png" />
+    <Content Include="App_Themes\support\img\flags\IT.png" />
+    <Content Include="App_Themes\support\img\flags\JM.png" />
+    <Content Include="App_Themes\support\img\flags\JO.png" />
+    <Content Include="App_Themes\support\img\flags\JP.png" />
+    <Content Include="App_Themes\support\img\flags\KE.png" />
+    <Content Include="App_Themes\support\img\flags\KG.png" />
+    <Content Include="App_Themes\support\img\flags\KH.png" />
+    <Content Include="App_Themes\support\img\flags\KI.png" />
+    <Content Include="App_Themes\support\img\flags\KM.png" />
+    <Content Include="App_Themes\support\img\flags\KN.png" />
+    <Content Include="App_Themes\support\img\flags\KP.png" />
+    <Content Include="App_Themes\support\img\flags\KR.png" />
+    <Content Include="App_Themes\support\img\flags\KW.png" />
+    <Content Include="App_Themes\support\img\flags\KZ.png" />
+    <Content Include="App_Themes\support\img\flags\LA.png" />
+    <Content Include="App_Themes\support\img\flags\LB.png" />
+    <Content Include="App_Themes\support\img\flags\LC.png" />
+    <Content Include="App_Themes\support\img\flags\LI.png" />
+    <Content Include="App_Themes\support\img\flags\LK.png" />
+    <Content Include="App_Themes\support\img\flags\LR.png" />
+    <Content Include="App_Themes\support\img\flags\LS.png" />
+    <Content Include="App_Themes\support\img\flags\LT.png" />
+    <Content Include="App_Themes\support\img\flags\LU.png" />
+    <Content Include="App_Themes\support\img\flags\LV.png" />
+    <Content Include="App_Themes\support\img\flags\LY.png" />
+    <Content Include="App_Themes\support\img\flags\MA.png" />
+    <Content Include="App_Themes\support\img\flags\MC.png" />
+    <Content Include="App_Themes\support\img\flags\MD.png" />
+    <Content Include="App_Themes\support\img\flags\ME.png" />
+    <Content Include="App_Themes\support\img\flags\MG.png" />
+    <Content Include="App_Themes\support\img\flags\MH.png" />
+    <Content Include="App_Themes\support\img\flags\MK.png" />
+    <Content Include="App_Themes\support\img\flags\ML.png" />
+    <Content Include="App_Themes\support\img\flags\MM.png" />
+    <Content Include="App_Themes\support\img\flags\MN.png" />
+    <Content Include="App_Themes\support\img\flags\MR.png" />
+    <Content Include="App_Themes\support\img\flags\MT.png" />
+    <Content Include="App_Themes\support\img\flags\MU.png" />
+    <Content Include="App_Themes\support\img\flags\MV.png" />
+    <Content Include="App_Themes\support\img\flags\MW.png" />
+    <Content Include="App_Themes\support\img\flags\MX.png" />
+    <Content Include="App_Themes\support\img\flags\MY.png" />
+    <Content Include="App_Themes\support\img\flags\MZ.png" />
+    <Content Include="App_Themes\support\img\flags\NA.png" />
+    <Content Include="App_Themes\support\img\flags\NE.png" />
+    <Content Include="App_Themes\support\img\flags\NG.png" />
+    <Content Include="App_Themes\support\img\flags\NI.png" />
+    <Content Include="App_Themes\support\img\flags\NL.png" />
+    <Content Include="App_Themes\support\img\flags\NO.png" />
+    <Content Include="App_Themes\support\img\flags\NP.png" />
+    <Content Include="App_Themes\support\img\flags\NR.png" />
+    <Content Include="App_Themes\support\img\flags\NZ.png" />
+    <Content Include="App_Themes\support\img\flags\OM.png" />
+    <Content Include="App_Themes\support\img\flags\PA.png" />
+    <Content Include="App_Themes\support\img\flags\PE.png" />
+    <Content Include="App_Themes\support\img\flags\PG.png" />
+    <Content Include="App_Themes\support\img\flags\PH.png" />
+    <Content Include="App_Themes\support\img\flags\PK.png" />
+    <Content Include="App_Themes\support\img\flags\PL.png" />
+    <Content Include="App_Themes\support\img\flags\PR.png" />
+    <Content Include="App_Themes\support\img\flags\PT.png" />
+    <Content Include="App_Themes\support\img\flags\PW.png" />
+    <Content Include="App_Themes\support\img\flags\PY.png" />
+    <Content Include="App_Themes\support\img\flags\QA.png" />
+    <Content Include="App_Themes\support\img\flags\RO.png" />
+    <Content Include="App_Themes\support\img\flags\RS.png" />
+    <Content Include="App_Themes\support\img\flags\RU.png" />
+    <Content Include="App_Themes\support\img\flags\RW.png" />
+    <Content Include="App_Themes\support\img\flags\SA.png" />
+    <Content Include="App_Themes\support\img\flags\SB.png" />
+    <Content Include="App_Themes\support\img\flags\SC.png" />
+    <Content Include="App_Themes\support\img\flags\SD.png" />
+    <Content Include="App_Themes\support\img\flags\SE.png" />
+    <Content Include="App_Themes\support\img\flags\SG.png" />
+    <Content Include="App_Themes\support\img\flags\SI.png" />
+    <Content Include="App_Themes\support\img\flags\SK.png" />
+    <Content Include="App_Themes\support\img\flags\SL.png" />
+    <Content Include="App_Themes\support\img\flags\SM.png" />
+    <Content Include="App_Themes\support\img\flags\SN.png" />
+    <Content Include="App_Themes\support\img\flags\SO.png" />
+    <Content Include="App_Themes\support\img\flags\SR.png" />
+    <Content Include="App_Themes\support\img\flags\SS.png" />
+    <Content Include="App_Themes\support\img\flags\ST.png" />
+    <Content Include="App_Themes\support\img\flags\SV.png" />
+    <Content Include="App_Themes\support\img\flags\SY.png" />
+    <Content Include="App_Themes\support\img\flags\SZ.png" />
+    <Content Include="App_Themes\support\img\flags\TD.png" />
+    <Content Include="App_Themes\support\img\flags\TG.png" />
+    <Content Include="App_Themes\support\img\flags\TH.png" />
+    <Content Include="App_Themes\support\img\flags\TJ.png" />
+    <Content Include="App_Themes\support\img\flags\TL.png" />
+    <Content Include="App_Themes\support\img\flags\TM.png" />
+    <Content Include="App_Themes\support\img\flags\TN.png" />
+    <Content Include="App_Themes\support\img\flags\TO.png" />
+    <Content Include="App_Themes\support\img\flags\TR.png" />
+    <Content Include="App_Themes\support\img\flags\TT.png" />
+    <Content Include="App_Themes\support\img\flags\TV.png" />
+    <Content Include="App_Themes\support\img\flags\TZ.png" />
+    <Content Include="App_Themes\support\img\flags\UA.png" />
+    <Content Include="App_Themes\support\img\flags\UG.png" />
+    <Content Include="App_Themes\support\img\flags\US.png" />
+    <Content Include="App_Themes\support\img\flags\UY.png" />
+    <Content Include="App_Themes\support\img\flags\UZ.png" />
+    <Content Include="App_Themes\support\img\flags\VA.png" />
+    <Content Include="App_Themes\support\img\flags\VC.png" />
+    <Content Include="App_Themes\support\img\flags\VE.png" />
+    <Content Include="App_Themes\support\img\flags\VN.png" />
+    <Content Include="App_Themes\support\img\flags\VU.png" />
+    <Content Include="App_Themes\support\img\flags\WS.png" />
+    <Content Include="App_Themes\support\img\flags\YE.png" />
+    <Content Include="App_Themes\support\img\flags\ZA.png" />
+    <Content Include="App_Themes\support\img\flags\ZM.png" />
+    <Content Include="App_Themes\support\img\flags\ZW.png" />
+    <Content Include="App_Themes\support\img\rrss\color-facebook-48.png" />
+    <Content Include="App_Themes\support\img\rrss\color-forwardtofriend-48.png" />
+    <Content Include="App_Themes\support\img\rrss\color-instagram-48.png" />
+    <Content Include="App_Themes\support\img\rrss\color-link-48.png" />
+    <Content Include="App_Themes\support\img\rrss\color-linkedin-48.png" />
+    <Content Include="App_Themes\support\img\rrss\color-twitter-48.png" />
+    <Content Include="App_Themes\support\img\rrss\color-whatsapp-48.png" />
+    <Content Include="App_Themes\support\img\rrss\color-youtube-48.png" />
+    <Content Include="App_Themes\support\js\bootstrap-datepicker.es.min.js" />
+    <Content Include="App_Themes\support\js\bootstrap-datepicker.min.js" />
+    <Content Include="App_Themes\support\js\bootstrap-select.min.js" />
+    <Content Include="App_Themes\support\js\bootstrap.bundle.min.js" />
+    <Content Include="App_Themes\support\js\internal\curso_functions.js" />
+    <Content Include="App_Themes\support\js\internal\recursos_directo_functions.js" />
+    <Content Include="App_Themes\support\js\internal\recursos_functions.js" />
+    <Content Include="App_Themes\support\js\selectpicker.js" />
+    <Content Include="App_Themes\support\js\bootstrap.min.js" />
+    <Content Include="App_Themes\support\js\datatables.min - Copia.js" />
+    <Content Include="App_Themes\support\js\internal\company_functions.js" />
+    <Content Include="App_Themes\support\js\internal\inscription_pdp_functions.js" />
+    <Content Include="App_Themes\support\js\internal\opinion_functions.js" />
+    <Content Include="App_Themes\support\js\jquery-ui.min.js" />
+    <Content Include="App_Themes\support\js\jquery.min.js" />
+    <Content Include="App_Themes\support\js\moment.min.js" />
+    <Content Include="App_Themes\support\js\popper.min.js" />
+    <Content Include="App_Themes\support\js\upload\sweetalert2011.js" />
+    <Content Include="App_Themes\support\mails\templates\admin-matricular.html" />
+    <Content Include="App_Themes\support\mails\templates\email_campaign_munuslingua.html" />
+    <Content Include="App_Themes\support\mails\templates\plantilla_mail.html" />
+    <Content Include="App_Themes\support\mails\templates\opinion.html" />
+    <Content Include="App_Themes\support\mails\templates\admin-matricular-pdp.html" />
+    <Content Include="App_Themes\support\mails\templates\admin-matricular-pdp-mails.html" />
+    <Content Include="App_Themes\support\mails\templates\email_campaign.html" />
+    <Content Include="App_Themes\support\mails\templates\email_campaign_aniacam.html" />
+    <Content Include="App_Themes\support\mails\templates\email_campaign_comunicacion.html" />
+    <Content Include="App_Themes\support\mails\templates\change-password.html" />
+    <Content Include="App_Themes\support\mails\templates\campus-activacion.html" />
+    <Content Include="App_Themes\support\mails\templates\_newsletter.html" />
+    <Content Include="App_Themes\support\mails\templates\newsletter.html" />
+    <Content Include="App_Themes\support\sound\notify.wav" />
+    <Content Include="App_Themes\support\js\internal\automation_functions.js" />
+    <Content Include="automatizacion-acciones-listado.aspx" />
+    <Content Include="automatizacion-acciones-mantenimiento.aspx" />
+    <Content Include="automatizar-curso-mantenimiento.aspx" />
+    <Content Include="automatizar-curso.aspx" />
+    <Content Include="avisos-leads.aspx" />
+    <Content Include="App_Themes\support\js\internal\banner-functions.js" />
+    <Content Include="banner-mantenimiento.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\campus_sbs_admin.dll" />
+    <Content Include="bin\campus_sbs_admin.dll.config" />
+    <Content Include="bin\campus_sbs_admin.pdb" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\NAudio.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\sbs_blog_DAL.dll" />
+    <Content Include="bin\SpreadsheetLight.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="cargar-usuarios.aspx" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\bender-runner.config.json" />
+    <Content Include="ckeditor\build-config.js" />
+    <Content Include="ckeditor\CHANGES.md" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\az.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de-ch.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es-mx.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\id.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\ku.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mk.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\oc.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\si.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sq.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\tt.js" />
+    <Content Include="ckeditor\lang\ug.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\LICENSE.md" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\az.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\en-au.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\es-mx.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\oc.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.css" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\copyformatting\cursors\cursor-disabled.svg" />
+    <Content Include="ckeditor\plugins\copyformatting\cursors\cursor.svg" />
+    <Content Include="ckeditor\plugins\copyformatting\styles\copyformatting.css" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\dialog\styles\dialog.css" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\exportpdf\CHANGELOG.md" />
+    <Content Include="ckeditor\plugins\exportpdf\LICENSE.md" />
+    <Content Include="ckeditor\plugins\exportpdf\plugindefinition.js" />
+    <Content Include="ckeditor\plugins\exportpdf\README.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\authentication.js" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\exportpdf.js" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\configfilename.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\configfilename.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\emptyeditor.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\emptyeditor.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\integration.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\integration.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\integrations\easyimage.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\integrations\easyimage.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\notifications.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\notifications.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\notificationsasync.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\notificationsasync.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\paperformat.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\paperformat.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\readonly.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\readonly.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\stylesheets.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\stylesheets.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokenfetching.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokenfetching.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokentwoeditorscorrect.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokentwoeditorscorrect.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokentwoeditorswrong.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokentwoeditorswrong.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokenwithouturl.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\tokenwithouturl.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\wrongendpoint.html" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\manual\wrongendpoint.md" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\notification.js" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\resourcespaths.js" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\statistics.js" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\stylesheets.js" />
+    <Content Include="ckeditor\plugins\exportpdf\tests\_helpers\tools.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\icons.png" />
+    <Content Include="ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromgdocs\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastefromlibreoffice\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetools\filter\common.js" />
+    <Content Include="ckeditor\plugins\pastetools\filter\image.js" />
+    <Content Include="ckeditor\plugins\preview\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\preview\preview.html" />
+    <Content Include="ckeditor\plugins\preview\styles\screen.css" />
+    <Content Include="ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\dialog.css" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="ckeditor\plugins\scayt\README.md" />
+    <Content Include="ckeditor\plugins\scayt\skins\moono-lisa\scayt.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\az.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\en-au.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\en-ca.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\es-mx.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\oc.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ro.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sr-latn.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\tableselection\styles\tableselection.css" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\widget\images\handle.png" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="ckeditor\plugins\wsc\icons\hidpi\spellchecker.png" />
+    <Content Include="ckeditor\plugins\wsc\icons\spellchecker.png" />
+    <Content Include="ckeditor\plugins\wsc\lang\af.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ar.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\bg.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\bn.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\bs.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ca.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\cs.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\cy.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\da.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\de.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\el.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\en-au.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\en-ca.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\en-gb.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\en.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\eo.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\es.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\et.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\eu.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\fa.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\fi.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\fo.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\fr-ca.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\fr.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\gl.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\gu.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\he.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\hi.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\hr.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\hu.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\is.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\it.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ja.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ka.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\km.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ko.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ku.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\lt.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\lv.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\mk.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\mn.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ms.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\nb.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\nl.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\no.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\pl.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\pt.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ro.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ru.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\sk.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\sl.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\sr-latn.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\sr.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\sv.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\th.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\tr.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\ug.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\uk.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\vi.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\wsc\lang\zh.js" />
+    <Content Include="ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="ckeditor\plugins\wsc\plugin.js" />
+    <Content Include="ckeditor\plugins\wsc\README.md" />
+    <Content Include="ckeditor\plugins\wsc\skins\moono-lisa\wsc.css" />
+    <Content Include="ckeditor\README.md" />
+    <Content Include="ckeditor\samples\css\samples.css" />
+    <Content Include="ckeditor\samples\img\github-top.png" />
+    <Content Include="ckeditor\samples\img\header-bg.png" />
+    <Content Include="ckeditor\samples\img\header-separator.png" />
+    <Content Include="ckeditor\samples\img\logo.png" />
+    <Content Include="ckeditor\samples\img\logo.svg" />
+    <Content Include="ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="ckeditor\samples\index.html" />
+    <Content Include="ckeditor\samples\js\sample.js" />
+    <Content Include="ckeditor\samples\js\sf.js" />
+    <Content Include="ckeditor\samples\old\ajax.html" />
+    <Content Include="ckeditor\samples\old\api.html" />
+    <Content Include="ckeditor\samples\old\appendto.html" />
+    <Content Include="ckeditor\samples\old\assets\inlineall\logo.png" />
+    <Content Include="ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="ckeditor\samples\old\assets\sample.jpg" />
+    <Content Include="ckeditor\samples\old\assets\uilanguages\languages.js" />
+    <Content Include="ckeditor\samples\old\datafiltering.html" />
+    <Content Include="ckeditor\samples\old\dialog\assets\my_dialog.js" />
+    <Content Include="ckeditor\samples\old\dialog\dialog.html" />
+    <Content Include="ckeditor\samples\old\divreplace.html" />
+    <Content Include="ckeditor\samples\old\enterkey\enterkey.html" />
+    <Content Include="ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="ckeditor\samples\old\htmlwriter\outputforflash.html" />
+    <Content Include="ckeditor\samples\old\htmlwriter\outputhtml.html" />
+    <Content Include="ckeditor\samples\old\index.html" />
+    <Content Include="ckeditor\samples\old\inlineall.html" />
+    <Content Include="ckeditor\samples\old\inlinebycode.html" />
+    <Content Include="ckeditor\samples\old\inlinetextarea.html" />
+    <Content Include="ckeditor\samples\old\jquery.html" />
+    <Content Include="ckeditor\samples\old\magicline\magicline.html" />
+    <Content Include="ckeditor\samples\old\readonly.html" />
+    <Content Include="ckeditor\samples\old\replacebyclass.html" />
+    <Content Include="ckeditor\samples\old\replacebycode.html" />
+    <Content Include="ckeditor\samples\old\sample.css" />
+    <Content Include="ckeditor\samples\old\sample.js" />
+    <Content Include="ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="ckeditor\samples\old\tabindex.html" />
+    <Content Include="ckeditor\samples\old\toolbar\toolbar.html" />
+    <Content Include="ckeditor\samples\old\uicolor.html" />
+    <Content Include="ckeditor\samples\old\uilanguages.html" />
+    <Content Include="ckeditor\samples\old\wysiwygarea\fullpage.html" />
+    <Content Include="ckeditor\samples\old\xhtmlstyle.html" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\css\fontello.css" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\index.html" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="ckeditor\skins\moono-lisa\dialog.css" />
+    <Content Include="ckeditor\skins\moono-lisa\dialog_ie.css" />
+    <Content Include="ckeditor\skins\moono-lisa\dialog_ie8.css" />
+    <Content Include="ckeditor\skins\moono-lisa\dialog_iequirks.css" />
+    <Content Include="ckeditor\skins\moono-lisa\editor.css" />
+    <Content Include="ckeditor\skins\moono-lisa\editor_gecko.css" />
+    <Content Include="ckeditor\skins\moono-lisa\editor_ie.css" />
+    <Content Include="ckeditor\skins\moono-lisa\editor_ie8.css" />
+    <Content Include="ckeditor\skins\moono-lisa\editor_iequirks.css" />
+    <Content Include="ckeditor\skins\moono-lisa\icons.png" />
+    <Content Include="ckeditor\skins\moono-lisa\icons_hidpi.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\arrow.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\close.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\hidpi\close.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\hidpi\lock-open.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\hidpi\lock.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\hidpi\refresh.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\lock-open.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\lock.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\refresh.png" />
+    <Content Include="ckeditor\skins\moono-lisa\images\spinner.gif" />
+    <Content Include="ckeditor\skins\moono-lisa\readme.md" />
+    <Content Include="ckeditor\skins\office2013\dialog.css" />
+    <Content Include="ckeditor\skins\office2013\editor.css" />
+    <Content Include="ckeditor\skins\office2013\icons.png" />
+    <Content Include="ckeditor\skins\office2013\icons_hidpi.png" />
+    <Content Include="ckeditor\skins\office2013\images\arrow.png" />
+    <Content Include="ckeditor\skins\office2013\images\close.png" />
+    <Content Include="ckeditor\skins\office2013\images\hidpi\close.png" />
+    <Content Include="ckeditor\skins\office2013\images\hidpi\lock-open.png" />
+    <Content Include="ckeditor\skins\office2013\images\hidpi\lock.png" />
+    <Content Include="ckeditor\skins\office2013\images\hidpi\refresh.png" />
+    <Content Include="ckeditor\skins\office2013\images\lock-open.png" />
+    <Content Include="ckeditor\skins\office2013\images\lock.png" />
+    <Content Include="ckeditor\skins\office2013\images\refresh.png" />
+    <Content Include="ckeditor\skins\office2013\skin.js" />
+    <Content Include="ckeditor\styles.js" />
+    <Content Include="ckeditor\vendor\promise.js" />
+    <Content Include="comunidad-social.aspx" />
+    <Content Include="Content\banners\1\a-massive-hunt-1500x300.jpg" />
+    <Content Include="Content\banners\1\a-massive-hunt-3000x600.jpg" />
+    <Content Include="Content\banners\1\normal-people-1500x300.jpg" />
+    <Content Include="Content\banners\1\normal-people-3000x600.jpg" />
+    <Content Include="Content\banners\1\sonic-1500x300.jpg" />
+    <Content Include="Content\banners\1\sonic-3000x600.jpg" />
+    <Content Include="Content\banners\1\sound-of-metal-1500x300.jpg" />
+    <Content Include="Content\banners\1\sound-of-metal-3000x600.jpg" />
+    <Content Include="Content\banners\1\time-1500x300.jpg" />
+    <Content Include="Content\banners\1\time-3000x600.jpg" />
+    <Content Include="control-lead-automation.aspx" />
+    <Content Include="control-lead.aspx" />
+    <Content Include="controls\header-crm.ascx" />
+    <Content Include="CSS\Admin_StyleSheet.css" />
+    <Content Include="CSS\calendario.css" />
+    <Content Include="CSS\IMG\bg_grey.png" />
+    <Content Include="CSS\IMG\botonLogin.png" />
+    <Content Include="CSS\IMG\bt_abrir_curso.jpg" />
+    <Content Include="CSS\IMG\bt_aceptar-green.png" />
+    <Content Include="CSS\IMG\bt_aceptar.png" />
+    <Content Include="CSS\IMG\bt_all.png" />
+    <Content Include="CSS\IMG\bt_asignar.png" />
+    <Content Include="CSS\IMG\bt_buscar.png" />
+    <Content Include="CSS\IMG\bt_buscar2.png" />
+    <Content Include="CSS\IMG\bt_desbloquear.png" />
+    <Content Include="CSS\IMG\bt_eliminar.png" />
+    <Content Include="CSS\IMG\bt_enviar.png" />
+    <Content Include="CSS\IMG\bt_guardar.jpg" />
+    <Content Include="CSS\IMG\bt_nuevo.png" />
+    <Content Include="CSS\IMG\bt_publicar.jpg" />
+    <Content Include="CSS\IMG\bt_recordar.jpg" />
+    <Content Include="CSS\IMG\bt_recordarALL.png" />
+    <Content Include="CSS\IMG\bt_sinasignacion.png" />
+    <Content Include="CSS\IMG\bt_volver.jpg" />
+    <Content Include="CSS\IMG\Edit.png" />
+    <Content Include="CSS\IMG\Erase.png" />
+    <Content Include="CSS\IMG\fondo_login.jpg" />
+    <Content Include="CSS\IMG\icon-bell.png" />
+    <Content Include="CSS\IMG\icon-calendar.gif" />
+    <Content Include="CSS\IMG\icon-change-edition.png" />
+    <Content Include="CSS\IMG\icon-clean-bbdd.png" />
+    <Content Include="CSS\IMG\icon-cog.png" />
+    <Content Include="CSS\IMG\icon-database.png" />
+    <Content Include="CSS\IMG\icon-email.png" />
+    <Content Include="CSS\IMG\icon-excel.png" />
+    <Content Include="CSS\IMG\icon-extraordinary.png" />
+    <Content Include="CSS\IMG\icon-ficha-base.png" />
+    <Content Include="CSS\IMG\icon-file_feedback.png" />
+    <Content Include="CSS\IMG\icon-fundacion.png" />
+    <Content Include="CSS\IMG\icon-green.png" />
+    <Content Include="CSS\IMG\icon-list-students.png" />
+    <Content Include="CSS\IMG\icon-mail-read.png" />
+    <Content Include="CSS\IMG\icon-mail.png" />
+    <Content Include="CSS\IMG\icon-no-publish.png" />
+    <Content Include="CSS\IMG\icon-opinion.png" />
+    <Content Include="CSS\IMG\icon-ordinary.png" />
+    <Content Include="CSS\IMG\icon-percent.png" />
+    <Content Include="CSS\IMG\icon-phone-grey.png" />
+    <Content Include="CSS\IMG\icon-phone.png" />
+    <Content Include="CSS\IMG\icon-question-btn.png" />
+    <Content Include="CSS\IMG\icon-question-warning.png" />
+    <Content Include="CSS\IMG\icon-red.png" />
+    <Content Include="CSS\IMG\icon-reload.png" />
+    <Content Include="CSS\IMG\icon-send-mail.png" />
+    <Content Include="CSS\IMG\icon-title.png" />
+    <Content Include="CSS\IMG\icon-trash.png" />
+    <Content Include="CSS\IMG\icon-unify.png" />
+    <Content Include="CSS\IMG\icon-university.png" />
+    <Content Include="CSS\IMG\icon-user-search.png" />
+    <Content Include="CSS\IMG\icon-whatsapp-grey.png" />
+    <Content Include="CSS\IMG\icon-whatsapp.png" />
+    <Content Include="CSS\IMG\icono_add_image.png" />
+    <Content Include="CSS\IMG\icono_administracion.png" />
+    <Content Include="CSS\IMG\icono_agenda.png" />
+    <Content Include="CSS\IMG\icono_alta_docencia.png" />
+    <Content Include="CSS\IMG\icono_alta_grupo.png" />
+    <Content Include="CSS\IMG\icono_alumnos.png" />
+    <Content Include="CSS\IMG\icono_anuncio.png" />
+    <Content Include="CSS\IMG\icono_asignar_contenidos - copia.jpg" />
+    <Content Include="CSS\IMG\icono_asignar_contenidos.jpg" />
+    <Content Include="CSS\IMG\icono_asignar_grupo.png" />
+    <Content Include="CSS\IMG\icono_aviso.png" />
+    <Content Include="CSS\IMG\icono_borrar.png" />
+    <Content Include="CSS\IMG\icono_calificar.png" />
+    <Content Include="CSS\IMG\icono_certificado.png" />
+    <Content Include="CSS\IMG\icono_clase.png" />
+    <Content Include="CSS\IMG\icono_comentario.png" />
+    <Content Include="CSS\IMG\icono_componer_curso.png" />
+    <Content Include="CSS\IMG\icono_contenido.png" />
+    <Content Include="CSS\IMG\icono_contenido_curso.png" />
+    <Content Include="CSS\IMG\icono_contenido_examen.png" />
+    <Content Include="CSS\IMG\icono_cp.png" />
+    <Content Include="CSS\IMG\icono_crear_curso.png" />
+    <Content Include="CSS\IMG\icono_crear_examen.png" />
+    <Content Include="CSS\IMG\icono_crear_foro.png" />
+    <Content Include="CSS\IMG\icono_crear_foro_grupo.png" />
+    <Content Include="CSS\IMG\icono_curso.png" />
+    <Content Include="CSS\IMG\icono_docencia.png" />
+    <Content Include="CSS\IMG\icono_editar.png" />
+    <Content Include="CSS\IMG\icono_encuesta.png" />
+    <Content Include="CSS\IMG\icono_encuestabloq.png" />
+    <Content Include="CSS\IMG\icono_examen.png" />
+    <Content Include="CSS\IMG\icono_fichaCurso.png" />
+    <Content Include="CSS\IMG\icono_foro.png" />
+    <Content Include="CSS\IMG\icono_foro_grupo.png" />
+    <Content Include="CSS\IMG\icono_historial_visitas.png" />
+    <Content Include="CSS\IMG\icono_imagen.png" />
+    <Content Include="CSS\IMG\icono_liberar.png" />
+    <Content Include="CSS\IMG\icono_lista.png" />
+    <Content Include="CSS\IMG\icono_listado_Docencias.png" />
+    <Content Include="CSS\IMG\icono_listado_examen.png" />
+    <Content Include="CSS\IMG\icono_mail.png" />
+    <Content Include="CSS\IMG\icono_mensaje.png" />
+    <Content Include="CSS\IMG\icono_mensaje_grey.png" />
+    <Content Include="CSS\IMG\icono_multimedia.png" />
+    <Content Include="CSS\IMG\icono_password.png" />
+    <Content Include="CSS\IMG\icono_pdf.png" />
+    <Content Include="CSS\IMG\icono_perfil.png" />
+    <Content Include="CSS\IMG\icono_plus.png" />
+    <Content Include="CSS\IMG\icono_programa.png" />
+    <Content Include="CSS\IMG\icono_publicar_examen.png" />
+    <Content Include="CSS\IMG\icono_recurso.png" />
+    <Content Include="CSS\IMG\icono_seguimiento.png" />
+    <Content Include="CSS\IMG\icono_uno.png" />
+    <Content Include="CSS\IMG\icono_upload_Recurso.png" />
+    <Content Include="CSS\IMG\icono_video.png" />
+    <Content Include="CSS\IMG\icono_web.png" />
+    <Content Include="CSS\IMG\icon_academic.png" />
+    <Content Include="CSS\IMG\icon_add.png" />
+    <Content Include="CSS\IMG\icon_back.png" />
+    <Content Include="CSS\IMG\icon_balance.png" />
+    <Content Include="CSS\IMG\icon_campus.png" />
+    <Content Include="CSS\IMG\icon_cash.png" />
+    <Content Include="CSS\IMG\icon_check.png" />
+    <Content Include="CSS\IMG\icon_close.png" />
+    <Content Include="CSS\IMG\icon_copy.png" />
+    <Content Include="CSS\IMG\icon_document.png" />
+    <Content Include="CSS\IMG\icon_edit.png" />
+    <Content Include="CSS\IMG\icon_file_add.png" />
+    <Content Include="CSS\IMG\icon_file_add_alarm.png" />
+    <Content Include="CSS\IMG\icon_file_feedback.png" />
+    <Content Include="CSS\IMG\icon_file_show.png" />
+    <Content Include="CSS\IMG\icon_file_upload.png" />
+    <Content Include="CSS\IMG\icon_informes.png" />
+    <Content Include="CSS\IMG\icon_Linkedin.png" />
+    <Content Include="CSS\IMG\icon_liquidaciones.png" />
+    <Content Include="CSS\IMG\icon_List.png" />
+    <Content Include="CSS\IMG\icon_loading.gif" />
+    <Content Include="CSS\IMG\icon_person.png" />
+    <Content Include="CSS\IMG\icon_practicas.png" />
+    <Content Include="CSS\IMG\icon_principal.png" />
+    <Content Include="CSS\IMG\icon_publish.png" />
+    <Content Include="CSS\IMG\icon_question.png" />
+    <Content Include="CSS\IMG\icon_sales.png" />
+    <Content Include="CSS\IMG\icon_search.png" />
+    <Content Include="CSS\IMG\icon_searching.png" />
+    <Content Include="CSS\IMG\icon_see.png" />
+    <Content Include="CSS\IMG\icon_task.png" />
+    <Content Include="CSS\IMG\icon_teachers.png" />
+    <Content Include="CSS\IMG\icon_tutor.png" />
+    <Content Include="CSS\IMG\icon_Twitter.png" />
+    <Content Include="CSS\IMG\Login.png" />
+    <Content Include="CSS\IMG\logo-tripartita.png" />
+    <Content Include="CSS\IMG\logo_114x35.png" />
+    <Content Include="CSS\IMG\Mail.png" />
+    <Content Include="CSS\IMG\_icono_asignar_contenidos.jpg" />
+    <Content Include="CSS\IMG\_icono_certificado.png" />
+    <Content Include="CSS\IMG\_icono_contenido_curso.png" />
+    <Content Include="CSS\IMG\_icono_crear_curso.png" />
+    <Content Include="CSS\IMG\_icono_liberar %282%29.png" />
+    <Content Include="CSS\Login.css" />
+    <Content Include="CSS\Login_Empresa.css" />
+    <Content Include="CSS\sbs.css" />
+    <Content Include="cursos-mantenimiento.aspx" />
+    <Content Include="cursos.aspx" />
+    <Content Include="dar-baja-usuarios.aspx" />
+    <Content Include="docencias.aspx" />
+    <Content Include="email-click.aspx" />
+    <Content Include="App_Themes\support\js\internal\ficha-alumno-crm-functions.js" />
+    <Content Include="App_Themes\support\js\internal\ficha-alumno-crm-aux-functions.js" />
+    <Content Include="encuestas-alumnos.aspx" />
+    <Content Include="encuestas-curso.aspx" />
+    <Content Include="encuestas-profesores.aspx" />
+    <Content Include="ficha-alumno-crm-aux.aspx" />
+    <Content Include="ficha-alumno-crm.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Images\100.jpg" />
+    <Content Include="Images\112.jpg" />
+    <Content Include="Images\114.jpg" />
+    <Content Include="Images\47.jpg" />
+    <Content Include="Images\50.jpg" />
+    <Content Include="Images\51.jpg" />
+    <Content Include="Images\64.jpg" />
+    <Content Include="Images\65.jpg" />
+    <Content Include="Images\66.jpg" />
+    <Content Include="Images\67.jpg" />
+    <Content Include="Images\71.jpg" />
+    <Content Include="Images\72.jpg" />
+    <Content Include="Images\77.jpg" />
+    <Content Include="Images\81.jpg" />
+    <Content Include="Images\82.jpg" />
+    <Content Include="Images\83.jpg" />
+    <Content Include="Images\84 - copia.jpg" />
+    <Content Include="Images\84.jpg" />
+    <Content Include="Images\85.jpg" />
+    <Content Include="Images\86.jpg" />
+    <Content Include="Images\88.jpg" />
+    <Content Include="Images\95.jpg" />
+    <Content Include="Images\99.jpg" />
+    <Content Include="Images\AccesoCampus.jpg" />
+    <Content Include="Images\AccesoCampus_OPENIT.jpg" />
+    <Content Include="Images\Barra.png" />
+    <Content Include="Images\bg_grain.png" />
+    <Content Include="Images\bg_grey.png" />
+    <Content Include="Images\botonLogin.png" />
+    <Content Include="Images\BotonMensaje.png" />
+    <Content Include="Images\btn_crear_mensaje.jpg" />
+    <Content Include="Images\btn_crear_mensaje_old.jpg" />
+    <Content Include="Images\bt_aceptar.png" />
+    <Content Include="Images\bt_anadir.png" />
+    <Content Include="Images\bt_anterior.jpg" />
+    <Content Include="Images\bt_añadir.png" />
+    <Content Include="Images\bt_cerrar.png" />
+    <Content Include="Images\bt_colapsar.jpg" />
+    <Content Include="Images\bt_contraer.jpg" />
+    <Content Include="Images\bt_crear_mensaje.jpg" />
+    <Content Include="Images\bt_editar.png" />
+    <Content Include="Images\bt_eliminar.jpg" />
+    <Content Include="Images\bt_encuesta.png" />
+    <Content Include="Images\bt_enviar.png" />
+    <Content Include="Images\bt_expandir.jpg" />
+    <Content Include="Images\bt_guardar.jpg" />
+    <Content Include="Images\bt_iniciar.jpg" />
+    <Content Include="Images\bt_nuevo.png" />
+    <Content Include="Images\bt_publicar.jpg" />
+    <Content Include="Images\bt_rechazar.png" />
+    <Content Include="Images\bt_responder.jpg" />
+    <Content Include="Images\bt_siguiente.jpg" />
+    <Content Include="Images\bt_ver_examen.jpg" />
+    <Content Include="Images\bt_volver.jpg" />
+    <Content Include="Images\CabeceraFlyer.jpg" />
+    <Content Include="Images\cargando.gif" />
+    <Content Include="Images\cob_cursoFT.jpg" />
+    <Content Include="Images\cob_masinfo.jpg" />
+    <Content Include="Images\cursoFT.png" />
+    <Content Include="Images\Edit.png" />
+    <Content Include="Images\Erase.png" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\fondo_default.png" />
+    <Content Include="Images\icoCabecera.png" />
+    <Content Include="Images\icon-black.png" />
+    <Content Include="Images\icon-blue.png" />
+    <Content Include="Images\icon-calendar.gif" />
+    <Content Include="Images\icon-green.png" />
+    <Content Include="Images\icon-orange.png" />
+    <Content Include="Images\icon-red.png" />
+    <Content Include="Images\icon-sbs.png" />
+    <Content Include="Images\icon-sbs2.png" />
+    <Content Include="Images\iconoCalendario.png" />
+    <Content Include="Images\iconoContenidos.png" />
+    <Content Include="Images\icono_agenda.png" />
+    <Content Include="Images\icono_anuncio.png" />
+    <Content Include="Images\icono_anuncio_old.png" />
+    <Content Include="Images\icono_aviso.png" />
+    <Content Include="Images\icono_aviso_old.png" />
+    <Content Include="Images\icono_borrar.png" />
+    <Content Include="Images\icono_contenido.png" />
+    <Content Include="Images\icono_cp.png" />
+    <Content Include="Images\icono_cp_old.png" />
+    <Content Include="Images\icono_curso.png" />
+    <Content Include="Images\icono_curso_old.png" />
+    <Content Include="Images\icono_docencia.png" />
+    <Content Include="Images\icono_documentos_30.png" />
+    <Content Include="Images\icono_editar.png" />
+    <Content Include="Images\icono_encuesta.png" />
+    <Content Include="Images\icono_encuestabloq.png" />
+    <Content Include="Images\icono_examen.png" />
+    <Content Include="Images\icono_foro.png" />
+    <Content Include="Images\icono_foro_grupo.png" />
+    <Content Include="Images\icono_home.png" />
+    <Content Include="Images\icono_listado_examen.png" />
+    <Content Include="Images\icono_mail.png" />
+    <Content Include="Images\icono_mails.png" />
+    <Content Include="Images\icono_mandado.png" />
+    <Content Include="Images\icono_miperfil.png" />
+    <Content Include="Images\icono_multimedia.png" />
+    <Content Include="Images\icono_notas.png" />
+    <Content Include="Images\icono_notes.png" />
+    <Content Include="Images\icono_pdf.png" />
+    <Content Include="Images\icono_programa.png" />
+    <Content Include="Images\icono_programas.png" />
+    <Content Include="Images\icono_recibido.png" />
+    <Content Include="Images\icono_salir.png" />
+    <Content Include="Images\icono_setup.png" />
+    <Content Include="Images\icono_transparente.png" />
+    <Content Include="Images\icono_Warning.png" />
+    <Content Include="Images\icono_web.png" />
+    <Content Include="Images\icon_back.png" />
+    <Content Include="Images\icon_close.png" />
+    <Content Include="Images\icon_pdf.png" />
+    <Content Include="Images\icon_pdfWrong.png" />
+    <Content Include="Images\icon_percent.png" />
+    <Content Include="Images\img_registrate.png" />
+    <Content Include="Images\LineaCabecera.png" />
+    <Content Include="Images\LineaDerecha.png" />
+    <Content Include="Images\linkedin.png" />
+    <Content Include="Images\Login.png" />
+    <Content Include="Images\logoSBS.png" />
+    <Content Include="Images\logo_114x35.png" />
+    <Content Include="Images\Logo_92x22.jpg" />
+    <Content Include="Images\Mail.png" />
+    <Content Include="Images\mas_inf.png" />
+    <Content Include="Images\oldlogo_114x35.png" />
+    <Content Include="Images\PieFlyer.jpg" />
+    <Content Include="Images\pixel.png" />
+    <Content Include="Images\redactar_mensaje.png" />
+    <Content Include="Images\sprite_bg.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\warn.png" />
+    <Content Include="Images\_71.jpg" />
+    <Content Include="Images\_icon-sbs.png" />
+    <Content Include="informe-evalua-tu-talento.aspx" />
+    <Content Include="informe-leads-crm.aspx" />
+    <Content Include="App_Themes\support\js\internal\informe-leads-crm-functions.js" />
+    <Content Include="informe-leads.aspx" />
+    <Content Include="App_Themes\support\js\internal\informe-matriculas-crm-functions.js" />
+    <Content Include="informe-matriculas-crm.aspx" />
+    <Content Include="informe-matriculas.aspx" />
+    <Content Include="informe-newsletter.aspx" />
+    <Content Include="informe-opiniones.aspx" />
+    <Content Include="informe-practicas.aspx" />
+    <Content Include="informe-servidor-mantenimiento.aspx" />
+    <Content Include="informe-servidor.aspx" />
+    <Content Include="informe-universidad.aspx" />
+    <Content Include="lista-banners.aspx" />
+    <Content Include="lista-newsletter-mantenimiento.aspx" />
+    <Content Include="lista-newsletter.aspx" />
+    <Content Include="lista-opiniones.aspx" />
+    <Content Include="lista-recursos-directo.aspx" />
+    <Content Include="lista-reglas.aspx" />
+    <Content Include="lista-suscripciones-sbslife.aspx" />
+    <Content Include="lista-suscriptores-mantenimiento.aspx" />
+    <Content Include="lista-suscriptores.aspx" />
+    <Content Include="App_Themes\support\js\internal\lista_suscriptores_mant_functions.js" />
+    <Content Include="lista-tipo-recursos-directo.aspx" />
+    <Content Include="lista-tipos-automatizacion.aspx" />
+    <Content Include="App_Themes\support\js\internal\listado-leads-crm-funcions.js" />
+    <Content Include="listado-leads-crm.aspx" />
+    <Content Include="matricula-pdp-mantenimiento.aspx" />
+    <Content Include="matricula-pdp.aspx" />
+    <Content Include="Models\SpainBSCampusModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SpainBSCampusModel.edmx</DependentUpon>
+      <LastGenOutput>SpainBSCampusModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SpainBSCampusModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SpainBSCampusModel.edmx</DependentUpon>
+      <LastGenOutput>SpainBSCampusModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="newsletter-mantenimiento.aspx" />
+    <Content Include="opinion-mantenimiento.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="App_Themes\support\img\datatables\Sorting icons.psd" />
+    <Content Include="App_Themes\support\img\favicons\manifest.json" />
+    <Content Include="App_Themes\support\webfonts\fa-brands-400.eot" />
+    <Content Include="App_Themes\support\webfonts\fa-brands-400.ttf" />
+    <Content Include="App_Themes\support\webfonts\fa-brands-400.woff" />
+    <Content Include="App_Themes\support\webfonts\fa-brands-400.woff2" />
+    <Content Include="App_Themes\support\webfonts\fa-regular-400.eot" />
+    <Content Include="App_Themes\support\webfonts\fa-regular-400.ttf" />
+    <Content Include="App_Themes\support\webfonts\fa-regular-400.woff" />
+    <Content Include="App_Themes\support\webfonts\fa-regular-400.woff2" />
+    <Content Include="App_Themes\support\webfonts\fa-solid-900.eot" />
+    <Content Include="App_Themes\support\webfonts\fa-solid-900.ttf" />
+    <Content Include="App_Themes\support\webfonts\fa-solid-900.woff" />
+    <Content Include="App_Themes\support\webfonts\fa-solid-900.woff2" />
+    <Content Include="controls\UploadHandler.ashx" />
+    <Content Include="App_Themes\support\js\dataTables.cleanString.js" />
+    <Content Include="Content\files\Excel_baja_usuario_20210617_rebotes1.csv" />
+    <Content Include="Content\files\Excel_baja_usuario_20210617_rebotes2.csv" />
+    <Content Include="Content\files\Excel_suscriptor_sbslife_20210702_pruebas.csv" />
+    <Content Include="Content\files\Excel_suscriptor_sbslife_20210705_pruebas2.csv" />
+    <Content Include="Content\files\Excel_suscriptor_sbslife_20210706_pruebas2.csv" />
+    <Content Include="Content\files\Excel_usuario_20210426_leads.csv" />
+    <Content Include="Content\files\Excel_usuario_20210427_matriculas.csv" />
+    <Content Include="Content\files\Excel_usuario_20210428_matriculas.csv" />
+    <Content Include="Content\files\Excel_usuario_20210429_matriculas.csv" />
+    <Content Include="App_Themes\DataTable\images\Sorting icons.psd" />
+    <Content Include="libman.json" />
+    <Content Include="Admin\UploadFactura.ashx" />
+    <EntityDeploy Include="Models\SpainBSCampusModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SpainBSCampusModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SpainBSCampusModel.edmx.diagram">
+      <DependentUpon>SpainBSCampusModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\David.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\support\css\all.css" />
+    <Content Include="App_Themes\support\css\async.min.css" />
+    <Content Include="App_Themes\support\css\base.css" />
+    <Content Include="App_Themes\support\css\blog.css" />
+    <Content Include="App_Themes\support\css\bootstrap-select.min.css" />
+    <Content Include="App_Themes\support\css\cookies.css" />
+    <Content Include="App_Themes\support\css\critical.css" />
+    <Content Include="App_Themes\support\css\datatables.min.css" />
+    <Content Include="App_Themes\support\css\fonts.min.css" />
+    <Content Include="App_Themes\support\css\fullcalendar.css" />
+    <Content Include="App_Themes\support\css\grunticon\grunticon.loader.js" />
+    <Content Include="App_Themes\support\css\grunticon\icons.data.png.css" />
+    <Content Include="App_Themes\support\css\grunticon\icons.data.svg.css" />
+    <Content Include="App_Themes\support\css\grunticon\icons.fallback.css" />
+    <Content Include="App_Themes\support\css\grunticon\ie8-icon\ff.png" />
+    <Content Include="App_Themes\support\css\grunticon\ie8-icon\inbox.png" />
+    <Content Include="App_Themes\support\css\grunticon\ie8-icon\twitter.png" />
+    <Content Include="App_Themes\support\css\grunticon\preview.html" />
+    <Content Include="App_Themes\support\css\ie8-grid.css" />
+    <Content Include="App_Themes\support\css\jPages.css" />
+    <Content Include="App_Themes\support\css\pola.css" />
+    <Content Include="App_Themes\support\css\sbs.css" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="App_Themes\support\css\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="App_Themes\support\css\start\jquery-ui-1.8.18.custom.css" />
+    <Content Include="App_Themes\support\css\start\jquery-ui-1.8.18.customVisor.css" />
+    <Content Include="App_Themes\support\img\blockquote.png" />
+    <Content Include="App_Themes\support\img\datatables\favicon.ico" />
+    <Content Include="App_Themes\support\img\datatables\sort_asc.png" />
+    <Content Include="App_Themes\support\img\datatables\sort_asc_disabled.png" />
+    <Content Include="App_Themes\support\img\datatables\sort_both.png" />
+    <Content Include="App_Themes\support\img\datatables\sort_desc.png" />
+    <Content Include="App_Themes\support\img\datatables\sort_desc_disabled.png" />
+    <Content Include="App_Themes\support\img\favicons\android-icon-144x144.png" />
+    <Content Include="App_Themes\support\img\favicons\android-icon-192x192.png" />
+    <Content Include="App_Themes\support\img\favicons\android-icon-36x36.png" />
+    <Content Include="App_Themes\support\img\favicons\android-icon-48x48.png" />
+    <Content Include="App_Themes\support\img\favicons\android-icon-72x72.png" />
+    <Content Include="App_Themes\support\img\favicons\android-icon-96x96.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-114x114.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-120x120.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-144x144.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-152x152.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-180x180.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-57x57.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-60x60.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-72x72.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-76x76.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon-precomposed.png" />
+    <Content Include="App_Themes\support\img\favicons\apple-icon.png" />
+    <Content Include="App_Themes\support\img\favicons\browserconfig.xml" />
+    <Content Include="App_Themes\support\img\favicons\favicon-16x16.png" />
+    <Content Include="App_Themes\support\img\favicons\favicon-194x194.png" />
+    <Content Include="App_Themes\support\img\favicons\favicon-32x32.png" />
+    <Content Include="App_Themes\support\img\favicons\favicon-96x96.png" />
+    <Content Include="App_Themes\support\img\favicons\favicon.ico" />
+    <Content Include="App_Themes\support\img\favicons\ms-icon-144x144.png" />
+    <Content Include="App_Themes\support\img\favicons\ms-icon-150x150.png" />
+    <Content Include="App_Themes\support\img\favicons\ms-icon-310x310.png" />
+    <Content Include="App_Themes\support\img\favicons\ms-icon-70x70.png" />
+    <Content Include="App_Themes\support\img\icon-sbs.png" />
+    <Content Include="App_Themes\support\img\icons\icon-calendar.png" />
+    <Content Include="App_Themes\support\img\icons\icon_file_add.png" />
+    <Content Include="App_Themes\support\img\icons\icon_file_add_alarm.png" />
+    <Content Include="App_Themes\support\img\icons\icon_file_feedback.png" />
+    <Content Include="App_Themes\support\img\icons\icon_file_show.png" />
+    <Content Include="App_Themes\support\img\icons\icon_file_upload.png" />
+    <Content Include="App_Themes\support\img\logo-blog-sbs.png" />
+    <Content Include="App_Themes\support\img\logo-sbs-grey.png" />
+    <Content Include="App_Themes\support\img\logo-sbs-grey.svg" />
+    <Content Include="App_Themes\support\img\logo-sbs-stripe.png" />
+    <Content Include="App_Themes\support\img\logo-sbs.png" />
+    <Content Include="App_Themes\support\img\pantallas\AccesoCampus.jpg" />
+    <Content Include="App_Themes\support\img\pantallas\fondo_login.jpg" />
+    <Content Include="App_Themes\support\img\pixel.png" />
+    <Content Include="App_Themes\support\img\sin_foto-2x.jpg" />
+    <Content Include="App_Themes\support\img\sin_foto.png" />
+    <Content Include="App_Themes\support\img\sprites\blog-icon-calendar.svg" />
+    <Content Include="App_Themes\support\img\sprites\dibujo.svg" />
+    <Content Include="App_Themes\support\img\sprites\sprite-social.png" />
+    <Content Include="App_Themes\support\img\sprites\sprite-svg.svg" />
+    <Content Include="App_Themes\support\img\sprites\sprite.png" />
+    <Content Include="App_Themes\support\img\sprites\Sprite\book.png" />
+    <Content Include="App_Themes\support\img\sprites\Sprite\facebook.png" />
+    <Content Include="App_Themes\support\img\sprites\Sprite\google-plus.png" />
+    <Content Include="App_Themes\support\img\sprites\Sprite\instagram.png" />
+    <Content Include="App_Themes\support\img\sprites\Sprite\linkedin.png" />
+    <Content Include="App_Themes\support\img\sprites\Sprite\twitter.png" />
+    <Content Include="App_Themes\support\img\sprites\Sprite\youtube.png" />
+    <Content Include="App_Themes\support\img\_logo-blog-sbs.png" />
+    <Content Include="App_Themes\support\js\async.js" />
+    <Content Include="App_Themes\support\js\async_sinComp.js" />
+    <Content Include="App_Themes\support\js\autosize.min.js" />
+    <Content Include="App_Themes\support\js\Bootstrap-select 1.6.3.js" />
+    <Content Include="App_Themes\support\js\bootstrap-select-es.min.js" />
+    <Content Include="App_Themes\support\js\bootstrap-select.js" />
+    <Content Include="App_Themes\support\js\critical.js" />
+    <Content Include="App_Themes\support\js\critical_sinComp.js" />
+    <Content Include="App_Themes\support\js\dataTables.dateFormat.js" />
+    <Content Include="App_Themes\support\js\datatables.min.js" />
+    <Content Include="App_Themes\support\js\defaults-es_ES.js" />
+    <Content Include="App_Themes\support\js\internal\candidate_functions.js" />
+    <Content Include="App_Themes\support\js\internal\_company_functions.js" />
+    <Content Include="App_Themes\support\js\internal\cookie_privacy.js" />
+    <Content Include="App_Themes\support\js\internal\functions.js" />
+    <Content Include="App_Themes\support\js\internal\practice_functions.js" />
+    <Content Include="App_Themes\support\js\jPages.js" />
+    <Content Include="App_Themes\support\js\jquery-ui.js" />
+    <Content Include="App_Themes\support\js\modernizr.js" />
+    <Content Include="App_Themes\support\js\tinymce.min.js" />
+    <Content Include="App_Themes\support\js\upload\jquery.fileupload.js" />
+    <Content Include="App_Themes\support\js\upload\jquery.iframe-transport.js" />
+    <Content Include="App_Themes\support\js\upload\jquery.ui.widget.js" />
+    <Content Include="App_Themes\support\js\valkyrie-nav.js" />
+    <Content Include="App_Themes\support\mails\asuntos\literals.xml" />
+    <Content Include="App_Themes\support\mails\templates\remember-password.html" />
+    <Content Include="App_Themes\support\webfonts\fa-brands-400.svg" />
+    <Content Include="App_Themes\support\webfonts\fa-regular-400.svg" />
+    <Content Include="App_Themes\support\webfonts\fa-solid-900.svg" />
+    <Content Include="candidatos-mantenimiento.aspx" />
+    <Content Include="candidatos.aspx" />
+    <Content Include="contacto-mantenimiento.aspx" />
+    <Content Include="contactos.aspx" />
+    <Content Include="controls\control_cookie.ascx" />
+    <Content Include="controls\header.ascx" />
+    <Content Include="controls\nav.ascx" />
+    <Content Include="empleo-mantenimiento.aspx" />
+    <Content Include="empleos.aspx" />
+    <Content Include="empresa-mantenimiento.aspx" />
+    <Content Include="empresas.aspx" />
+    <Content Include="functions.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="practica-mantenimiento.aspx" />
+    <Content Include="practicas.aspx" />
+    <Content Include="preview-mail.aspx" />
+    <Content Include="preview-newsletter.aspx" />
+    <Content Include="PruebaFormulario.aspx" />
+    <Content Include="recurso-directo.aspx" />
+    <Content Include="recurso-mantenimiento.aspx" />
+    <Content Include="registro-sbslife.aspx" />
+    <Content Include="regla-accion.aspx" />
+    <Content Include="regla-mantenimiento.aspx" />
+    <Content Include="remember-password.aspx" />
+    <Content Include="App_Themes\support\js\internal\rules_functions.js" />
+    <Content Include="rrss-mantenimiento.aspx" />
+    <Content Include="App_Themes\support\js\internal\seguimiento-comercial-crm-functions.js" />
+    <Content Include="seguimiento-comercial-crm.aspx" />
+    <Content Include="solicitar-opinion.aspx" />
+    <Content Include="solicitud-mantenimiento.aspx" />
+    <Content Include="solicitud-practica.aspx" />
+    <Content Include="App_Themes\support\mails\templates\suscripcion-sbs-life.html" />
+    <Content Include="suscripcion-sbslife-mantenimiento.aspx" />
+    <Content Include="suscriptores-mantenimiento.aspx" />
+    <Content Include="suscriptores.aspx" />
+    <Content Include="test-listado.aspx" />
+    <Content Include="test-reglas.aspx" />
+    <Content Include="tests_categoria-mantenimiento.aspx" />
+    <Content Include="tests_categoria.aspx" />
+    <Content Include="tests_inventario_pregunta-mantenimiento.aspx" />
+    <Content Include="tests_subcategoria-mantenimiento.aspx" />
+    <Content Include="tests_subcategoria.aspx" />
+    <Content Include="test_inventario_pregunta.aspx" />
+    <Content Include="test_reglas-mantenimiento.aspx" />
+    <Content Include="test_test.aspx" />
+    <Content Include="test_test_mantenimiento.aspx" />
+    <Content Include="tipo-automatizacion-mantenimiento.aspx" />
+    <Content Include="upload.aspx" />
+    <Content Include="ventas-curso.aspx" />
+    <Content Include="ventas-docencia.aspx" />
+    <Content Include="ventas-profesores.aspx" />
+    <Content Include="ventas-tpv-sbslife.aspx" />
+    <Content Include="ventas-tpv.aspx" />
+    <Content Include="ventas-tutor.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin-Balance-Acumulado.aspx.cs">
+      <DependentUpon>Admin-Balance-Acumulado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-Balance-Acumulado.aspx.designer.cs">
+      <DependentUpon>Admin-Balance-Acumulado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UploadFactura.ashx.cs">
+      <DependentUpon>UploadFactura.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_facturas.aspx.cs">
+      <DependentUpon>admin_facturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_facturas.aspx.designer.cs">
+      <DependentUpon>admin_facturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_facturasHelpers.cs" />
+    <Content Include="App_Code\Services\FacturaService.cs" />
+    <Content Include="App_Code\DAL\DataRespository.cs" />
+    <Content Include="App_Code\DTOs\TotalFacturaSocioDTO.cs" />
+    <Compile Include="admin_facturas_edit.aspx.cs">
+      <DependentUpon>admin_facturas_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_facturas_edit.aspx.designer.cs">
+      <DependentUpon>admin_facturas_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_facturas_list.aspx.cs">
+      <DependentUpon>admin_facturas_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_facturas_list.aspx.designer.cs">
+      <DependentUpon>admin_facturas_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_gastos.aspx.cs">
+      <DependentUpon>admin_gastos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_gastos.aspx.designer.cs">
+      <DependentUpon>admin_gastos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_gastos_list.aspx.cs">
+      <DependentUpon>admin_gastos_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_gastos_list.aspx.designer.cs">
+      <DependentUpon>admin_gastos_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Utils\Constantes.cs" />
+    <Compile Include="App_Code\Utils\Cookie_Page.cs" />
+    <Compile Include="App_Code\Utils\FilesStatus.cs" />
+    <Compile Include="automatizacion-acciones-listado.aspx.cs">
+      <DependentUpon>automatizacion-acciones-listado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="automatizacion-acciones-listado.aspx.designer.cs">
+      <DependentUpon>automatizacion-acciones-listado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="automatizacion-acciones-mantenimiento.aspx.cs">
+      <DependentUpon>automatizacion-acciones-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="automatizacion-acciones-mantenimiento.aspx.designer.cs">
+      <DependentUpon>automatizacion-acciones-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="automatizar-curso-mantenimiento.aspx.cs">
+      <DependentUpon>automatizar-curso-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="automatizar-curso-mantenimiento.aspx.designer.cs">
+      <DependentUpon>automatizar-curso-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="automatizar-curso.aspx.cs">
+      <DependentUpon>automatizar-curso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="automatizar-curso.aspx.designer.cs">
+      <DependentUpon>automatizar-curso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="avisos-leads.aspx.cs">
+      <DependentUpon>avisos-leads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="avisos-leads.aspx.designer.cs">
+      <DependentUpon>avisos-leads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\DAL\Conexion_BBDD.cs" />
+    <Compile Include="App_Code\BL\Docencia.cs" />
+    <Compile Include="App_Code\Utils\BundleConfig.cs" />
+    <Compile Include="banner-mantenimiento.aspx.cs">
+      <DependentUpon>banner-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="banner-mantenimiento.aspx.designer.cs">
+      <DependentUpon>banner-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cargar-usuarios.aspx.cs">
+      <DependentUpon>cargar-usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cargar-usuarios.aspx.designer.cs">
+      <DependentUpon>cargar-usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comunidad-social.aspx.cs">
+      <DependentUpon>comunidad-social.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="comunidad-social.aspx.designer.cs">
+      <DependentUpon>comunidad-social.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control-lead-automation.aspx.cs">
+      <DependentUpon>control-lead-automation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="control-lead-automation.aspx.designer.cs">
+      <DependentUpon>control-lead-automation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control-lead.aspx.cs">
+      <DependentUpon>control-lead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="control-lead.aspx.designer.cs">
+      <DependentUpon>control-lead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\header-crm.ascx.cs">
+      <DependentUpon>header-crm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\header-crm.ascx.designer.cs">
+      <DependentUpon>header-crm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\CsvUsuarios.cs" />
+    <Compile Include="App_Code\BL\CsvBajaUsuarios.cs" />
+    <Compile Include="App_Code\BL\CsvSuscriptores.cs" />
+    <Compile Include="cursos-mantenimiento.aspx.cs">
+      <DependentUpon>cursos-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cursos-mantenimiento.aspx.designer.cs">
+      <DependentUpon>cursos-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cursos.aspx.cs">
+      <DependentUpon>cursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cursos.aspx.designer.cs">
+      <DependentUpon>cursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dar-baja-usuarios.aspx.cs">
+      <DependentUpon>dar-baja-usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dar-baja-usuarios.aspx.designer.cs">
+      <DependentUpon>dar-baja-usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="docencias.aspx.cs">
+      <DependentUpon>docencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="docencias.aspx.designer.cs">
+      <DependentUpon>docencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="email-click.aspx.cs">
+      <DependentUpon>email-click.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="email-click.aspx.designer.cs">
+      <DependentUpon>email-click.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\Estados_Lead.cs" />
+    <Compile Include="encuestas-alumnos.aspx.cs">
+      <DependentUpon>encuestas-alumnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="encuestas-alumnos.aspx.designer.cs">
+      <DependentUpon>encuestas-alumnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="encuestas-curso.aspx.cs">
+      <DependentUpon>encuestas-curso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="encuestas-curso.aspx.designer.cs">
+      <DependentUpon>encuestas-curso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="encuestas-profesores.aspx.cs">
+      <DependentUpon>encuestas-profesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="encuestas-profesores.aspx.designer.cs">
+      <DependentUpon>encuestas-profesores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ficha-alumno-crm-aux.aspx.cs">
+      <DependentUpon>ficha-alumno-crm-aux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ficha-alumno-crm-aux.aspx.designer.cs">
+      <DependentUpon>ficha-alumno-crm-aux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ficha-alumno-crm.aspx.cs">
+      <DependentUpon>ficha-alumno-crm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ficha-alumno-crm.aspx.designer.cs">
+      <DependentUpon>ficha-alumno-crm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="informe-evalua-tu-talento.aspx.cs">
+      <DependentUpon>informe-evalua-tu-talento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-evalua-tu-talento.aspx.designer.cs">
+      <DependentUpon>informe-evalua-tu-talento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-leads-crm.aspx.cs">
+      <DependentUpon>informe-leads-crm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-leads-crm.aspx.designer.cs">
+      <DependentUpon>informe-leads-crm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-leads.aspx.cs">
+      <DependentUpon>informe-leads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-leads.aspx.designer.cs">
+      <DependentUpon>informe-leads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-matriculas-crm.aspx.cs">
+      <DependentUpon>informe-matriculas-crm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-matriculas-crm.aspx.designer.cs">
+      <DependentUpon>informe-matriculas-crm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-matriculas.aspx.cs">
+      <DependentUpon>informe-matriculas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-matriculas.aspx.designer.cs">
+      <DependentUpon>informe-matriculas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-newsletter.aspx.cs">
+      <DependentUpon>informe-newsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-newsletter.aspx.designer.cs">
+      <DependentUpon>informe-newsletter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-opiniones.aspx.cs">
+      <DependentUpon>informe-opiniones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-opiniones.aspx.designer.cs">
+      <DependentUpon>informe-opiniones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-practicas.aspx.cs">
+      <DependentUpon>informe-practicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-practicas.aspx.designer.cs">
+      <DependentUpon>informe-practicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-servidor-mantenimiento.aspx.cs">
+      <DependentUpon>informe-servidor-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-servidor-mantenimiento.aspx.designer.cs">
+      <DependentUpon>informe-servidor-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-servidor.aspx.cs">
+      <DependentUpon>informe-servidor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-servidor.aspx.designer.cs">
+      <DependentUpon>informe-servidor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informe-universidad.aspx.cs">
+      <DependentUpon>informe-universidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informe-universidad.aspx.designer.cs">
+      <DependentUpon>informe-universidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\LinqToCSV.cs" />
+    <Compile Include="App_Code\BL\InformeEconomico.cs" />
+    <Compile Include="lista-banners.aspx.cs">
+      <DependentUpon>lista-banners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-banners.aspx.designer.cs">
+      <DependentUpon>lista-banners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-newsletter-mantenimiento.aspx.cs">
+      <DependentUpon>lista-newsletter-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-newsletter-mantenimiento.aspx.designer.cs">
+      <DependentUpon>lista-newsletter-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-newsletter.aspx.cs">
+      <DependentUpon>lista-newsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-newsletter.aspx.designer.cs">
+      <DependentUpon>lista-newsletter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-opiniones.aspx.cs">
+      <DependentUpon>lista-opiniones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-opiniones.aspx.designer.cs">
+      <DependentUpon>lista-opiniones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-recursos-directo.aspx.cs">
+      <DependentUpon>lista-recursos-directo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-recursos-directo.aspx.designer.cs">
+      <DependentUpon>lista-recursos-directo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-reglas.aspx.cs">
+      <DependentUpon>lista-reglas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-reglas.aspx.designer.cs">
+      <DependentUpon>lista-reglas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-suscripciones-sbslife.aspx.cs">
+      <DependentUpon>lista-suscripciones-sbslife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-suscripciones-sbslife.aspx.designer.cs">
+      <DependentUpon>lista-suscripciones-sbslife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-suscriptores-mantenimiento.aspx.cs">
+      <DependentUpon>lista-suscriptores-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-suscriptores-mantenimiento.aspx.designer.cs">
+      <DependentUpon>lista-suscriptores-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-suscriptores.aspx.cs">
+      <DependentUpon>lista-suscriptores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-suscriptores.aspx.designer.cs">
+      <DependentUpon>lista-suscriptores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\Listado_Suscripciones.cs" />
+    <Compile Include="lista-tipo-recursos-directo.aspx.cs">
+      <DependentUpon>lista-tipo-recursos-directo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-tipo-recursos-directo.aspx.designer.cs">
+      <DependentUpon>lista-tipo-recursos-directo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lista-tipos-automatizacion.aspx.cs">
+      <DependentUpon>lista-tipos-automatizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lista-tipos-automatizacion.aspx.designer.cs">
+      <DependentUpon>lista-tipos-automatizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listado-leads-crm.aspx.cs">
+      <DependentUpon>listado-leads-crm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listado-leads-crm.aspx.designer.cs">
+      <DependentUpon>listado-leads-crm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="matricula-pdp-mantenimiento.aspx.cs">
+      <DependentUpon>matricula-pdp-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="matricula-pdp-mantenimiento.aspx.designer.cs">
+      <DependentUpon>matricula-pdp-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="matricula-pdp.aspx.cs">
+      <DependentUpon>matricula-pdp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="matricula-pdp.aspx.designer.cs">
+      <DependentUpon>matricula-pdp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRoleClaims.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserTokens.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Atribuciones.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BEC_SOLICITUD_BECA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BLOG_USU.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampusCursoOnline.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CampusCursoOnlineAfiliado.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ACCIONES_PERSONA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ACL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ACTIVACIONES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ACTIVACIONES_PDP.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_AGENDA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ALERTAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ANUNCIO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ANUNCIO_REL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_AREA_FUNCIONAL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ASIG_COMERCIAL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_AUTORIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_AUTO_CURSO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_AUTO_DOCENCIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_AUTO_USER.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_AUX.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CLASE_ASISTENCIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CLASE_ENCUESTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CLIENTES_COMERCIAL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CLIENTES_DOC.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CONTENIDO_CURSO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CONTENIDO_DOCENCIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CONTENIDO_EXAMEN.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CONTENIDO_PROGRAMA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CURSO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CURSO_ASOCIADO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_CURSO_EXAMEN.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DATA_COMERCIAL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_ALUMNO_AUTO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_CONTENIDO_EXAMEN.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_EXAMEN.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_GRUPO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_GRUPO_EVALUACION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_GRUPO_REC_PRACT.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_SUBGRUPO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_DOCENCIA_TUTORIAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_EDUCACION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ED_ANTERIOR.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_ENCUESTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_EXPERIENCIA_PROFESIONAL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_FORO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_FORO_ADJUNTOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_FORO_MENSAJE.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_FORO_RESPUESTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_IMAGEN.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_INVESTIGA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_LH.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_LITERALES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_LOG.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_OPINIONES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_OPINIONES_SOLICITUD.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_OTROS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_PDP.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_PDP_conex_paquete.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_PDP_paquete.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_PLANTILLA_MAIL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_PROGRAMA_ASOCIADO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_PUBLICIDAD.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RD_Asistencia.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RD_Doc.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RD_DOC_CUR.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RD_ListaSeg.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RD_R.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RD_Valoracion.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RECURSO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RECURSO_DIRECTO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_RECURSO_STATUS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_REC_CP.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_REC_CP_TRABAJO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_REGLAS_ACCIONES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_REGLAS_AUTOMATIZACION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_REGLAS_TIPO_ACCION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_SEG_COMERCIAL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_SEG_COMERCIAL_INF.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_TIPO_ANUNCIO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_TIPO_AUTOMATIZACION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_TIPO_CURSO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_TIPO_RECURSO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_TIPO_SOLICITUD_OPINION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_TUTORIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_WORKFLOW_AVANCE.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_WORKFLOW_DOCENCIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_WORKFLOW_GRUPO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_WORKFLOW_PASO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\campus_WORKFLOW_PREGUNTAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Carritos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Categorias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CATEGORIA_CAT.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLIENTES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLIENTES_COMENTARIOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Clientes_Intereses.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLIENTES_TAG.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CodigoPostal.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CODIGOS_PROMO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\COMENTARIOS_CMT.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\componer_Curso.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CVE_CERTIFICADO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CVE_PETICION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CVE_SOLICITUD.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C_EXPERTOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Direcciones.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTOS\FacturabySociedad.cs" />
+    <Compile Include="Models\DTOS\FacturaDto.cs" />
+    <Compile Include="Models\EDU_Banners.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDU_Productos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDU_Suscriptores.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\elEconomista_Cursos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\elEconomista_Noticias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_ACTIVADORES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_CAMPAIGNS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_CAMPAIGNS_STATUS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_CAMPAIGNS_STATUS_REENVIO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_CLICKS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_CONTENT.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_LISTADO_SUSCRIPCIONES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_SERVER.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_SERVER_ESTADISTICAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_SERVER_STATUS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMAIL_SUSCRIPCIONES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\enc_ALUMNIO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\enc_ENCUESTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\enc_PREGUNTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\enc_TIPO_Pregunta_Valor.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EVENTOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EXPERTOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EXPERTOS_CARACTERISTICAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FICHERO_FIC.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FOT_FOTOGRAFIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GAL_GALERIA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gastos_envio.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GEO_IP.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Idiomas.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Incidencias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_AUX.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_ENCUESTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_AREAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_CAJA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_COSTES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_ESTRUCTURAS_VERSION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_FACTURAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_SUBAREAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_SUBAREAS2.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_FIN_TAX_TYPES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_LHO_VENTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_MK_DATA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\INF_MK_OBJETIVOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lineas_pedido.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Modos_pago.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NOTICIAS_NOT.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NOTICIAS_RELACION_REL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ofertas.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OFF_sbs_Contacto.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OFF_sbs_Empleo.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OFF_sbs_Empresa.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OFF_sbs_Practicas.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OnlineAfiliado.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OnlineBusqueda.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OnlineCarrito.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OnlineDeseo.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OnlineOrden.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OnlineOrdenProducto.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OnlineOrdenStatus.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pagos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Paises.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAR_PARTICIPANTES.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pedidos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRA_CANDIDATOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRA_CONTACTO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRA_EMPLEO.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRA_EMPRESA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRA_PRACTICAS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRA_SOLICITUD_PRACTICA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Productos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Productos_home.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PROMOCION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Provincias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Relaciones_oferta.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Relaciones_restriccion.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Restricciones.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RJL_DiasNoLab.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RJL_Personal.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RJL_Registro.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_area_funcional.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_conex_area_tematica.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_conex_curso_area.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_conex_curso_tematica.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_control_curso.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_control_docencia.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_empresas_alumnos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_faqs.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_pagos_especiales.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_preferencias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_questions.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_tematica.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs2_ticker.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_comunidad_social.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_inf_landing.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_inf_landing_n2.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_Landing.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_Nurturing.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_Task.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_TP_Contrato.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_TP_Cursos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sbs_TP_Personas.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Socio.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SolicitudCambiarContrasenas.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SORTEO_BECA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SORTEO_BECA_ENCUESTA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SpainBSCampusModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpainBSCampusModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SpainBSCampusModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SpainBSCampusModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpainBSCampusModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Subcategorias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUBCATEGORIA_SBC.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUSCRIPCION_SCR.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TAG.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TAMANO_TAM.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tests_Categorias_Subcategorias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Categoria.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Clientes.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Examen.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Examen_Contenido.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Inventario_Pregunta.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Subcategoria.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Test.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Test_Reglas.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test_Triada_Cerebral.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Textos_categorias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Textos_modo_pago.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Textos_productos.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Textos_restricciones.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Textos_subcategorias.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Textos_tipo_restriccion.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoSocio.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipos_conocimiento_web.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipos_iva.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipos_oferta.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipos_orden.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIPOS_RELACION.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipos_relacion_oferta.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipos_relacion_restriccion.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tipos_restriccion.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoVia.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UNI_ALUMNOS.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UNI_PROGRAMA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UNI_PROG_ASIGNATURA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\URL_URL.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VIDEOS_VID.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VW_INF_FIN_ESTRUCTURA_COMPLETA.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="newsletter-mantenimiento.aspx.cs">
+      <DependentUpon>newsletter-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newsletter-mantenimiento.aspx.designer.cs">
+      <DependentUpon>newsletter-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\Noticia.cs" />
+    <Compile Include="opinion-mantenimiento.aspx.cs">
+      <DependentUpon>opinion-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="opinion-mantenimiento.aspx.designer.cs">
+      <DependentUpon>opinion-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\Plantilla_mail.cs" />
+    <Compile Include="preview-mail.aspx.cs">
+      <DependentUpon>preview-mail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="preview-mail.aspx.designer.cs">
+      <DependentUpon>preview-mail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="preview-newsletter.aspx.cs">
+      <DependentUpon>preview-newsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="preview-newsletter.aspx.designer.cs">
+      <DependentUpon>preview-newsletter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\Provinces.cs" />
+    <Compile Include="PruebaFormulario.aspx.cs">
+      <DependentUpon>PruebaFormulario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PruebaFormulario.aspx.designer.cs">
+      <DependentUpon>PruebaFormulario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recurso-directo.aspx.cs">
+      <DependentUpon>recurso-directo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recurso-directo.aspx.designer.cs">
+      <DependentUpon>recurso-directo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recurso-mantenimiento.aspx.cs">
+      <DependentUpon>recurso-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recurso-mantenimiento.aspx.designer.cs">
+      <DependentUpon>recurso-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registro-sbslife.aspx.cs">
+      <DependentUpon>registro-sbslife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registro-sbslife.aspx.designer.cs">
+      <DependentUpon>registro-sbslife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="regla-accion.aspx.cs">
+      <DependentUpon>regla-accion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="regla-accion.aspx.designer.cs">
+      <DependentUpon>regla-accion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="regla-mantenimiento.aspx.cs">
+      <DependentUpon>regla-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="regla-mantenimiento.aspx.designer.cs">
+      <DependentUpon>regla-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="remember-password.aspx.cs">
+      <DependentUpon>remember-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="remember-password.aspx.designer.cs">
+      <DependentUpon>remember-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\Report.cs" />
+    <Compile Include="rrss-mantenimiento.aspx.cs">
+      <DependentUpon>rrss-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rrss-mantenimiento.aspx.designer.cs">
+      <DependentUpon>rrss-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seguimiento-comercial-crm.aspx.cs">
+      <DependentUpon>seguimiento-comercial-crm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seguimiento-comercial-crm.aspx.designer.cs">
+      <DependentUpon>seguimiento-comercial-crm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitar-opinion.aspx.cs">
+      <DependentUpon>solicitar-opinion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="solicitar-opinion.aspx.designer.cs">
+      <DependentUpon>solicitar-opinion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitud-mantenimiento.aspx.cs">
+      <DependentUpon>solicitud-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="solicitud-mantenimiento.aspx.designer.cs">
+      <DependentUpon>solicitud-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitud-practica.aspx.cs">
+      <DependentUpon>solicitud-practica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="solicitud-practica.aspx.designer.cs">
+      <DependentUpon>solicitud-practica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BL\Usuarios.cs" />
+    <Compile Include="App_Code\Utils\Utilities.cs" />
+    <Compile Include="candidatos-mantenimiento.aspx.cs">
+      <DependentUpon>candidatos-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="candidatos-mantenimiento.aspx.designer.cs">
+      <DependentUpon>candidatos-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="candidatos.aspx.cs">
+      <DependentUpon>candidatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="candidatos.aspx.designer.cs">
+      <DependentUpon>candidatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contacto-mantenimiento.aspx.cs">
+      <DependentUpon>contacto-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contacto-mantenimiento.aspx.designer.cs">
+      <DependentUpon>contacto-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactos.aspx.cs">
+      <DependentUpon>contactos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactos.aspx.designer.cs">
+      <DependentUpon>contactos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\control_cookie.ascx.cs">
+      <DependentUpon>control_cookie.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\control_cookie.ascx.designer.cs">
+      <DependentUpon>control_cookie.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\nav.ascx.cs">
+      <DependentUpon>nav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\nav.ascx.designer.cs">
+      <DependentUpon>nav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\UploadHandler.ashx.cs">
+      <DependentUpon>UploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="empleo-mantenimiento.aspx.cs">
+      <DependentUpon>empleo-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="empleo-mantenimiento.aspx.designer.cs">
+      <DependentUpon>empleo-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="empleos.aspx.cs">
+      <DependentUpon>empleos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="empleos.aspx.designer.cs">
+      <DependentUpon>empleos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="empresa-mantenimiento.aspx.cs">
+      <DependentUpon>empresa-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="empresa-mantenimiento.aspx.designer.cs">
+      <DependentUpon>empresa-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="empresas.aspx.cs">
+      <DependentUpon>empresas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="empresas.aspx.designer.cs">
+      <DependentUpon>empresas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="functions.aspx.cs">
+      <DependentUpon>functions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="functions.aspx.designer.cs">
+      <DependentUpon>functions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practica-mantenimiento.aspx.cs">
+      <DependentUpon>practica-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practica-mantenimiento.aspx.designer.cs">
+      <DependentUpon>practica-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practicas.aspx.cs">
+      <DependentUpon>practicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practicas.aspx.designer.cs">
+      <DependentUpon>practicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="suscripcion-sbslife-mantenimiento.aspx.cs">
+      <DependentUpon>suscripcion-sbslife-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="suscripcion-sbslife-mantenimiento.aspx.designer.cs">
+      <DependentUpon>suscripcion-sbslife-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="suscriptores-mantenimiento.aspx.cs">
+      <DependentUpon>suscriptores-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="suscriptores-mantenimiento.aspx.designer.cs">
+      <DependentUpon>suscriptores-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="suscriptores.aspx.cs">
+      <DependentUpon>suscriptores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="suscriptores.aspx.designer.cs">
+      <DependentUpon>suscriptores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test-listado.aspx.cs">
+      <DependentUpon>test-listado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test-listado.aspx.designer.cs">
+      <DependentUpon>test-listado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test-reglas.aspx.cs">
+      <DependentUpon>test-reglas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test-reglas.aspx.designer.cs">
+      <DependentUpon>test-reglas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tests_categoria-mantenimiento.aspx.cs">
+      <DependentUpon>tests_categoria-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tests_categoria-mantenimiento.aspx.designer.cs">
+      <DependentUpon>tests_categoria-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tests_categoria.aspx.cs">
+      <DependentUpon>tests_categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tests_categoria.aspx.designer.cs">
+      <DependentUpon>tests_categoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tests_inventario_pregunta-mantenimiento.aspx.cs">
+      <DependentUpon>tests_inventario_pregunta-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tests_inventario_pregunta-mantenimiento.aspx.designer.cs">
+      <DependentUpon>tests_inventario_pregunta-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tests_subcategoria-mantenimiento.aspx.cs">
+      <DependentUpon>tests_subcategoria-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tests_subcategoria-mantenimiento.aspx.designer.cs">
+      <DependentUpon>tests_subcategoria-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tests_subcategoria.aspx.cs">
+      <DependentUpon>tests_subcategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tests_subcategoria.aspx.designer.cs">
+      <DependentUpon>tests_subcategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test_inventario_pregunta.aspx.cs">
+      <DependentUpon>test_inventario_pregunta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_inventario_pregunta.aspx.designer.cs">
+      <DependentUpon>test_inventario_pregunta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test_reglas-mantenimiento.aspx.cs">
+      <DependentUpon>test_reglas-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_reglas-mantenimiento.aspx.designer.cs">
+      <DependentUpon>test_reglas-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test_test.aspx.cs">
+      <DependentUpon>test_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_test.aspx.designer.cs">
+      <DependentUpon>test_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test_test_mantenimiento.aspx.cs">
+      <DependentUpon>test_test_mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_test_mantenimiento.aspx.designer.cs">
+      <DependentUpon>test_test_mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tipo-automatizacion-mantenimiento.aspx.cs">
+      <DependentUpon>tipo-automatizacion-mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipo-automatizacion-mantenimiento.aspx.designer.cs">
+      <DependentUpon>tipo-automatizacion-mantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ventas-curso.aspx.cs">
+      <DependentUpon>ventas-curso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ventas-curso.aspx.designer.cs">
+      <DependentUpon>ventas-curso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ventas-docencia.aspx.cs">
+      <DependentUpon>ventas-docencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ventas-docencia.aspx.designer.cs">
+      <DependentUpon>ventas-docencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ventas-profesores.aspx.cs">
+      <DependentUpon>ventas-profesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ventas-profesores.aspx.designer.cs">
+      <DependentUpon>ventas-profesores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ventas-tpv-sbslife.aspx.cs">
+      <DependentUpon>ventas-tpv-sbslife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ventas-tpv-sbslife.aspx.designer.cs">
+      <DependentUpon>ventas-tpv-sbslife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ventas-tpv.aspx.cs">
+      <DependentUpon>ventas-tpv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ventas-tpv.aspx.designer.cs">
+      <DependentUpon>ventas-tpv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ventas-tutor.aspx.cs">
+      <DependentUpon>ventas-tutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ventas-tutor.aspx.designer.cs">
+      <DependentUpon>ventas-tutor.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\Interfaces\" />
+    <Folder Include="documentos\facturas\" />
+    <Folder Include="documentos\Html\" />
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4645</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3063/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:3063/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.4.2.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.9.3\build\Microsoft.TypeScript.MSBuild.targets')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>

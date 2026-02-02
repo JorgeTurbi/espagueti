@@ -1,0 +1,30 @@
+﻿/*body {
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+}*/
+
+#sliding-popup {
+	position:fixed;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	padding-bottom:20px;
+	width:100%;
+	text-align:justify;
+	min-height:40px;
+	background: #eceff1 none repeat scroll 0 0;
+	color:#78909c;
+	z-index:99999;
+}
+
+.inner {
+    font-family: verdana;
+    font-size: 12px;
+    padding-left: 5px;
+    position: relative;
+    padding-top: 1%;
+}
+
+/*.inner a.ok {padding:4px;color:#64c5ff ;text-decoration:none;}
+.inner a.info {color:#64c5ff;text-decoration:none;}*/

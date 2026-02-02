@@ -1,0 +1,10 @@
+09:57:28:  ERROR - Cookie_Page.cs::searchIdCliente()
+09:57:28: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+09:57:28: - INNEREXC:
+12:08:35:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:08:35: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:08:35: - INNEREXC:
+15:31:10:  ERROR - La llamada al servidor remoto GET https://life.spainbs.com/api/migrate/register/94 resultó en un error.
+15:31:10:  ERROR - Se ha producido un error al añadir la suscripción al usuario 94

@@ -1,0 +1,6 @@
+C:\Proyectos\SBS Admin\campus_sbs_admin\Campaign_plan_process\bin\Debug\Campaign_plan_process.exe.config
+C:\Proyectos\SBS Admin\campus_sbs_admin\Campaign_plan_process\bin\Debug\Campaign_plan_process.exe
+C:\Proyectos\SBS Admin\campus_sbs_admin\Campaign_plan_process\bin\Debug\Campaign_plan_process.pdb
+C:\Proyectos\SBS Admin\campus_sbs_admin\Campaign_plan_process\obj\Debug\Campaign_plan_process.exe
+C:\Proyectos\SBS Admin\campus_sbs_admin\Campaign_plan_process\obj\Debug\Campaign_plan_process.pdb
+C:\Proyectos\SBS Admin\campus_sbs_admin\Campaign_plan_process\obj\Debug\Campaign_plan_process.csprojResolveAssemblyReference.cache

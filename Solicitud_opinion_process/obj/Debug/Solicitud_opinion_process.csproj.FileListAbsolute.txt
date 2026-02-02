@@ -1,0 +1,32 @@
+C:\Proyectos\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe.config
+C:\Proyectos\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe
+C:\Proyectos\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.pdb
+C:\Proyectos\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.csprojResolveAssemblyReference.cache
+C:\Proyectos\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.exe
+C:\Proyectos\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.pdb
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe.config
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.pdb
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.csproj.AssemblyReference.cache
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.exe.config
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.csproj.CoreCompileInputs.cache
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitu.C705201C.Up2Date
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.exe
+C:\SBS\DESARROLLO\SBS Admin\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.pdb
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe.config
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.pdb
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.csproj.AssemblyReference.cache
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitu.C705201C.Up2Date
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.exe
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.pdb
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe.config
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.exe
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\bin\Debug\Solicitud_opinion_process.pdb
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitu.C705201C.Up2Date
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.exe
+C:\Users\Administrator\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.pdb
+C:\Users\Administrador\Desktop\ToModify\campus_sbs_admin\Solicitud_opinion_process\obj\Debug\Solicitud_opinion_process.exe.config

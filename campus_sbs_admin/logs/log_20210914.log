@@ -1,0 +1,64 @@
+09:27:44:  ERROR - Utils.cs::cleanString()
+09:27:44: - MSG:Referencia a objeto no establecida como instancia de un objeto.
+09:27:44: - INNEREXC:
+10:20:28:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:20:28: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:20:28: - INNEREXC:
+10:21:36:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:21:36: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:21:36: - INNEREXC:
+10:22:06:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:22:06: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:22:06: - INNEREXC:
+10:24:13:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:24:13: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:24:13: - INNEREXC:
+10:59:15:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:59:15: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:59:15: - INNEREXC:
+10:59:31:  ERROR - Utils.cs::cleanString()
+10:59:31: - MSG:Referencia a objeto no establecida como instancia de un objeto.
+10:59:31: - INNEREXC:
+11:32:51:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:32:51: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:32:51: - INNEREXC:
+11:33:34:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:33:34: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:33:34: - INNEREXC:
+11:35:26:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:35:26: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:35:26: - INNEREXC:
+11:43:43:  ERROR - Utils.cs::cleanString()
+11:43:43: - MSG:Referencia a objeto no establecida como instancia de un objeto.
+11:43:43: - INNEREXC:
+12:30:31:  ERROR - Utils.cs::cleanString()
+12:30:31: - MSG:Referencia a objeto no establecida como instancia de un objeto.
+12:30:31: - INNEREXC:
+13:57:46:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:57:46: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+13:57:46: - INNEREXC:
+14:14:10:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:14:10: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:14:10: - INNEREXC:
+14:15:09:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:15:09: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:15:09: - INNEREXC:
+14:20:50:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:20:50: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:20:50: - INNEREXC:
+14:21:12:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:21:12: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:21:12: - INNEREXC:

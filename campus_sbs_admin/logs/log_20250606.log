@@ -1,0 +1,89 @@
+09:37:52:  ERROR - Cookie_Page.cs::searchIdCliente()
+09:37:52: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+09:37:52: - INNEREXC:
+09:57:58:  ERROR - Cookie_Page.cs::searchIdCliente()
+09:57:58: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+09:57:58: - INNEREXC:
+10:00:29:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:00:29: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:00:29: - INNEREXC:
+10:02:09:  ERROR - Cookie_Page.cs::searchIdCliente()
+10:02:09: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+10:02:09: - INNEREXC:
+11:54:56:  ERROR - Cookie_Page.cs::searchIdCliente()
+11:54:56: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+11:54:56: - INNEREXC:
+11:57:30:  ERROR - DataAccess.cs::getActionsByUser()
+11:57:30: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+11:57:30: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+12:02:05:  ERROR - DataAccess.cs::getActionsByUser()
+12:02:05: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+12:02:05: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+12:02:42:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:02:42: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:02:42: - INNEREXC:
+12:06:41:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:06:41: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:06:41: - INNEREXC:
+12:08:49:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:08:49: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:08:49: - INNEREXC:
+12:37:40:  ERROR - Cookie_Page.cs::searchIdCliente()
+12:37:40: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+12:37:40: - INNEREXC:
+13:06:35:  ERROR - Cookie_Page.cs::searchIdCliente()
+13:06:35: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+13:06:35: - INNEREXC:
+14:01:02:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:01:02: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:01:02: - INNEREXC:
+14:02:40:  ERROR - DataAccess.cs::getActionsByUser()
+14:02:40: - MSG:Se produjo un error al ejecutar la definición del comando. Vea la excepción interna para obtener detalles.
+14:02:40: - INNEREXC:Se agotó el tiempo de espera de ejecución. El período de tiempo de espera transcurrió antes de la finalización de la operación o el servidor no responde.
+14:03:01:  ERROR - Cookie_Page.cs::searchIdCliente()
+14:03:01: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+14:03:01: - INNEREXC:
+17:42:39:  ERROR - Cookie_Page.cs::searchIdCliente()
+17:42:39: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+17:42:39: - INNEREXC:
+18:13:11:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:13:11: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:13:11: - INNEREXC:
+18:17:57:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:17:57: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:17:57: - INNEREXC:
+18:36:33:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:36:33: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:36:33: - INNEREXC:
+18:45:42:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:45:42: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:45:42: - INNEREXC:
+18:53:40:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:53:40: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:53:40: - INNEREXC:
+18:54:18:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:54:18: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:54:18: - INNEREXC:
+18:54:33:  ERROR - Cookie_Page.cs::searchIdCliente()
+18:54:33: - MSG:El valor no puede ser nulo.
+Nombre del parámetro: String
+18:54:33: - INNEREXC:
