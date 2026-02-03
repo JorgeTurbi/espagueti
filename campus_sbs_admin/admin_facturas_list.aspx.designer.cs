@@ -15,24 +15,6 @@ namespace campus_sbs_admin
     {
 
         /// <summary>
-        /// menu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::campus_sbs_admin.controls.nav menu;
-
-        /// <summary>
-        /// cabecera control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::campus_sbs_admin.controls.header cabecera;
-
-        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -49,6 +31,24 @@ namespace campus_sbs_admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
+        /// menu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::campus_sbs_admin.controls.nav menu;
+
+        /// <summary>
+        /// cabecera control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::campus_sbs_admin.controls.header cabecera;
 
         /// <summary>
         /// ddlyear control.
