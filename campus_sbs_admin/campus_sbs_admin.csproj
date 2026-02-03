@@ -1568,6 +1568,7 @@
     <Content Include="regla-mantenimiento.aspx" />
     <Content Include="remember-password.aspx" />
     <Content Include="App_Themes\support\js\internal\rules_functions.js" />
+    <Content Include="Roles_Permisos.aspx" />
     <Content Include="rrss-mantenimiento.aspx" />
     <Content Include="App_Themes\support\js\internal\seguimiento-comercial-crm-functions.js" />
     <Content Include="seguimiento-comercial-crm.aspx" />
@@ -2849,6 +2850,13 @@
       <DependentUpon>remember-password.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\BL\Report.cs" />
+    <Compile Include="Roles_Permisos.aspx.cs">
+      <DependentUpon>Roles_Permisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles_Permisos.aspx.designer.cs">
+      <DependentUpon>Roles_Permisos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="rrss-mantenimiento.aspx.cs">
       <DependentUpon>rrss-mantenimiento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
