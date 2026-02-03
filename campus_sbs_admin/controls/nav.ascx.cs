@@ -1,307 +1,422 @@
-﻿using sbs_DAL;
+﻿using campus_sbs_admin.Models;
+using sbs_DAL;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace campus_sbs_admin.controls
 {
-    public partial class nav : System.Web.UI.UserControl
+    public partial class nav : UserControl
     {
-        DataAccess da = new DataAccess();
+        private readonly DataAccess da = new DataAccess();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            /// 0.- Sacar los datos del usuario         
-            List<CLIENTES> list_user = new List<CLIENTES>();
-            if (Session["usuario"] != null)
-                list_user.Add((CLIENTES)Session["usuario"]);
-            if (list_user.Count > 0)
+            var auth = Session["auth"] as AuthContext;
+            if (auth == null || auth.User == null)
             {
-                string page = Request.Path.Replace("/", "");
-                paint_menu(list_user[0], page);
-            }
-            else
                 Response.Redirect("login.aspx");
+                return;
+            }
+
+            if (!IsPostBack)
+            {
+                var menu = GetMenuForUser(auth.User.id_cliente);
+                paint_menu(menu, Request.Path);
+            }
         }
 
-        private void paint_menu(CLIENTES client, string page)
+        private void paint_menu(List<MenuGroupDto> menu, string currentPage)
         {
-            DataAccess da = new DataAccess();
-            StringBuilder sbuild = new StringBuilder();
+            menu = menu ?? new List<MenuGroupDto>();
+            currentPage = NormalizePage(currentPage);
 
-            /// 0.- Comprobar si es un usuario especial
-            List<string> list_users_mails = ConfigurationManager.AppSettings["users_special_mail"].Split(',').ToList();
-            long id_user_special = -1;
+            var sb = new StringBuilder();
 
-            if (list_users_mails.Contains(client.id_cliente.ToString()))
-                id_user_special = client.id_cliente;
-
-            if (id_user_special == -1)
+            foreach (var g in menu.OrderBy(x => x.SortOrder))
             {
-                if (client.Comercial != null && client.Comercial.Value)
+                var groupCode = HttpUtility.HtmlAttributeEncode(g.Code); // MENU_COMPANY para id único
+
+                var groupIcon = (g.IconCss ?? "").Trim();
+                if (!string.IsNullOrWhiteSpace(groupIcon) && !groupIcon.Contains("fa-2x"))
+                    groupIcon += " fa-2x";
+
+                sb.Append("<li class='nav-item'>");
+                sb.Append($"<a href='javascript:void(0)' aria-controls='menu_{groupCode}' aria-expanded='false'>");
+
+                if (!string.IsNullOrWhiteSpace(groupIcon))
+                    sb.Append($"<i class='{HttpUtility.HtmlAttributeEncode(groupIcon)}' aria-hidden='true'></i>");
+
+                sb.Append($"<span> {HttpUtility.HtmlEncode(g.Title)}</span>");
+                sb.Append("<i class='fas fa-angle-down fa-2x'></i>");
+                sb.Append("</a>");
+
+                sb.Append($"<div class='nav-level'><ul id='menu_{groupCode}'>");
+
+                foreach (var p in g.Children)
                 {
-                    /// 1.1.- Página leads
-                    if (page == "listado-leads-crm.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Leads</span></a></li>");
+                    if (string.IsNullOrWhiteSpace(p.Url)) continue;
 
-                    /// 1.2.- Página de informe leads
-                    if (page == "informe-leads-crm.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Leads</span></a></li>");
+                    var url = (p.Url ?? "").Trim();
+                    var urlCompare = NormalizePage(url);
 
-                    /// 1.3.- Página de informe matrículas
-                    if (page == "informe-matriculas-crm.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Matrículas</span></a></li>");
+                    var isActive = string.Equals(currentPage, urlCompare, StringComparison.OrdinalIgnoreCase);
+                    var activeClass = isActive ? " class='active'" : "";
 
-                    /// 1.- Menu CRM
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_crm' aria-expanded='false'><i class='fas fa-globe fa-2x' aria-hidden='true'></i><span> CRM</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_crm'>");
-                    sbuild.Append("<li><a href='listado-leads-crm.aspx'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Leads</span></a></li>");
-                    sbuild.Append("<li><a href='informe-leads-crm.aspx'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Leads</span></a></li>");
-                    sbuild.Append("<li><a href='informe-matriculas-crm.aspx'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Matrículas</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
+                    var pageIcon = (p.IconCss ?? "").Trim();
+                    if (!string.IsNullOrWhiteSpace(pageIcon) && !pageIcon.Contains("fa-2x"))
+                        pageIcon += " fa-2x";
+
+                    sb.Append($"<li><a href='{HttpUtility.HtmlAttributeEncode(url)}'{activeClass}>");
+
+                    if (!string.IsNullOrWhiteSpace(pageIcon))
+                        sb.Append($"<i class='{HttpUtility.HtmlAttributeEncode(pageIcon)}' aria-hidden='true'></i>");
+
+                    sb.Append($"<span> {HttpUtility.HtmlEncode(p.Title)}</span>");
+                    sb.Append("</a></li>");
                 }
-                else
-                {
-                    /// 1.1.- Página empresas
-                    if (page == "empresas.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-building fa-2x' aria-hidden='true'></i><span> Empresas</span></a></li>");
 
-                    /// 1.2.- Página contactos
-                    if (page == "contactos.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-address-card fa-2x' aria-hidden='true'></i><span> Contactos</span></a></li>");
-
-                    /// 1.3.- Página prácticas
-                    if (page == "practicas.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-toolbox fa-2x' aria-hidden='true'></i><span> Prácticas</span></a></li>");
-
-                    /// 1.4.- Página empleos
-                    if (page == "empleos.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-business-time fa-2x' aria-hidden='true'></i><span> Empleos</span></a></li>");
-
-                    /// 1.5.- Página informe prácticas
-                    if (page == "informe-practicas.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-chart-bar fa-2x' aria-hidden='true'></i><span> Informe de Prácticas</span></a></li>");
-
-                    /// 1.6.- Página listado de solicitudes
-                    if (page == "solicitud-practica.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-file-signature fa-2x' aria-hidden='true'></i><span> Solicitudes prácticas</span></a></li>");
-
-                    /// 1.7.- Página listado de candidatos
-                    if (page == "candidatos.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-users fa-2x' aria-hidden='true'></i><span> Candidatos prácticas</span></a></li>");
-
-                    /// 1.8.- Página matriculación PDP
-                    if (page == "matricula-pdp.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-user-plus fa-2x' aria-hidden='true'></i><span> Matriculación PDP</span></a></li>");
-
-                    /// 2.1.- Página ventas tpv
-                    if (page == "ventas-tpv.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span> Ventas por TPV</span></a></li>");
-
-                    /// 2.2.- Página ventas tpv sbs Life
-                    if (page == "ventas-tpv-sbslife.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span> Suscripciones SBS Life</span></a></li>");
-
-                    /// 3.1.- Página lista suscriptores
-                    if (page == "lista-suscriptores.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de suscriptores</span></a></li>");
-
-                    /// 3.2.- Página lista campañas
-                    if (page == "lista-newsletter.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de campañas</span></a></li>");
-
-                    /// 4.1.- Página leads
-                    if (page == "listado-leads-crm.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Leads</span></a></li>");
-
-                    /// 4.2.- Página de informe leads
-                    if (page == "informe-leads-crm.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Leads</span></a></li>");
-
-                    /// 4.3.- Página de informe matrículas
-                    if (page == "informe-matriculas-crm.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Matrículas</span></a></li>");
-                    
-                    /// 5.1.- Página de recursos en directo
-                    if (page == "lista-recursos-directo.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-graduation-cap fa-2x' aria-hidden='true'></i><span> Recursos en directo</span></a></li>");
-
-                    /// 5.2.- Página de cursos
-                    if (page == "cursos.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-graduation-cap fa-2x' aria-hidden='true'></i><span> Cursos</span></a></li>");
-
-                    /// 6.1.- Página solicitar opinión
-                    if (page == "solicitar-opinion.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-comment-dots fa-2x' aria-hidden='true'></i><span> Solicitud Opinión</span></a></li>");
-
-                    /// 6.2.- Página lista opiniones
-                    if (page == "lista-opiniones.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de opiniones</span></a></li>");
-
-                    /// 6.3.- Página comunidad social
-                    if (page == "comunidad-social.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-rss fa-2x' aria-hidden='true'></i><span> Comunidad Social</span></a></li>");
-
-                    /// 8.1.- Página tipos automatización
-                    if (page == "lista-tipos-automatizacion.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-tools fa-2x' aria-hidden='true'></i><span> Lista de tipos Automatización</span></a></li>");
-
-                    /// 8.2.- Página reglas automatización
-                    if (page == "lista-reglas.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-pencil-ruler fa-2x' aria-hidden='true'></i><span> Lista de reglas Automatización</span></a></li>");
-
-                    /// 9.1.- Página control leads
-                    if (page == "control-lead-automation.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Control leads</span></a></li>");
-
-                    /// 9.2.- Página informe de matrículas
-                    if (page == "informe-matriculas.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Informe matrículas</span></a></li>");
-
-                    /// 9.3.- Página informe de leads
-                    if (page == "informe-leads.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Informe leads</span></a></li>");
-
-                    /// 10.1.- Test_Test
-                    if (page == "test_test.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-clipboard-list fa-2x' aria-hidden='true'></i><span> Tests</span></a></li>");
-
-                    /// 10.2.- Test_Preguntas
-                    if (page == "test_inventario_pregunta.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-question-circle fa-2x' aria-hidden='true'></i><span> Test Preguntas</span></a></li>");
-
-                    /// 10.3.- Test_Categorias
-                    if (page == "tests_categoria.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-tag fa-2x' aria-hidden='true'></i><span> Test Categorías</span></a></li>");
-
-                    /// 10.4.- Test_Subcategorias
-                    if (page == "tests_subcategoria.aspx")
-                        sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='fas fa-tags fa-2x' aria-hidden='true'></i><span> Test Subcategoría</span></a></li>");
-
-                    /// 1.- Menu común COMPANY
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_company' aria-expanded='false'><i class='fas fa-industry fa-2x' aria-hidden='true'></i><span> Company</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_company'>");
-                    sbuild.Append("<li><a href='empresas.aspx'><i class='fas fa-building fa-2x' aria-hidden='true'></i><span> Empresas</span></a></li>");
-                    sbuild.Append("<li><a href='contactos.aspx'><i class='far fa-address-card fa-2x' aria-hidden='true'></i><span> Contactos</span></a></li>");
-                    sbuild.Append("<li><a href='practicas.aspx'><i class='fas fa-toolbox fa-2x' aria-hidden='true'></i><span> Prácticas</span></a></li>");
-                    sbuild.Append("<li><a href='empleos.aspx'><i class='fas fa-business-time fa-2x' aria-hidden='true'></i><span> Empleos</span></a></li>");
-                    sbuild.Append("<li><a href='informe-practicas.aspx'><i class='fas fa-chart-bar fa-2x' aria-hidden='true'></i><span> Informe de Prácticas</span></a></li>");
-                    sbuild.Append("<li><a href='solicitud-practica.aspx'><i class='fas fa-file-signature fa-2x' aria-hidden='true'></i><span> Solicitudes de Prácticas</span></a></li>");
-                    sbuild.Append("<li><a href='candidatos.aspx'><i class='fas fa-users fa-2x' aria-hidden='true'></i><span> Candidatos prácticas</span></a></li>");
-                    sbuild.Append("<li><a href='matricula-pdp.aspx'><i class='fas fa-user-plus fa-2x' aria-hidden='true'></i><span> Matriculación PDP</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 2.- Menu común FINANCIERO
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_finance' aria-expanded='false'><i class='fas fa-landmark fa-2x' aria-hidden='true'></i><span> Financiero</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_finance'>");
-
-
-                    sbuild.Append("<li><a href='admin_facturas.aspx'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span>Facturas</span></a></li>");
-                    sbuild.Append("<li><a href='admin_facturas_list.aspx'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span>Listar Facturas</span></a></li>");
-                    sbuild.Append("<li><a href='admin_Gastos.aspx'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span>Gastos</span></a></li>");
-                    sbuild.Append("<li><a href='Admin-Balance-Acumulado.aspx'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span>Balac. Acumulado</span></a></li>");
-                    sbuild.Append("<li><a href='ventas-tpv.aspx'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span> Ventas por TPV</span></a></li>");
-                    sbuild.Append("<li><a href='ventas-tpv-sbslife.aspx'><i class='far fa-credit-card fa-2x' aria-hidden='true'></i><span> Suscripciones SBS Life</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 3.- Menu común COMERCIAL
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_comercial' aria-expanded='false'><i class='fas fa-mail-bulk fa-2x' aria-hidden='true'></i><span> Comercial</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_comercial'>");
-                    sbuild.Append("<li><a href='lista-suscriptores.aspx'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de suscriptores</span></a></li>");
-                    sbuild.Append("<li><a href='lista-newsletter.aspx'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de campañas</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 4.- Menu CRM
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_crm' aria-expanded='false'><i class='fas fa-globe fa-2x' aria-hidden='true'></i><span> CRM</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_crm'>");
-                    sbuild.Append("<li><a href='listado-leads-crm.aspx'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Leads</span></a></li>");
-                    sbuild.Append("<li><a href='informe-leads-crm.aspx'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Leads</span></a></li>");
-                    sbuild.Append("<li><a href='informe-matriculas-crm.aspx'><i class='fas fa-list fa-2x' aria-hidden='true'></i><span> Inf. Matrículas</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-                    
-                    /// 5.- Menu común Académico
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_academico' aria-expanded='false'><i class='fas fa-graduation-cap fa-2x' aria-hidden='true'></i><span> Académico</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_academico'>");
-                    sbuild.Append("<li><a href='lista-recursos-directo.aspx'><i class='fas fa-photo-video fa-2x' aria-hidden='true'></i><span> Recursos en directo</span></a></li>");
-                    sbuild.Append("<li><a href='cursos.aspx'><i class='fas fa-folder-open fa-2x' aria-hidden='true'></i><span> Cursos</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 6.- Menu común WEB
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_web' aria-expanded='false'><i class='fas fa-globe-europe fa-2x' aria-hidden='true'></i><span> WEB</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_web'>");
-                    sbuild.Append("<li><a href='lista-opiniones.aspx'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de opiniones</span></a></li>");
-                    sbuild.Append("<li><a href='comunidad-social.aspx'><i class='fas fa-rss fa-2x' aria-hidden='true'></i><span> Comunidad Social</span></a></li>");
-                    sbuild.Append("<li></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 7.- Menu común Usuarios
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_usuarios' aria-expanded='false'><i class='fas fa-users fa-2x'></i><span> Usuarios</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_usuarios'>");
-                    sbuild.Append("<li><a href='cargar-usuarios.aspx'><i class='fas fa-file-upload fa-2x'></i><span> Cargar Usuarios</span></a></li>");
-                    sbuild.Append("<li><a href='dar-baja-usuarios.aspx'><i class='fas fa-file-download fa-2x'></i><span> Dar de baja Usuarios</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 8.- Menu común Automatización
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_automation' aria-expanded='false'><i class='fas fa-tools fa-2x' aria-hidden='true'></i><span> Automatización</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_automation'>");
-                    sbuild.Append("<li><a href='lista-tipos-automatizacion.aspx'><i class='fas fa-tools fa-2x' aria-hidden='true'></i><span> Lista de tipos Automatización</span></a></li>");
-                    sbuild.Append("<li><a href='lista-reglas.aspx'><i class='fas fa-pencil-ruler fa-2x' aria-hidden='true'></i><span> Lista de reglas Automatización</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 9.- Menu informes
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_informes' aria-expanded='false'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Informes</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_informes'>");
-                    sbuild.Append("<li><a href='control-lead-automation.aspx'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Control leads</span></a></li>");
-                    sbuild.Append("<li><a href='informe-matriculas.aspx'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Ventas</span></a></li>");
-                    sbuild.Append("<li><a href='informe-leads.aspx'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Leads</span></a></li>");
-                    sbuild.Append("<li><a href='informe-universidad.aspx'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Matrículas</span></a></li>");
-                    sbuild.Append("<li><a href='informe-evalua-tu-talento.aspx'><i class='fas fa-chart-line fa-2x' aria-hidden='true'></i><span> Evalúa tu talento</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 10.- Menu Tests
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_tests' aria-expanded='false'><i class='fas fa-clipboard-list fa-2x' aria-hidden='true'></i><span> Tests</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_tests'>");
-                    sbuild.Append("<li><a href='test_test.aspx'><i class='fas fa-clipboard-list fa-2x' aria-hidden='true'></i><span> Tests</span></a></li>");
-                    sbuild.Append("<li><a href='test_inventario_pregunta.aspx'><i class='fas fa-question-circle fa-2x' aria-hidden='true'></i><span> Preguntas</span></a></li>");
-                    sbuild.Append("<li><a href='tests_categoria.aspx'><i class='fas fa-tag fa-2x' aria-hidden='true'></i><span> Categorías</span></a></li>");
-                    sbuild.Append("<li><a href='tests_subcategoria.aspx'><i class='fas fa-tags fa-2x' aria-hidden='true'></i><span> Subcategorías</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    /// 11.- Menu SBS Life
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_sbs_life' aria-expanded='false'><i class='fas fa-globe-americas fa-2x' aria-hidden='true'></i><span> SBS Life</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                    sbuild.Append("<div class='nav-level'><ul id='menu_sbs_life'>");
-                    sbuild.Append("<li><a href='lista-banners.aspx'><i class='fas fa-ad fa-2x'></i><span> Banners</span></a></li>");
-                    sbuild.Append("<li><a href='registro-sbslife.aspx'><i class='fas fa-file-upload fa-2x'></i><span> Registrar Usuarios</span></a></li>");
-                    sbuild.Append("<li><a href='lista-suscripciones-sbslife.aspx'><i class='far fa-list-alt fa-2x'></i><span> Lista de suscripciones</span></a></li>");
-                    sbuild.Append("</ul></div></li>");
-
-                    sbuild.Append("<li class='nav-item'><br /><br /><br /><br /><br /><br /></li>");
-                }
-            }
-            else
-            {
-                /// 1.1.- Página lista suscriptores
-                if (page == "lista-suscriptores.aspx")
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de suscriptores</span></a></li>");
-
-                /// 1.2.- Página lista campañas
-                if (page == "lista-newsletter.aspx")
-                    sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' class='active'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de campañas</span></a></li>");
-
-                /// 1.- Menu común COMERCIAL
-                sbuild.Append("<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_comercial' aria-expanded='false'><i class='fas fa-mail-bulk fa-2x' aria-hidden='true'></i><span> Comercial</span><i class='fas fa-angle-down fa-2x'></i></a>");
-                sbuild.Append("<div class='nav-level'><ul id='menu_comercial'>");
-                sbuild.Append("<li><a href='lista-suscriptores.aspx'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de suscriptores</span></a></li>");
-                sbuild.Append("<li><a href='lista-newsletter.aspx'><i class='far fa-list-alt fa-2x' aria-hidden='true'></i><span> Lista de campañas</span></a></li>");
-                sbuild.Append("</ul></div></li>");
+                sb.Append("</ul></div></li>");
             }
 
-            menu_nav.InnerHtml = sbuild.ToString();
+            menu_nav.InnerHtml = sb.ToString();
         }
+
+        private static string NormalizePage(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path)) return string.Empty;
+
+            path = path.Trim();
+
+            if (path.StartsWith("/")) path = path.TrimStart('/');
+
+            var q = path.IndexOf("?", StringComparison.Ordinal);
+            if (q >= 0) path = path.Substring(0, q);
+
+            return path;
+        }
+
+        //private void paint_menu(List<MenuPageDto> pages, string currentPage)
+        //{
+        //    pages = pages ?? new List<MenuPageDto>();
+        //    currentPage = (currentPage ?? string.Empty).Trim();
+
+        //    // Normaliza currentPage a "algo.aspx"
+        //    // (si te llega con / o con querystring)
+        //    if (currentPage.StartsWith("/")) currentPage = currentPage.TrimStart('/');
+        //    var qIndex = currentPage.IndexOf("?", StringComparison.Ordinal);
+        //    if (qIndex >= 0) currentPage = currentPage.Substring(0, qIndex);
+
+        //    var groups = pages
+        //        .Where(p => p != null && !string.IsNullOrWhiteSpace(p.GroupCode))
+        //        .GroupBy(p => p.GroupCode.Trim())
+        //        .Select(g =>
+        //        {
+        //            // Tomamos "metadata" del grupo desde el primer item
+        //            var first = g.First();
+
+        //            return new
+        //            {
+        //                GroupCode = g.Key,
+        //                GroupTitle = string.IsNullOrWhiteSpace(first.GroupTitle) ? g.Key : first.GroupTitle,
+        //                GroupIconCss = (first.GroupIconCss ?? "").Trim(),
+        //                GroupSortOrder = first.GroupSortOrder,
+        //                Pages = g.Where(x => x != null)
+        //                         .OrderBy(x => x.SortOrder)
+        //                         .ThenBy(x => x.Title)
+        //                         .ToList()
+        //            };
+        //        })
+        //        .OrderBy(g => g.GroupSortOrder)
+        //        .ThenBy(g => g.GroupTitle);
+
+        //    var sb = new StringBuilder();
+
+        //    foreach (var g in groups)
+        //    {
+        //        // Icono del grupo desde BD (OBLIGATORIO)
+        //        // Si no viene, puedes poner uno "neutro" (pero tú dijiste que DEBE venir de BD).
+        //        // Aun así, para no romper el HTML, si viene vacío lo dejamos sin <i>.
+        //        string groupIconCss = g.GroupIconCss;
+        //        bool hasGroupIcon = !string.IsNullOrWhiteSpace(groupIconCss);
+
+        //        // Garantiza tamaño (si en BD guardas "fas fa-x", le añade fa-2x)
+        //        if (hasGroupIcon && !groupIconCss.Contains("fa-2x"))
+        //            groupIconCss += " fa-2x";
+
+        //        sb.Append($"<li class='nav-item'>");
+        //        sb.Append($"<a href='javascript:void(0)' aria-controls='menu_{HttpUtility.HtmlAttributeEncode(g.GroupCode)}' aria-expanded='false'>");
+
+        //        if (hasGroupIcon)
+        //            sb.Append($"<i class='{HttpUtility.HtmlAttributeEncode(groupIconCss)}' aria-hidden='true'></i>");
+
+        //        sb.Append($"<span> {HttpUtility.HtmlEncode(g.GroupTitle)}</span>");
+        //        sb.Append($"<i class='fas fa-angle-down fa-2x'></i>");
+        //        sb.Append("</a>");
+
+        //        sb.Append($"<div class='nav-level'><ul id='menu_{HttpUtility.HtmlAttributeEncode(g.GroupCode)}'>");
+
+        //        foreach (var p in g.Pages)
+        //        {
+        //            if (string.IsNullOrWhiteSpace(p.Url)) continue;
+
+        //            // Normaliza URL de la página (por si viene /empresas.aspx o con query)
+        //            var url = p.Url.Trim();
+        //            if (url.StartsWith("/")) url = url.TrimStart('/');
+        //            var q2 = url.IndexOf("?", StringComparison.Ordinal);
+        //            var urlToCompare = q2 >= 0 ? url.Substring(0, q2) : url;
+
+        //            var isActive = string.Equals(currentPage, urlToCompare, StringComparison.OrdinalIgnoreCase);
+        //            var activeClass = isActive ? " class='active'" : "";
+
+        //            var pageIconCss = (p.IconCss ?? "").Trim();
+        //            if (!string.IsNullOrWhiteSpace(pageIconCss) && !pageIconCss.Contains("fa-2x"))
+        //                pageIconCss += " fa-2x";
+
+        //            sb.Append($"<li><a href='{HttpUtility.HtmlAttributeEncode(url)}'{activeClass}>");
+
+        //            if (!string.IsNullOrWhiteSpace(pageIconCss))
+        //                sb.Append($"<i class='{HttpUtility.HtmlAttributeEncode(pageIconCss)}' aria-hidden='true'></i>");
+
+        //            sb.Append($"<span> {HttpUtility.HtmlEncode(p.Title)}</span>");
+        //            sb.Append("</a></li>");
+        //        }
+
+        //        sb.Append("</ul></div></li>");
+        //    }
+
+        //    menu_nav.InnerHtml = sb.ToString();
+        //}
+
+        //private void paint_menu(List<MenuPageDto> pages, string currentPage)
+        //{
+        //    if (pages == null) pages = new List<MenuPageDto>();
+
+        //    var groups = pages
+        //        .Where(p => p != null && !string.IsNullOrWhiteSpace(p.GroupCode))
+        //        .GroupBy(p => p.GroupCode)
+        //        .OrderBy(g => g.Key);
+
+        //    var sb = new StringBuilder();
+
+        //    foreach (var g in groups)
+        //    {
+        //        sb.Append($"<li class='nav-item'><a href='javascript:void(0)' aria-controls='menu_{g.Key}' aria-expanded='false'>");
+        //        sb.Append($"<i class='fas fa-folder fa-2x' aria-hidden='true'></i>");
+        //        sb.Append($"<span> {g.Key}</span><i class='fas fa-angle-down fa-2x'></i></a>");
+        //        sb.Append($"<div class='nav-level'><ul id='menu_{g.Key}'>");
+
+        //        foreach (var p in g.OrderBy(x => x.SortOrder))
+        //        {
+        //            var isActive = string.Equals(currentPage, p.Url, StringComparison.OrdinalIgnoreCase);
+        //            var activeClass = isActive ? " class='active'" : "";
+
+        //            sb.Append($"<li><a href='{p.Url}'{activeClass}>");
+        //            sb.Append($"<i class='{p.IconCss}' aria-hidden='true'></i><span> {p.Title}</span>");
+        //            sb.Append("</a></li>");
+        //        }
+
+        //        sb.Append("</ul></div></li>");
+        //    }
+
+        //    menu_nav.InnerHtml = sb.ToString();
+        //}
+        private List<MenuGroupDto> GetMenuForUser(long idCliente)
+        {
+            using (var db = new SpainBS_Connection())
+            {
+                var roleIds = db.ClienteRoles
+                    .Where(x => x.id_cliente == idCliente)
+                    .Select(x => x.RoleId)
+                    .Distinct()
+                    .ToList();
+
+                if (roleIds.Count == 0)
+                    return new List<MenuGroupDto>();
+
+                // 1) Padres ROOT (menús)
+                var roots = db.Pages
+                    .Where(p => p.IsActive && p.IsMenu && p.GroupCode == "ROOT")
+                    .Select(p => new MenuGroupDto
+                    {
+                        PageId = p.PageId,
+                        Code = p.Code,          // MENU_COMPANY
+                        Title = p.Title,        // Company
+                        IconCss = p.IconCss,
+                        SortOrder = p.SortOrder
+                    })
+                    .OrderBy(p => p.SortOrder)
+                    .ToList();
+
+                // 2) Hijos permitidos por roles (CanView = true)
+                var rawChildren = (from rp in db.RolePages
+                                   join p in db.Pages on rp.PageId equals p.PageId
+                                   where roleIds.Contains(rp.RoleId)
+                                         && rp.CanView
+                                         && p.IsActive
+                                         && p.IsMenu
+                                         && p.GroupCode != "ROOT" // hijos
+                                   select new
+                                   {
+                                       p.PageId,
+                                       p.Code,
+                                       p.Title,
+                                       p.Url,
+                                       p.IconCss,
+                                       p.GroupCode,
+                                       p.SortOrder,
+                                       rp.CanView,
+                                       rp.CanEdit,
+                                       rp.CanDelete
+                                   })
+                                   .ToList();
+
+                // dedupe por PageId (si varios roles lo traen)
+                var children = rawChildren
+                    .GroupBy(x => x.PageId)
+                    .Select(g => new MenuPageDto
+                    {
+                        PageId = g.Key,
+                        Code = g.First().Code,
+                        Title = g.First().Title,
+                        Url = g.First().Url,
+                        IconCss = g.First().IconCss,
+                        GroupCode = g.First().GroupCode,
+                        SortOrder = g.Min(x => x.SortOrder),
+                        CanView = true,
+                        CanEdit = g.Any(x => x.CanEdit),
+                        CanDelete = g.Any(x => x.CanDelete)
+                    })
+                    .ToList();
+
+                // 3) Relación padre -> hijos
+                // Padre.Code = MENU_COMPANY => sufijo = COMPANY
+                var rootBySuffix = roots.ToDictionary(
+                    r => GetSuffixFromMenuCode(r.Code),   // COMPANY
+                    r => r,
+                    StringComparer.OrdinalIgnoreCase
+                );
+
+                foreach (var c in children)
+                {
+                    if (string.IsNullOrWhiteSpace(c.GroupCode)) continue;
+
+                    if (rootBySuffix.TryGetValue(c.GroupCode.Trim(), out var parent))
+                    {
+                        parent.Children.Add(c);
+                    }
+                }
+
+                // 4) Ordenar hijos dentro de cada padre
+                foreach (var r in roots)
+                {
+                    r.Children = r.Children
+                        .OrderBy(x => x.SortOrder)
+                        .ThenBy(x => x.Title)
+                        .ToList();
+                }
+
+                // 5) Opcional: solo devolver padres que tengan hijos
+                roots = roots.Where(r => r.Children.Count > 0).ToList();
+
+                return roots;
+            }
+        }
+
+        private static string GetSuffixFromMenuCode(string code)
+        {
+            // MENU_COMPANY -> COMPANY
+            if (string.IsNullOrWhiteSpace(code)) return code;
+            code = code.Trim();
+
+            const string prefix = "MENU_";
+            if (code.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+                return code.Substring(prefix.Length);
+
+            return code;
+        }
+        //private List<MenuPageDto> GetMenuPagesForUser(long idCliente)
+        //{
+        //    using (var db = new SpainBS_Connection())
+        //    {
+        //        var roleIds = db.ClienteRoles
+        //            .Where(x => x.id_cliente == idCliente)
+        //            .Select(x => x.RoleId)
+        //            .Distinct()
+        //            .ToList();
+
+        //        if (roleIds == null || roleIds.Count == 0)
+        //            return new List<MenuPageDto>();
+
+        //        var raw = (from rp in db.RolePages
+        //                   join p in db.Pages on rp.PageId equals p.PageId
+        //                   where roleIds.Contains(rp.RoleId)
+        //                         && rp.CanView
+        //                         && p.IsActive
+        //                         && p.IsMenu
+        //                   select new
+        //                   {
+        //                       p.Title,
+        //                       p.Url,
+        //                       p.IconCss,
+        //                       p.GroupCode,
+        //                       p.SortOrder,
+        //                       rp.CanView,
+        //                       rp.CanEdit,
+        //                       rp.CanDelete
+        //                   })
+        //                   .ToList();
+
+        //        var pages = raw
+        //            .Where(x => !string.IsNullOrWhiteSpace(x.Url))
+        //            .GroupBy(x => x.Url)
+        //            .Select(g => new MenuPageDto
+        //            {
+        //                Title = g.First().Title,
+        //                Url = g.Key,
+        //                IconCss = g.First().IconCss,
+        //                GroupCode = g.First().GroupCode,
+        //                SortOrder = g.Min(x => x.SortOrder),
+
+        //                CanView = true,
+        //                CanEdit = g.Any(x => x.CanEdit),
+        //                CanDelete = g.Any(x => x.CanDelete)
+        //            })
+        //            .OrderBy(x => x.GroupCode)
+        //            .ThenBy(x => x.SortOrder)
+        //            .ToList();
+
+        //        return pages;
+        //    }
+        //}
+    }
+
+    public class MenuPageDto
+    {
+        public int PageId { get; set; }
+        public string Code { get; set; }
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public string IconCss { get; set; }
+        public string GroupCode { get; set; }
+        public int SortOrder { get; set; }
+
+        public bool CanView { get; set; }
+        public bool CanEdit { get; set; }
+        public bool CanDelete { get; set; }
+    }
+
+    public class MenuGroupDto
+    {
+        public int PageId { get; set; }
+        public string Code { get; set; }          // MENU_COMPANY
+        public string Title { get; set; }         // Company
+        public string IconCss { get; set; }       // fa-solid fa-industry
+        public int SortOrder { get; set; }        // 10
+
+        public List<MenuPageDto> Children { get; set; } = new List<MenuPageDto>();
     }
 }

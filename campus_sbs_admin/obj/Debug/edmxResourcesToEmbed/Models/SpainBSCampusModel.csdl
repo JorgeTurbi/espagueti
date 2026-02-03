@@ -284,44 +284,6 @@
     <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Codigo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
-  <EntityType Name="campus_ASIG_COMERCIAL">
-    <Key>
-      <PropertyRef Name="idAlumno" />
-      <PropertyRef Name="idCurso" />
-      <PropertyRef Name="idDocencia" />
-      <PropertyRef Name="Fecha" />
-    </Key>
-    <Property Name="idAlumno" Type="Int64" Nullable="false" />
-    <Property Name="idCurso" Type="Int64" Nullable="false" />
-    <Property Name="idDocencia" Type="Int64" Nullable="false" />
-    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="idOrigen" Type="Int64" />
-    <Property Name="idVendedor" Type="Int64" />
-    <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="Comentarios" Type="String" MaxLength="3850" FixedLength="false" Unicode="true" />
-    <Property Name="Fecha_Lead" Type="DateTime" Precision="0" />
-    <Property Name="Fecha_Env_Contrato" Type="DateTime" Precision="0" />
-    <Property Name="Fecha_Recep_Contrato" Type="DateTime" Precision="0" />
-    <Property Name="Fecha_Matricula" Type="DateTime" Precision="0" />
-    <Property Name="EUR_PVP" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="Beca_Fundacion" Type="Int32" />
-    <Property Name="Otros_Descuentos" Type="Int32" />
-    <Property Name="EUR_Aportacion_Fundacion" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="EUR_Universidad" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="EUR_PVP_Becado" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="PDF_Contrato" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
-    <Property Name="PDF_Factura" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
-    <Property Name="pertenecia" Type="Int64" />
-    <Property Name="metodologia" Type="Int64" />
-    <Property Name="titulo_propio" Type="Boolean" Nullable="false" />
-    <Property Name="titulo_ucam" Type="Boolean" Nullable="false" />
-    <Property Name="titulo_sbs_ad" Type="Boolean" Nullable="false" />
-    <Property Name="titulo_sbs_do" Type="Boolean" Nullable="false" />
-    <Property Name="titulo_cualificam" Type="Boolean" Nullable="false" />
-    <Property Name="captacion_tipo" Type="Int64" />
-    <Property Name="captacion_origen" Type="Int64" />
-    <Property Name="acceso" Type="Int64" />
-  </EntityType>
   <EntityType Name="campus_AUTO_CURSO">
     <Key>
       <PropertyRef Name="Id_Automatizacion" />
@@ -1164,7 +1126,7 @@
     <Property Name="id_Profesor" Type="Int64" Nullable="false" />
     <Property Name="cp_fecha" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="cp_fichero" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="cp_comentarios" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cp_comentarios" Type="String" MaxLength="3800" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="cp_fecha_max" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="pendiente" Type="Boolean" />
     <NavigationProperty Name="campus_REC_CP_TRABAJO" Relationship="Self.FK_campus_REC_CP_TRABAJO_campus_REC_CP" FromRole="campus_REC_CP" ToRole="campus_REC_CP_TRABAJO" />
@@ -1238,7 +1200,7 @@
     <Property Name="Meta_Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="num_asistentes" Type="Int32" />
     <Property Name="duracion" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="horario" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="horario" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="campus_RD_Asistencia" Relationship="Self.FK_campus_RD_Asistencia_campus_RECURSO_DIRECTO" FromRole="campus_RECURSO_DIRECTO" ToRole="campus_RD_Asistencia" />
     <NavigationProperty Name="campus_RD_Doc" Relationship="Self.FK_campus_RD_Doc_campus_RECURSO_DIRECTO" FromRole="campus_RECURSO_DIRECTO" ToRole="campus_RD_Doc" />
     <NavigationProperty Name="campus_RD_ListaSeg" Relationship="Self.FK_campus_RD_ListaSeg_campus_RECURSO_DIRECTO" FromRole="campus_RECURSO_DIRECTO" ToRole="campus_RD_ListaSeg" />
@@ -1657,6 +1619,7 @@
     <NavigationProperty Name="Pedidos" Relationship="Self.FK_Pedidos_Clientes" FromRole="CLIENTES" ToRole="Pedidos" />
     <NavigationProperty Name="sbs_TP_Contrato" Relationship="Self.FK_TP_Contrato_Cliente" FromRole="CLIENTES" ToRole="sbs_TP_Contrato" />
     <NavigationProperty Name="OnlineAfiliado" Relationship="Self.ClientesOnlineAfiliado" FromRole="CLIENTES" ToRole="OnlineAfiliado" />
+    <NavigationProperty Name="ClienteRoles" Relationship="SpainBSCampusModel.FK_ClienteRoles_Clientes" FromRole="CLIENTES" ToRole="ClienteRole" />
   </EntityType>
   <EntityType Name="CLIENTES_COMENTARIOS">
     <Key>
@@ -2887,6 +2850,7 @@
     <Property Name="PDP_Activado" Type="Boolean" />
     <Property Name="PDP_Comentarios" Type="String" MaxLength="3999" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PRA_EMPRESA" Relationship="Self.FK_PRA_PRACTICAS_PRA_EMPRESA" FromRole="PRA_PRACTICAS" ToRole="PRA_EMPRESA" />
+    <Property Name="Curriculares" Type="Boolean" />
   </EntityType>
   <EntityType Name="PRA_SOLICITUD_PRACTICA">
     <Key>
@@ -5539,7 +5503,6 @@
     <EntitySet Name="campus_ANUNCIO" EntityType="Self.campus_ANUNCIO" />
     <EntitySet Name="campus_ANUNCIO_REL" EntityType="Self.campus_ANUNCIO_REL" />
     <EntitySet Name="campus_AREA_FUNCIONAL" EntityType="Self.campus_AREA_FUNCIONAL" />
-    <EntitySet Name="campus_ASIG_COMERCIAL" EntityType="Self.campus_ASIG_COMERCIAL" />
     <EntitySet Name="campus_AUTO_CURSO" EntityType="Self.campus_AUTO_CURSO" />
     <EntitySet Name="campus_AUTO_DOCENCIA" EntityType="Self.campus_AUTO_DOCENCIA" />
     <EntitySet Name="campus_AUTO_USER" EntityType="Self.campus_AUTO_USER" />
@@ -6305,5 +6268,162 @@
       <Parameter Name="Cookie" Mode="In" Type="String" />
       <Parameter Name="Scoring" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="ClienteRoles" EntityType="SpainBSCampusModel.ClienteRole" />
+    <EntitySet Name="Pages" EntityType="SpainBSCampusModel.Page" />
+    <EntitySet Name="RolePages" EntityType="SpainBSCampusModel.RolePage" />
+    <EntitySet Name="Roles" EntityType="SpainBSCampusModel.Role" />
+    <AssociationSet Name="FK_ClienteRoles_Clientes" Association="SpainBSCampusModel.FK_ClienteRoles_Clientes">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="ClienteRole" EntitySet="ClienteRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteRoles_Roles" Association="SpainBSCampusModel.FK_ClienteRoles_Roles">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="ClienteRole" EntitySet="ClienteRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolePages__PageI__4C8B54C9" Association="SpainBSCampusModel.FK__RolePages__PageI__4C8B54C9">
+      <End Role="Page" EntitySet="Pages" />
+      <End Role="RolePage" EntitySet="RolePages" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RolePages__RoleI__4B973090" Association="SpainBSCampusModel.FK__RolePages__RoleI__4B973090">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="RolePage" EntitySet="RolePages" />
+    </AssociationSet>
+    <EntitySet Name="campus_ASIG_COMERCIAL" EntityType="SpainBSCampusModel.campus_ASIG_COMERCIAL" />
   </EntityContainer>
+  <EntityType Name="ClienteRole">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="id_cliente" Type="Int64" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CLIENTE" Relationship="SpainBSCampusModel.FK_ClienteRoles_Clientes" FromRole="ClienteRole" ToRole="CLIENTES" />
+    <NavigationProperty Name="Role" Relationship="SpainBSCampusModel.FK_ClienteRoles_Roles" FromRole="ClienteRole" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Page">
+    <Key>
+      <PropertyRef Name="PageId" />
+    </Key>
+    <Property Name="PageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IconCss" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="GroupCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" />
+    <Property Name="IsMenu" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="RolePages" Relationship="SpainBSCampusModel.FK__RolePages__PageI__4C8B54C9" FromRole="Page" ToRole="RolePage" />
+  </EntityType>
+  <EntityType Name="RolePage">
+    <Key>
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="PageId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="PageId" Type="Int32" Nullable="false" />
+    <Property Name="CanView" Type="Boolean" Nullable="false" />
+    <Property Name="CanEdit" Type="Boolean" Nullable="false" />
+    <Property Name="CanDelete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Page" Relationship="SpainBSCampusModel.FK__RolePages__PageI__4C8B54C9" FromRole="RolePage" ToRole="Page" />
+    <NavigationProperty Name="Role" Relationship="SpainBSCampusModel.FK__RolePages__RoleI__4B973090" FromRole="RolePage" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ClienteRoles" Relationship="SpainBSCampusModel.FK_ClienteRoles_Roles" FromRole="Role" ToRole="ClienteRole" />
+    <NavigationProperty Name="RolePages" Relationship="SpainBSCampusModel.FK__RolePages__RoleI__4B973090" FromRole="Role" ToRole="RolePage" />
+  </EntityType>
+  <Association Name="FK_ClienteRoles_Clientes">
+    <End Type="SpainBSCampusModel.CLIENTES" Role="CLIENTES" Multiplicity="1" />
+    <End Type="SpainBSCampusModel.ClienteRole" Role="ClienteRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="ClienteRole">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteRoles_Roles">
+    <End Type="SpainBSCampusModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="SpainBSCampusModel.ClienteRole" Role="ClienteRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="ClienteRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolePages__PageI__4C8B54C9">
+    <End Type="SpainBSCampusModel.Page" Role="Page" Multiplicity="1" />
+    <End Type="SpainBSCampusModel.RolePage" Role="RolePage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Page">
+        <PropertyRef Name="PageId" />
+      </Principal>
+      <Dependent Role="RolePage">
+        <PropertyRef Name="PageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RolePages__RoleI__4B973090">
+    <End Type="SpainBSCampusModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="SpainBSCampusModel.RolePage" Role="RolePage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="RolePage">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="campus_ASIG_COMERCIAL">
+    <Key>
+      <PropertyRef Name="idAlumno" />
+      <PropertyRef Name="idCurso" />
+      <PropertyRef Name="idDocencia" />
+      <PropertyRef Name="Fecha" />
+    </Key>
+    <Property Name="idAlumno" Type="Int64" Nullable="false" />
+    <Property Name="idCurso" Type="Int64" Nullable="false" />
+    <Property Name="idDocencia" Type="Int64" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idOrigen" Type="Int64" />
+    <Property Name="idVendedor" Type="Int64" />
+    <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Comentarios" Type="String" MaxLength="3850" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha_Lead" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Env_Contrato" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Recep_Contrato" Type="DateTime" Precision="0" />
+    <Property Name="Fecha_Matricula" Type="DateTime" Precision="0" />
+    <Property Name="EUR_PVP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Beca_Fundacion" Type="Int32" />
+    <Property Name="Otros_Descuentos" Type="Int32" />
+    <Property Name="EUR_Aportacion_Fundacion" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EUR_Universidad" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EUR_PVP_Becado" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PDF_Contrato" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="PDF_Factura" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="pertenecia" Type="Int64" />
+    <Property Name="metodologia" Type="Int64" />
+    <Property Name="titulo_propio" Type="Boolean" Nullable="false" />
+    <Property Name="titulo_ucam" Type="Boolean" Nullable="false" />
+    <Property Name="titulo_sbs_ad" Type="Boolean" Nullable="false" />
+    <Property Name="titulo_sbs_do" Type="Boolean" Nullable="false" />
+    <Property Name="titulo_cualificam" Type="Boolean" Nullable="false" />
+    <Property Name="captacion_tipo" Type="Int64" />
+    <Property Name="captacion_origen" Type="Int64" />
+    <Property Name="acceso_por" Type="Int64" />
+  </EntityType>
 </Schema>

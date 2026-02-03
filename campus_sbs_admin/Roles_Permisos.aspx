@@ -242,7 +242,7 @@
                                         <tr>
                                             <th>Módulo</th>
                                             <th class="text-center">Ver</th>
-                                            <th class="text-center">Crear</th>
+                                            <%--<th class="text-center">Crear</th>--%>
                                             <th class="text-center">Editar</th>
                                             <th class="text-center">Eliminar</th>
                                         </tr>
@@ -396,25 +396,25 @@
 
             for (var i = 0; i < rows.length; i++) {
                 var r = rows[i];
-                var activo = r.activo
+                var activo = r.Activo
                     ? '<span class="bold text-color-primary">Sí</span>'
                     : '<span class="text-muted">No</span>';
 
                 var acciones = '<div class="text-center">'
-                    + '<a href="javascript:void(0);" class="btn btn-sm btn-outline-primary btn-edit-rol" data-id="' + r.id + '" title="Editar">'
+                    + '<a href="javascript:void(0);" class="btn btn-sm btn-outline-primary btn-edit-rol" data-id="' + r.Id + '" title="Editar">'
                     + '<i class="fas fa-edit"></i>'
                     + '</a> '
-                    + '<a href="javascript:void(0);" class="btn btn-sm btn-outline-danger btn-del-rol" data-id="' + r.id + '" title="Eliminar">'
+                    + '<a href="javascript:void(0);" class="btn btn-sm btn-outline-danger btn-del-rol" data-id="' + r.Id + '" title="Eliminar">'
                     + '<i class="fas fa-trash"></i>'
                     + '</a>'
                     + '</div>';
 
                 var tr = '<tr>'
-                    + '<td class="text-center">' + r.id + '</td>'
-                    + '<td class="bold">' + r.nombre + '</td>'
-                    + '<td>' + r.descripcion + '</td>'
+                    + '<td class="text-center">' + r.Id + '</td>'
+                    + '<td class="bold">' + r.Nombre + '</td>'
+                    + '<td>' + r.Descripcion + '</td>'
                     + '<td class="text-center">' + activo + '</td>'
-                    + '<td class="text-center">' + r.usuarios + '</td>'
+                    + '<td class="text-center">' + r.CantidadUsuario + '</td>'
                     + '<td>' + acciones + '</td>'
                     + '</tr>';
 
@@ -459,7 +459,7 @@
         function deleteRol(id) {
             showConfirm('¿Seguro que deseas eliminar este rol?', function () {
                 showLoading();
-                ajaxPost('Roles_Permisos.aspx/DeleteRol', { id: id },
+                ajaxPost('Roles_Permisos.aspx/DeleteRol', { Id: id },
                     function (d) {
                         hideLoading();
                         showInfo('Éxito', d.message || 'Eliminado.');
@@ -489,8 +489,8 @@
                 var options = '<option value="0">Sin asignar</option>';
                 for (var j = 0; j < rolesCache.length; j++) {
                     var rc = rolesCache[j];
-                    var sel = (rc.id === u.rolId) ? ' selected' : '';
-                    options += '<option value="' + rc.id + '"' + sel + '>' + rc.nombre + '</option>';
+                    var sel = (rc.Id === u.rolId) ? ' selected' : '';
+                    options += '<option value="' + rc.Id + '"' + sel + '>' + rc.Nombre + '</option>';
                 }
 
                 var select = '<select class="form-control ddl-asignar" data-uid="' + u.id + '" title="Rol">'
@@ -534,7 +534,7 @@
             $ddl.append('<option value="">Seleccione un rol</option>');
 
             for (var i = 0; i < roles.length; i++) {
-                $ddl.append('<option value="' + roles[i].id + '">' + roles[i].nombre + '</option>');
+                $ddl.append('<option value="' + roles[i].Id + '">' + roles[i].Nombre + '</option>');
             }
         }
 
@@ -561,7 +561,7 @@
                 var tr = '<tr data-pid="' + p.id + '">'
                     + '<td class="bold">' + p.modulo + '</td>'
                     + '<td class="text-center"><input type="checkbox" class="perm-chk" data-col="ver"' + (p.ver ? ' checked' : '') + ' /></td>'
-                    + '<td class="text-center"><input type="checkbox" class="perm-chk" data-col="crear"' + (p.crear ? ' checked' : '') + ' /></td>'
+                   /* + '<td class="text-center"><input type="checkbox" class="perm-chk" data-col="crear"' + (p.crear ? ' checked' : '') + ' /></td>'*/
                     + '<td class="text-center"><input type="checkbox" class="perm-chk" data-col="editar"' + (p.editar ? ' checked' : '') + ' /></td>'
                     + '<td class="text-center"><input type="checkbox" class="perm-chk" data-col="eliminar"' + (p.eliminar ? ' checked' : '') + ' /></td>'
                     + '</tr>';
@@ -580,7 +580,7 @@
                 permisos.push({
                     id: Number($tr.attr('data-pid')),
                     ver: $tr.find('[data-col="ver"]').is(':checked'),
-                    crear: $tr.find('[data-col="crear"]').is(':checked'),
+                 /*   crear: $tr.find('[data-col="crear"]').is(':checked'),*/
                     editar: $tr.find('[data-col="editar"]').is(':checked'),
                     eliminar: $tr.find('[data-col="eliminar"]').is(':checked')
                 });
@@ -621,14 +621,14 @@
                 var id = Number($(this).data('id'));
                 var rol = null;
                 for (var i = 0; i < rolesCache.length; i++) {
-                    if (rolesCache[i].id === id) { rol = rolesCache[i]; break; }
+                    if (rolesCache[i].Id === id) { rol = rolesCache[i]; break; }
                 }
                 if (!rol) return;
 
-                $('#hdnRolId').val(rol.id);
-                $('#txtRolNombre').val(rol.nombre);
-                $('#txtRolDesc').val(rol.descripcion);
-                $('#chkRolActivo').prop('checked', rol.activo);
+                $('#hdnRolId').val(rol.Id);
+                $('#txtRolNombre').val(rol.Nombre);
+                $('#txtRolDesc').val(rol.Descripcion);
+                $('#chkRolActivo').prop('checked', rol.Activo);
                 $('#pnlFormRol').show();
                 $('#txtRolNombre').focus();
             });

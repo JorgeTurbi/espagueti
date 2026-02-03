@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="88eba9e18f29415e8a8b049ef8307a6b" Name="Diagram1">
+      <Diagram DiagramId="88eba9e18f29415e8a8b049ef8307a6b" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="SpainBSCampusModel.C_EXPERTOS" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.AspNetRoleClaims" Width="1.5" PointX="14.25" PointY="43.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.AspNetRoles" Width="1.5" PointX="12" PointY="50" IsExpanded="true" />
@@ -24,7 +24,6 @@
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_ANUNCIO" Width="1.5" PointX="7.75" PointY="15.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_ANUNCIO_REL" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_AREA_FUNCIONAL" Width="1.5" PointX="10.75" PointY="20.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ASIG_COMERCIAL" Width="1.5" PointX="0.75" PointY="27.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUTO_CURSO" Width="1.5" PointX="12.75" PointY="20.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUTO_DOCENCIA" Width="1.5" PointX="2.75" PointY="14.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_AUTO_USER" Width="1.5" PointX="2.75" PointY="27.5" IsExpanded="true" />
@@ -58,7 +57,7 @@
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_FORO_ADJUNTOS" Width="1.5" PointX="30.75" PointY="30.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_FORO_MENSAJE" Width="1.5" PointX="31.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_FORO_RESPUESTA" Width="1.5" PointX="31.75" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SpainBSCampusModel.campus_IMAGEN" Width="1.5" PointX="11.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_IMAGEN" Width="1.5" PointX="12.625" PointY="33.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_INVESTIGA" Width="1.5" PointX="31.75" PointY="14.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_LH" Width="1.5" PointX="31.75" PointY="17.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SpainBSCampusModel.campus_LITERALES" Width="1.5" PointX="31.75" PointY="21.5" IsExpanded="true" />
@@ -388,6 +387,15 @@
         <AssociationConnector Association="SpainBSCampusModel.FK_UNI_PROG_ASIGNATURA_UNI_PROGRAMA" ManuallyRouted="false" />
         <AssociationConnector Association="SpainBSCampusModel.AspNetUserRoles" ManuallyRouted="false" />
         <AssociationConnector Association="SpainBSCampusModel.ClientesOnlineAfiliado" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.ClienteRole" Width="1.5" PointX="48.625" PointY="38.5" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Page" Width="1.5" PointX="46.375" PointY="13.125" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.RolePage" Width="1.5" PointX="48.625" PointY="9.5" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.Role" Width="1.5" PointX="46.375" PointY="9.5" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_ClienteRoles_Clientes" />
+        <AssociationConnector Association="SpainBSCampusModel.FK_ClienteRoles_Roles" />
+        <AssociationConnector Association="SpainBSCampusModel.FK__RolePages__PageI__4C8B54C9" />
+        <AssociationConnector Association="SpainBSCampusModel.FK__RolePages__RoleI__4B973090" />
+        <EntityTypeShape EntityType="SpainBSCampusModel.campus_ASIG_COMERCIAL" Width="1.5" PointX="46.375" PointY="25.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

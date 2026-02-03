@@ -2287,6 +2287,9 @@
     <Compile Include="Models\CATEGORIA_CAT.cs">
       <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClienteRole.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CLIENTES.cs">
       <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
     </Compile>
@@ -2505,6 +2508,9 @@
     <Compile Include="Models\OnlineOrdenStatus.cs">
       <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Page.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Pagos.cs">
       <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
     </Compile>
@@ -2563,6 +2569,12 @@
       <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RJL_Registro.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RolePage.cs">
       <DependentUpon>SpainBSCampusModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sbs2_area_funcional.cs">
@@ -2983,7 +2995,6 @@
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SpainBSCampusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SpainBSCampusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="_EXPERTOS">
           <Key>
             <PropertyRef Name="Id_Experto" />
@@ -317,7 +317,7 @@
           <Property Name="titulo_cualificam" Type="bit" Nullable="false" />
           <Property Name="captacion_tipo" Type="bigint" />
           <Property Name="captacion_origen" Type="bigint" />
-          <Property Name="acceso" Type="bigint" />
+          <Property Name="acceso_por" Type="bigint" />
         </EntityType>
         <EntityType Name="campus_AUTO_CURSO">
           <Key>
@@ -558,8 +558,8 @@
           <Property Name="generar_titulo" Type="bit" />
           <Property Name="plan_num_dias" Type="int" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_CURSO_ASOCIADO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.campus_CURSO_ASOCIADO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="campus_CURSO_ASOCIADO">
           <Key>
             <PropertyRef Name="id_course_web" />
@@ -1057,8 +1057,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_CURSO_ASOCI
           <Property Name="adjunto_4" Type="nvarchar" MaxLength="100" />
           <Property Name="adjunto_5" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_ASOCIADO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.campus_PROGRAMA_ASOCIADO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="campus_PROGRAMA_ASOCIADO">
           <Key>
             <PropertyRef Name="id_program_web" />
@@ -1150,7 +1150,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_AS
           <Property Name="id_Profesor" Type="bigint" Nullable="false" />
           <Property Name="cp_fecha" Type="datetime" Nullable="false" />
           <Property Name="cp_fichero" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="cp_comentarios" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="cp_comentarios" Type="nvarchar" MaxLength="3800" Nullable="false" />
           <Property Name="cp_fecha_max" Type="datetime" Nullable="false" />
           <Property Name="pendiente" Type="bit" />
         </EntityType>
@@ -1220,7 +1220,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_AS
           <Property Name="Meta_Author" Type="nvarchar" MaxLength="100" />
           <Property Name="num_asistentes" Type="int" />
           <Property Name="duracion" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="horario" Type="varchar" MaxLength="200" />
+          <Property Name="horario" Type="varchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="campus_RECURSO_STATUS">
           <Key>
@@ -1521,6 +1521,15 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_AS
           <Property Name="id_categoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="foto" Type="varchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="ClienteRoles">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="id_cliente" Type="bigint" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="CLIENTES">
           <Key>
             <PropertyRef Name="id_cliente" />
@@ -1528,7 +1537,6 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_AS
           <Property Name="id_cliente" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="apellidos" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="Nombre_Completo" Type="nvarchar" MaxLength="500" />
           <Property Name="fecha_nac" Type="datetime" />
           <Property Name="Lugar_nac" Type="varchar" MaxLength="200" />
           <Property Name="sexo" Type="varchar" MaxLength="1" />
@@ -1563,10 +1571,10 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_AS
           <Property Name="id_tipo_conocimiento_web" Type="int" />
           <Property Name="Foto" Type="varchar" MaxLength="200" />
           <Property Name="FCodEtico" Type="datetime" />
-          <Property Name="Profesor" Type="varchar" MaxLength="1" />
           <Property Name="Administrador" Type="varchar" MaxLength="1" />
-          <Property Name="Comercial" Type="bit" />
           <Property Name="SuperAdministrador" Type="bit" />
+          <Property Name="Comercial" Type="bit" />
+          <Property Name="Profesor" Type="varchar" MaxLength="1" />
           <Property Name="Biografia" Type="varchar" MaxLength="500" />
           <Property Name="Notas" Type="varchar" MaxLength="500" />
           <Property Name="Nivel_Estudios" Type="int" />
@@ -1578,6 +1586,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_AS
           <Property Name="Cargo" Type="nvarchar" MaxLength="250" />
           <Property Name="Empresa" Type="nvarchar" MaxLength="250" />
           <Property Name="Key" Type="nvarchar" MaxLength="36" />
+          <Property Name="Nombre_Completo" Type="nvarchar" MaxLength="500" />
           <Property Name="AutoMarketing" Type="bit" />
           <Property Name="scoring" Type="bigint" />
           <Property Name="skype" Type="nvarchar" MaxLength="500" />
@@ -1833,8 +1842,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.campus_PROGRAMA_AS
           <Property Name="IdPedido" Type="bigint" />
           <Property Name="Activo" Type="bit" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.elEconomista_Cursos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.elEconomista_Cursos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="elEconomista_Cursos">
           <Key>
             <PropertyRef Name="Id_Componer_Curso" />
@@ -1843,8 +1852,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.elEconomista_Curso
           <Property Name="Id_Componer_Curso" Type="bigint" Nullable="false" />
           <Property Name="Orden" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.elEconomista_Noticias' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.elEconomista_Noticias' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="elEconomista_Noticias">
           <Key>
             <PropertyRef Name="IdNoticia" />
@@ -2110,32 +2119,32 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.elEconomista_Notic
           </Key>
           <Property Name="Id_Experto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Foto_Original" Type="varchar" MaxLength="200" />
           <Property Name="Foto" Type="varchar" MaxLength="200" />
+          <Property Name="Foto2x" Type="nvarchar" MaxLength="200" />
           <Property Name="Cargo" Type="nvarchar" MaxLength="250" />
           <Property Name="Comentario" Type="varchar" MaxLength="7995" />
           <Property Name="Url_Twitter" Type="varchar" MaxLength="300" />
           <Property Name="Url_Linkedin" Type="varchar" MaxLength="300" />
-          <Property Name="Id_Curso" Type="bigint" />
-          <Property Name="Principal" Type="numeric" Precision="1" Scale="0" />
-          <Property Name="Consejo" Type="numeric" Precision="1" Scale="0" />
+          <Property Name="Url_Disco" Type="varchar" MaxLength="300" />
           <Property Name="CV" Type="varchar" MaxLength="7995" />
-          <Property Name="Foto_Original" Type="varchar" MaxLength="200" />
-          <Property Name="Acuerdo" Type="varchar" MaxLength="7995" />
           <Property Name="Usuario" Type="bigint" />
-          <Property Name="Mail" Type="varchar" MaxLength="100" />
           <Property Name="Activo" Type="bit" />
-          <Property Name="Video" Type="nvarchar" MaxLength="1999" />
+          <Property Name="Eur_presencial" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Eur_online" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Acuerdo" Type="varchar" MaxLength="7995" />
+          <Property Name="Fecha_convenio" Type="datetime" />
+          <Property Name="Datos_facturacion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Nif_Cif" Type="nvarchar" MaxLength="50" />
           <Property Name="CCC" Type="nvarchar" MaxLength="50" />
           <Property Name="Pct_autor" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Pct_tutor" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Eur_presencial" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Datos_facturacion" Type="nvarchar" MaxLength="500" />
-          <Property Name="Nif_Cif" Type="nvarchar" MaxLength="50" />
-          <Property Name="Fecha_convenio" Type="datetime" />
-          <Property Name="Foto2x" Type="nvarchar" MaxLength="200" />
           <Property Name="Meta_Url" Type="nvarchar" MaxLength="500" />
-          <Property Name="Eur_online" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="Url_Disco" Type="varchar" MaxLength="300" />
+          <Property Name="Mail" Type="varchar" MaxLength="100" />
+          <Property Name="Video" Type="nvarchar" MaxLength="1999" />
+          <Property Name="Id_Curso" Type="bigint" />
+          <Property Name="Principal" Type="numeric" Precision="1" Scale="0" />
+          <Property Name="Consejo" Type="numeric" Precision="1" Scale="0" />
         </EntityType>
         <EntityType Name="EXPERTOS_CARACTERISTICAS">
           <Key>
@@ -2477,8 +2486,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.elEconomista_Notic
           <Property Name="NOT_N_COMENTARIOS" Type="int" />
           <Property Name="NOT_PERMITE_CMT" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.NOTICIAS_RELACION_REL' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.NOTICIAS_RELACION_REL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="NOTICIAS_RELACION_REL">
           <Key>
             <PropertyRef Name="REL_ID1" />
@@ -2638,6 +2647,20 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.NOTICIAS_RELACION_
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="Pages">
+          <Key>
+            <PropertyRef Name="PageId" />
+          </Key>
+          <Property Name="PageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="Url" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="IconCss" Type="varchar" MaxLength="80" />
+          <Property Name="GroupCode" Type="varchar" MaxLength="50" />
+          <Property Name="SortOrder" Type="int" Nullable="false" />
+          <Property Name="IsMenu" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Pagos">
           <Key>
             <PropertyRef Name="id_pago" />
@@ -2776,6 +2799,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.NOTICIAS_RELACION_
           <Property Name="PDP_Matriculado" Type="bit" />
           <Property Name="PDP_Activado" Type="bit" />
           <Property Name="PDP_Comentarios" Type="nvarchar" MaxLength="3999" />
+          <Property Name="Curriculares" Type="bit" />
         </EntityType>
         <EntityType Name="PRA_SOLICITUD_PRACTICA">
           <Key>
@@ -2869,8 +2893,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.NOTICIAS_RELACION_
           <Property Name="id_tipo_restriccion" Type="bigint" Nullable="false" />
           <Property Name="codigo" Type="varchar" MaxLength="200" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.RJL_DiasNoLab' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.RJL_DiasNoLab' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="RJL_DiasNoLab">
           <Key>
             <PropertyRef Name="fecha" />
@@ -2905,6 +2929,26 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.RJL_DiasNoLab' no 
           <Property Name="incidencia" Type="nvarchar" MaxLength="250" />
           <Property Name="comentarios" Type="nvarchar" MaxLength="3999" />
         </EntityType>
+        <EntityType Name="RolePages">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="PageId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="PageId" Type="int" Nullable="false" />
+          <Property Name="CanView" Type="bit" Nullable="false" />
+          <Property Name="CanEdit" Type="bit" Nullable="false" />
+          <Property Name="CanDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="sbs_comunidad_social">
           <Key>
             <PropertyRef Name="id_rrss" />
@@ -2931,8 +2975,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.RJL_DiasNoLab' no 
           <Property Name="pct_leads_nuevos" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="fecha_act" Type="datetime" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.sbs_inf_landing_n2' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.sbs_inf_landing_n2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="sbs_inf_landing_n2">
           <Key>
             <PropertyRef Name="idLanding" />
@@ -3107,8 +3151,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.sbs_inf_landing_n2
           <Property Name="idCurso" Type="bigint" Nullable="false" />
           <Property Name="idTematica" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.sbs2_control_curso' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.sbs2_control_curso' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="sbs2_control_curso">
           <Key>
             <PropertyRef Name="idCurso" />
@@ -3117,8 +3161,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.sbs2_control_curso
           <Property Name="idCurso" Type="bigint" Nullable="false" />
           <Property Name="step" Type="int" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.sbs2_control_docencia' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.sbs2_control_docencia' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="sbs2_control_docencia">
           <Key>
             <PropertyRef Name="idDocencia" />
@@ -3580,8 +3624,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.sbs2_control_docen
           <Property Name="nombre" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="2000" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.Tipos_conocimiento_web' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.Tipos_conocimiento_web' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Tipos_conocimiento_web">
           <Key>
             <PropertyRef Name="id_tipo_conocimiento_web" />
@@ -3716,8 +3760,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.Tipos_conocimiento
           <Property Name="VID_TAMID" Type="int" />
           <Property Name="VID_DIRECCION" Type="varchar" MaxLength="100" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCTURA_COMPLETA' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCTURA_COMPLETA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="VW_INF_FIN_ESTRUCTURA_COMPLETA">
           <Key>
             <PropertyRef Name="VersionID" />
@@ -3742,7 +3786,31 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <Property Name="Subarea2Nombre" Type="nvarchar" MaxLength="100" />
           <Property Name="Subarea2Orden" Type="int" />
         </EntityType>
-        <Association Name="FK__Socio__TipoSocio__55B597A7">
+        <Association Name="FK__RolePages__PageI__4C8B54C9">
+          <End Role="Pages" Type="Self.Pages" Multiplicity="1" />
+          <End Role="RolePages" Type="Self.RolePages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pages">
+              <PropertyRef Name="PageId" />
+            </Principal>
+            <Dependent Role="RolePages">
+              <PropertyRef Name="PageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RolePages__RoleI__4B973090">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="RolePages" Type="Self.RolePages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RolePages">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Socio__TipoSocio__031C6FA4">
           <End Role="TipoSocio" Type="Self.TipoSocio" Multiplicity="0..1" />
           <End Role="Socio" Type="Self.Socio" Multiplicity="*" />
           <ReferentialConstraint>
@@ -4279,6 +4347,30 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
             </Principal>
             <Dependent Role="Carritos">
               <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClienteRoles_Clientes">
+          <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="1" />
+          <End Role="ClienteRoles" Type="Self.ClienteRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="ClienteRoles">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClienteRoles_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="ClienteRoles" Type="Self.ClienteRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="ClienteRoles">
+              <PropertyRef Name="RoleId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5470,6 +5562,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <EntitySet Name="Carritos" EntityType="Self.Carritos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CATEGORIA_CAT" EntityType="Self.CATEGORIA_CAT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClienteRoles" EntityType="Self.ClienteRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENTES_COMENTARIOS" EntityType="Self.CLIENTES_COMENTARIOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clientes_Intereses" EntityType="Self.Clientes_Intereses" Schema="dbo" store:Type="Tables" />
@@ -5539,6 +5632,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <EntitySet Name="OnlineOrden" EntityType="Self.OnlineOrden" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OnlineOrdenProducto" EntityType="Self.OnlineOrdenProducto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OnlineOrdenStatus" EntityType="Self.OnlineOrdenStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pagos" EntityType="Self.Pagos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Paises" EntityType="Self.Paises" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PAR_PARTICIPANTES" EntityType="Self.PAR_PARTICIPANTES" Schema="dbo" store:Type="Tables" />
@@ -5558,6 +5652,8 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <EntitySet Name="Restricciones" EntityType="Self.Restricciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RJL_Personal" EntityType="Self.RJL_Personal" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RJL_Registro" EntityType="Self.RJL_Registro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RolePages" EntityType="Self.RolePages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sbs_comunidad_social" EntityType="Self.sbs_comunidad_social" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sbs_inf_landing" EntityType="Self.sbs_inf_landing" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sbs_Landing" EntityType="Self.sbs_Landing" Schema="dbo" store:Type="Tables" />
@@ -5709,7 +5805,15 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
     [VW_INF_FIN_ESTRUCTURA_COMPLETA].[Subarea2Orden] AS [Subarea2Orden]
     FROM [dbo].[VW_INF_FIN_ESTRUCTURA_COMPLETA] AS [VW_INF_FIN_ESTRUCTURA_COMPLETA]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__Socio__TipoSocio__55B597A7" Association="Self.FK__Socio__TipoSocio__55B597A7">
+          <AssociationSet Name="FK__RolePages__PageI__4C8B54C9" Association="Self.FK__RolePages__PageI__4C8B54C9">
+            <End Role="Pages" EntitySet="Pages" />
+            <End Role="RolePages" EntitySet="RolePages" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RolePages__RoleI__4B973090" Association="Self.FK__RolePages__RoleI__4B973090">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RolePages" EntitySet="RolePages" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Socio__TipoSocio__031C6FA4" Association="Self.FK__Socio__TipoSocio__031C6FA4">
             <End Role="TipoSocio" EntitySet="TipoSocio" />
             <End Role="Socio" EntitySet="Socio" />
           </AssociationSet>
@@ -5880,6 +5984,14 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <AssociationSet Name="FK_Carrito_Clientes" Association="Self.FK_Carrito_Clientes">
             <End Role="CLIENTES" EntitySet="CLIENTES" />
             <End Role="Carritos" EntitySet="Carritos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClienteRoles_Clientes" Association="Self.FK_ClienteRoles_Clientes">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="ClienteRoles" EntitySet="ClienteRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClienteRoles_Roles" Association="Self.FK_ClienteRoles_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="ClienteRoles" EntitySet="ClienteRoles" />
           </AssociationSet>
           <AssociationSet Name="FK_CLIENTES_COMENTARIOS_CLIENTES" Association="Self.FK_CLIENTES_COMENTARIOS_CLIENTES">
             <End Role="CLIENTES" EntitySet="CLIENTES" />
@@ -6234,8 +6346,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
             <End Role="VIDEOS_VID" EntitySet="VIDEOS_VID" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SpainBSCampusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -6522,44 +6633,6 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Codigo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
-        <EntityType Name="campus_ASIG_COMERCIAL">
-          <Key>
-            <PropertyRef Name="idAlumno" />
-            <PropertyRef Name="idCurso" />
-            <PropertyRef Name="idDocencia" />
-            <PropertyRef Name="Fecha" />
-          </Key>
-          <Property Name="idAlumno" Type="Int64" Nullable="false" />
-          <Property Name="idCurso" Type="Int64" Nullable="false" />
-          <Property Name="idDocencia" Type="Int64" Nullable="false" />
-          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="idOrigen" Type="Int64" />
-          <Property Name="idVendedor" Type="Int64" />
-          <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Comentarios" Type="String" MaxLength="3850" FixedLength="false" Unicode="true" />
-          <Property Name="Fecha_Lead" Type="DateTime" Precision="0" />
-          <Property Name="Fecha_Env_Contrato" Type="DateTime" Precision="0" />
-          <Property Name="Fecha_Recep_Contrato" Type="DateTime" Precision="0" />
-          <Property Name="Fecha_Matricula" Type="DateTime" Precision="0" />
-          <Property Name="EUR_PVP" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Beca_Fundacion" Type="Int32" />
-          <Property Name="Otros_Descuentos" Type="Int32" />
-          <Property Name="EUR_Aportacion_Fundacion" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="EUR_Universidad" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="EUR_PVP_Becado" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="PDF_Contrato" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
-          <Property Name="PDF_Factura" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
-          <Property Name="pertenecia" Type="Int64" />
-          <Property Name="metodologia" Type="Int64" />
-          <Property Name="titulo_propio" Type="Boolean" Nullable="false" />
-          <Property Name="titulo_ucam" Type="Boolean" Nullable="false" />
-          <Property Name="titulo_sbs_ad" Type="Boolean" Nullable="false" />
-          <Property Name="titulo_sbs_do" Type="Boolean" Nullable="false" />
-          <Property Name="titulo_cualificam" Type="Boolean" Nullable="false" />
-          <Property Name="captacion_tipo" Type="Int64" />
-          <Property Name="captacion_origen" Type="Int64" />
-          <Property Name="acceso" Type="Int64" />
         </EntityType>
         <EntityType Name="campus_AUTO_CURSO">
           <Key>
@@ -7403,7 +7476,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <Property Name="id_Profesor" Type="Int64" Nullable="false" />
           <Property Name="cp_fecha" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="cp_fichero" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="cp_comentarios" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cp_comentarios" Type="String" MaxLength="3800" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="cp_fecha_max" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="pendiente" Type="Boolean" />
           <NavigationProperty Name="campus_REC_CP_TRABAJO" Relationship="Self.FK_campus_REC_CP_TRABAJO_campus_REC_CP" FromRole="campus_REC_CP" ToRole="campus_REC_CP_TRABAJO" />
@@ -7477,7 +7550,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <Property Name="Meta_Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="num_asistentes" Type="Int32" />
           <Property Name="duracion" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="horario" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="horario" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="campus_RD_Asistencia" Relationship="Self.FK_campus_RD_Asistencia_campus_RECURSO_DIRECTO" FromRole="campus_RECURSO_DIRECTO" ToRole="campus_RD_Asistencia" />
           <NavigationProperty Name="campus_RD_Doc" Relationship="Self.FK_campus_RD_Doc_campus_RECURSO_DIRECTO" FromRole="campus_RECURSO_DIRECTO" ToRole="campus_RD_Doc" />
           <NavigationProperty Name="campus_RD_ListaSeg" Relationship="Self.FK_campus_RD_ListaSeg_campus_RECURSO_DIRECTO" FromRole="campus_RECURSO_DIRECTO" ToRole="campus_RD_ListaSeg" />
@@ -7896,6 +7969,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <NavigationProperty Name="Pedidos" Relationship="Self.FK_Pedidos_Clientes" FromRole="CLIENTES" ToRole="Pedidos" />
           <NavigationProperty Name="sbs_TP_Contrato" Relationship="Self.FK_TP_Contrato_Cliente" FromRole="CLIENTES" ToRole="sbs_TP_Contrato" />
           <NavigationProperty Name="OnlineAfiliado" Relationship="Self.ClientesOnlineAfiliado" FromRole="CLIENTES" ToRole="OnlineAfiliado" />
+          <NavigationProperty Name="ClienteRoles" Relationship="SpainBSCampusModel.FK_ClienteRoles_Clientes" FromRole="CLIENTES" ToRole="ClienteRole" />
         </EntityType>
         <EntityType Name="CLIENTES_COMENTARIOS">
           <Key>
@@ -9126,6 +9200,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <Property Name="PDP_Activado" Type="Boolean" />
           <Property Name="PDP_Comentarios" Type="String" MaxLength="3999" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PRA_EMPRESA" Relationship="Self.FK_PRA_PRACTICAS_PRA_EMPRESA" FromRole="PRA_PRACTICAS" ToRole="PRA_EMPRESA" />
+          <Property Name="Curriculares" Type="Boolean" />
         </EntityType>
         <EntityType Name="PRA_SOLICITUD_PRACTICA">
           <Key>
@@ -11778,7 +11853,6 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <EntitySet Name="campus_ANUNCIO" EntityType="Self.campus_ANUNCIO" />
           <EntitySet Name="campus_ANUNCIO_REL" EntityType="Self.campus_ANUNCIO_REL" />
           <EntitySet Name="campus_AREA_FUNCIONAL" EntityType="Self.campus_AREA_FUNCIONAL" />
-          <EntitySet Name="campus_ASIG_COMERCIAL" EntityType="Self.campus_ASIG_COMERCIAL" />
           <EntitySet Name="campus_AUTO_CURSO" EntityType="Self.campus_AUTO_CURSO" />
           <EntitySet Name="campus_AUTO_DOCENCIA" EntityType="Self.campus_AUTO_DOCENCIA" />
           <EntitySet Name="campus_AUTO_USER" EntityType="Self.campus_AUTO_USER" />
@@ -12544,7 +12618,164 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
             <Parameter Name="Cookie" Mode="In" Type="String" />
             <Parameter Name="Scoring" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="ClienteRoles" EntityType="SpainBSCampusModel.ClienteRole" />
+          <EntitySet Name="Pages" EntityType="SpainBSCampusModel.Page" />
+          <EntitySet Name="RolePages" EntityType="SpainBSCampusModel.RolePage" />
+          <EntitySet Name="Roles" EntityType="SpainBSCampusModel.Role" />
+          <AssociationSet Name="FK_ClienteRoles_Clientes" Association="SpainBSCampusModel.FK_ClienteRoles_Clientes">
+            <End Role="CLIENTES" EntitySet="CLIENTES" />
+            <End Role="ClienteRole" EntitySet="ClienteRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClienteRoles_Roles" Association="SpainBSCampusModel.FK_ClienteRoles_Roles">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="ClienteRole" EntitySet="ClienteRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RolePages__PageI__4C8B54C9" Association="SpainBSCampusModel.FK__RolePages__PageI__4C8B54C9">
+            <End Role="Page" EntitySet="Pages" />
+            <End Role="RolePage" EntitySet="RolePages" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RolePages__RoleI__4B973090" Association="SpainBSCampusModel.FK__RolePages__RoleI__4B973090">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="RolePage" EntitySet="RolePages" />
+          </AssociationSet>
+          <EntitySet Name="campus_ASIG_COMERCIAL" EntityType="SpainBSCampusModel.campus_ASIG_COMERCIAL" />
         </EntityContainer>
+        <EntityType Name="ClienteRole">
+          <Key>
+            <PropertyRef Name="id_cliente" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="id_cliente" Type="Int64" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CLIENTE" Relationship="SpainBSCampusModel.FK_ClienteRoles_Clientes" FromRole="ClienteRole" ToRole="CLIENTES" />
+          <NavigationProperty Name="Role" Relationship="SpainBSCampusModel.FK_ClienteRoles_Roles" FromRole="ClienteRole" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="Page">
+          <Key>
+            <PropertyRef Name="PageId" />
+          </Key>
+          <Property Name="PageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IconCss" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="GroupCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SortOrder" Type="Int32" Nullable="false" />
+          <Property Name="IsMenu" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="RolePages" Relationship="SpainBSCampusModel.FK__RolePages__PageI__4C8B54C9" FromRole="Page" ToRole="RolePage" />
+        </EntityType>
+        <EntityType Name="RolePage">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="PageId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="PageId" Type="Int32" Nullable="false" />
+          <Property Name="CanView" Type="Boolean" Nullable="false" />
+          <Property Name="CanEdit" Type="Boolean" Nullable="false" />
+          <Property Name="CanDelete" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Page" Relationship="SpainBSCampusModel.FK__RolePages__PageI__4C8B54C9" FromRole="RolePage" ToRole="Page" />
+          <NavigationProperty Name="Role" Relationship="SpainBSCampusModel.FK__RolePages__RoleI__4B973090" FromRole="RolePage" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ClienteRoles" Relationship="SpainBSCampusModel.FK_ClienteRoles_Roles" FromRole="Role" ToRole="ClienteRole" />
+          <NavigationProperty Name="RolePages" Relationship="SpainBSCampusModel.FK__RolePages__RoleI__4B973090" FromRole="Role" ToRole="RolePage" />
+        </EntityType>
+        <Association Name="FK_ClienteRoles_Clientes">
+          <End Type="SpainBSCampusModel.CLIENTES" Role="CLIENTES" Multiplicity="1" />
+          <End Type="SpainBSCampusModel.ClienteRole" Role="ClienteRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTES">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="ClienteRole">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClienteRoles_Roles">
+          <End Type="SpainBSCampusModel.Role" Role="Role" Multiplicity="1" />
+          <End Type="SpainBSCampusModel.ClienteRole" Role="ClienteRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="ClienteRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RolePages__PageI__4C8B54C9">
+          <End Type="SpainBSCampusModel.Page" Role="Page" Multiplicity="1" />
+          <End Type="SpainBSCampusModel.RolePage" Role="RolePage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Page">
+              <PropertyRef Name="PageId" />
+            </Principal>
+            <Dependent Role="RolePage">
+              <PropertyRef Name="PageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RolePages__RoleI__4B973090">
+          <End Type="SpainBSCampusModel.Role" Role="Role" Multiplicity="1" />
+          <End Type="SpainBSCampusModel.RolePage" Role="RolePage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RolePage">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="campus_ASIG_COMERCIAL">
+          <Key>
+            <PropertyRef Name="idAlumno" />
+            <PropertyRef Name="idCurso" />
+            <PropertyRef Name="idDocencia" />
+            <PropertyRef Name="Fecha" />
+          </Key>
+          <Property Name="idAlumno" Type="Int64" Nullable="false" />
+          <Property Name="idCurso" Type="Int64" Nullable="false" />
+          <Property Name="idDocencia" Type="Int64" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="idOrigen" Type="Int64" />
+          <Property Name="idVendedor" Type="Int64" />
+          <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Comentarios" Type="String" MaxLength="3850" FixedLength="false" Unicode="true" />
+          <Property Name="Fecha_Lead" Type="DateTime" Precision="0" />
+          <Property Name="Fecha_Env_Contrato" Type="DateTime" Precision="0" />
+          <Property Name="Fecha_Recep_Contrato" Type="DateTime" Precision="0" />
+          <Property Name="Fecha_Matricula" Type="DateTime" Precision="0" />
+          <Property Name="EUR_PVP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Beca_Fundacion" Type="Int32" />
+          <Property Name="Otros_Descuentos" Type="Int32" />
+          <Property Name="EUR_Aportacion_Fundacion" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="EUR_Universidad" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="EUR_PVP_Becado" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PDF_Contrato" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+          <Property Name="PDF_Factura" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+          <Property Name="pertenecia" Type="Int64" />
+          <Property Name="metodologia" Type="Int64" />
+          <Property Name="titulo_propio" Type="Boolean" Nullable="false" />
+          <Property Name="titulo_ucam" Type="Boolean" Nullable="false" />
+          <Property Name="titulo_sbs_ad" Type="Boolean" Nullable="false" />
+          <Property Name="titulo_sbs_do" Type="Boolean" Nullable="false" />
+          <Property Name="titulo_cualificam" Type="Boolean" Nullable="false" />
+          <Property Name="captacion_tipo" Type="Int64" />
+          <Property Name="captacion_origen" Type="Int64" />
+          <Property Name="acceso_por" Type="Int64" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -12830,42 +13061,6 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="Codigo" ColumnName="Codigo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="campus_ASIG_COMERCIAL">
-            <EntityTypeMapping TypeName="SpainBSCampusModel.campus_ASIG_COMERCIAL">
-              <MappingFragment StoreEntitySet="campus_ASIG_COMERCIAL">
-                <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
-                <ScalarProperty Name="idCurso" ColumnName="idCurso" />
-                <ScalarProperty Name="idDocencia" ColumnName="idDocencia" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-                <ScalarProperty Name="idOrigen" ColumnName="idOrigen" />
-                <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
-                <ScalarProperty Name="Precio" ColumnName="Precio" />
-                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
-                <ScalarProperty Name="Fecha_Lead" ColumnName="Fecha_Lead" />
-                <ScalarProperty Name="Fecha_Env_Contrato" ColumnName="Fecha_Env_Contrato" />
-                <ScalarProperty Name="Fecha_Recep_Contrato" ColumnName="Fecha_Recep_Contrato" />
-                <ScalarProperty Name="Fecha_Matricula" ColumnName="Fecha_Matricula" />
-                <ScalarProperty Name="EUR_PVP" ColumnName="EUR_PVP" />
-                <ScalarProperty Name="Beca_Fundacion" ColumnName="Beca_Fundacion" />
-                <ScalarProperty Name="Otros_Descuentos" ColumnName="Otros_Descuentos" />
-                <ScalarProperty Name="EUR_Aportacion_Fundacion" ColumnName="EUR_Aportacion_Fundacion" />
-                <ScalarProperty Name="EUR_Universidad" ColumnName="EUR_Universidad" />
-                <ScalarProperty Name="EUR_PVP_Becado" ColumnName="EUR_PVP_Becado" />
-                <ScalarProperty Name="PDF_Contrato" ColumnName="PDF_Contrato" />
-                <ScalarProperty Name="PDF_Factura" ColumnName="PDF_Factura" />
-                <ScalarProperty Name="pertenecia" ColumnName="pertenecia" />
-                <ScalarProperty Name="metodologia" ColumnName="metodologia" />
-                <ScalarProperty Name="titulo_propio" ColumnName="titulo_propio" />
-                <ScalarProperty Name="titulo_ucam" ColumnName="titulo_ucam" />
-                <ScalarProperty Name="titulo_sbs_ad" ColumnName="titulo_sbs_ad" />
-                <ScalarProperty Name="titulo_sbs_do" ColumnName="titulo_sbs_do" />
-                <ScalarProperty Name="titulo_cualificam" ColumnName="titulo_cualificam" />
-                <ScalarProperty Name="captacion_tipo" ColumnName="captacion_tipo" />
-                <ScalarProperty Name="captacion_origen" ColumnName="captacion_origen" />
-                <ScalarProperty Name="acceso" ColumnName="acceso" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -15363,6 +15558,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <EntitySetMapping Name="PRA_PRACTICAS">
             <EntityTypeMapping TypeName="SpainBSCampusModel.PRA_PRACTICAS">
               <MappingFragment StoreEntitySet="PRA_PRACTICAS">
+                <ScalarProperty Name="Curriculares" ColumnName="Curriculares" />
                 <ScalarProperty Name="idPractica" ColumnName="idPractica" />
                 <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
                 <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
@@ -16440,6 +16636,87 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
           <FunctionImportMapping FunctionImportName="sp_Inf_Seg_Comercial" FunctionName="SpainBSCampusModel.Store.sp_Inf_Seg_Comercial" />
           <FunctionImportMapping FunctionImportName="sp_update_CampusAccionesPersona" FunctionName="SpainBSCampusModel.Store.sp_update_CampusAccionesPersona" />
           <FunctionImportMapping FunctionImportName="sp_update_CampusInvestiga" FunctionName="SpainBSCampusModel.Store.sp_update_CampusInvestiga" />
+          <EntitySetMapping Name="ClienteRoles">
+            <EntityTypeMapping TypeName="SpainBSCampusModel.ClienteRole">
+              <MappingFragment StoreEntitySet="ClienteRoles">
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pages">
+            <EntityTypeMapping TypeName="SpainBSCampusModel.Page">
+              <MappingFragment StoreEntitySet="Pages">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsMenu" ColumnName="IsMenu" />
+                <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+                <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+                <ScalarProperty Name="IconCss" ColumnName="IconCss" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="PageId" ColumnName="PageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolePages">
+            <EntityTypeMapping TypeName="SpainBSCampusModel.RolePage">
+              <MappingFragment StoreEntitySet="RolePages">
+                <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+                <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+                <ScalarProperty Name="CanView" ColumnName="CanView" />
+                <ScalarProperty Name="PageId" ColumnName="PageId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="SpainBSCampusModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="campus_ASIG_COMERCIAL">
+            <EntityTypeMapping TypeName="SpainBSCampusModel.campus_ASIG_COMERCIAL">
+              <MappingFragment StoreEntitySet="campus_ASIG_COMERCIAL">
+                <ScalarProperty Name="acceso_por" ColumnName="acceso_por" />
+                <ScalarProperty Name="captacion_origen" ColumnName="captacion_origen" />
+                <ScalarProperty Name="captacion_tipo" ColumnName="captacion_tipo" />
+                <ScalarProperty Name="titulo_cualificam" ColumnName="titulo_cualificam" />
+                <ScalarProperty Name="titulo_sbs_do" ColumnName="titulo_sbs_do" />
+                <ScalarProperty Name="titulo_sbs_ad" ColumnName="titulo_sbs_ad" />
+                <ScalarProperty Name="titulo_ucam" ColumnName="titulo_ucam" />
+                <ScalarProperty Name="titulo_propio" ColumnName="titulo_propio" />
+                <ScalarProperty Name="metodologia" ColumnName="metodologia" />
+                <ScalarProperty Name="pertenecia" ColumnName="pertenecia" />
+                <ScalarProperty Name="PDF_Factura" ColumnName="PDF_Factura" />
+                <ScalarProperty Name="PDF_Contrato" ColumnName="PDF_Contrato" />
+                <ScalarProperty Name="EUR_PVP_Becado" ColumnName="EUR_PVP_Becado" />
+                <ScalarProperty Name="EUR_Universidad" ColumnName="EUR_Universidad" />
+                <ScalarProperty Name="EUR_Aportacion_Fundacion" ColumnName="EUR_Aportacion_Fundacion" />
+                <ScalarProperty Name="Otros_Descuentos" ColumnName="Otros_Descuentos" />
+                <ScalarProperty Name="Beca_Fundacion" ColumnName="Beca_Fundacion" />
+                <ScalarProperty Name="EUR_PVP" ColumnName="EUR_PVP" />
+                <ScalarProperty Name="Fecha_Matricula" ColumnName="Fecha_Matricula" />
+                <ScalarProperty Name="Fecha_Recep_Contrato" ColumnName="Fecha_Recep_Contrato" />
+                <ScalarProperty Name="Fecha_Env_Contrato" ColumnName="Fecha_Env_Contrato" />
+                <ScalarProperty Name="Fecha_Lead" ColumnName="Fecha_Lead" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
+                <ScalarProperty Name="idOrigen" ColumnName="idOrigen" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="idDocencia" ColumnName="idDocencia" />
+                <ScalarProperty Name="idCurso" ColumnName="idCurso" />
+                <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -16454,7 +16731,7 @@ advertencia 6002: La tabla o vista 'PrePro_SpainBS_Campus.dbo.VW_INF_FIN_ESTRUCT
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

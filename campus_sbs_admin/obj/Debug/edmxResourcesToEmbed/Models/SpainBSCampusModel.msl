@@ -283,42 +283,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="campus_ASIG_COMERCIAL">
-      <EntityTypeMapping TypeName="SpainBSCampusModel.campus_ASIG_COMERCIAL">
-        <MappingFragment StoreEntitySet="campus_ASIG_COMERCIAL">
-          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
-          <ScalarProperty Name="idCurso" ColumnName="idCurso" />
-          <ScalarProperty Name="idDocencia" ColumnName="idDocencia" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="idOrigen" ColumnName="idOrigen" />
-          <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
-          <ScalarProperty Name="Precio" ColumnName="Precio" />
-          <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
-          <ScalarProperty Name="Fecha_Lead" ColumnName="Fecha_Lead" />
-          <ScalarProperty Name="Fecha_Env_Contrato" ColumnName="Fecha_Env_Contrato" />
-          <ScalarProperty Name="Fecha_Recep_Contrato" ColumnName="Fecha_Recep_Contrato" />
-          <ScalarProperty Name="Fecha_Matricula" ColumnName="Fecha_Matricula" />
-          <ScalarProperty Name="EUR_PVP" ColumnName="EUR_PVP" />
-          <ScalarProperty Name="Beca_Fundacion" ColumnName="Beca_Fundacion" />
-          <ScalarProperty Name="Otros_Descuentos" ColumnName="Otros_Descuentos" />
-          <ScalarProperty Name="EUR_Aportacion_Fundacion" ColumnName="EUR_Aportacion_Fundacion" />
-          <ScalarProperty Name="EUR_Universidad" ColumnName="EUR_Universidad" />
-          <ScalarProperty Name="EUR_PVP_Becado" ColumnName="EUR_PVP_Becado" />
-          <ScalarProperty Name="PDF_Contrato" ColumnName="PDF_Contrato" />
-          <ScalarProperty Name="PDF_Factura" ColumnName="PDF_Factura" />
-          <ScalarProperty Name="pertenecia" ColumnName="pertenecia" />
-          <ScalarProperty Name="metodologia" ColumnName="metodologia" />
-          <ScalarProperty Name="titulo_propio" ColumnName="titulo_propio" />
-          <ScalarProperty Name="titulo_ucam" ColumnName="titulo_ucam" />
-          <ScalarProperty Name="titulo_sbs_ad" ColumnName="titulo_sbs_ad" />
-          <ScalarProperty Name="titulo_sbs_do" ColumnName="titulo_sbs_do" />
-          <ScalarProperty Name="titulo_cualificam" ColumnName="titulo_cualificam" />
-          <ScalarProperty Name="captacion_tipo" ColumnName="captacion_tipo" />
-          <ScalarProperty Name="captacion_origen" ColumnName="captacion_origen" />
-          <ScalarProperty Name="acceso" ColumnName="acceso" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="campus_AUTO_CURSO">
       <EntityTypeMapping TypeName="SpainBSCampusModel.campus_AUTO_CURSO">
         <MappingFragment StoreEntitySet="campus_AUTO_CURSO">
@@ -2813,6 +2777,7 @@
     <EntitySetMapping Name="PRA_PRACTICAS">
       <EntityTypeMapping TypeName="SpainBSCampusModel.PRA_PRACTICAS">
         <MappingFragment StoreEntitySet="PRA_PRACTICAS">
+          <ScalarProperty Name="Curriculares" ColumnName="Curriculares" />
           <ScalarProperty Name="idPractica" ColumnName="idPractica" />
           <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
           <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
@@ -3890,5 +3855,86 @@
     <FunctionImportMapping FunctionImportName="sp_Inf_Seg_Comercial" FunctionName="SpainBSCampusModel.Store.sp_Inf_Seg_Comercial" />
     <FunctionImportMapping FunctionImportName="sp_update_CampusAccionesPersona" FunctionName="SpainBSCampusModel.Store.sp_update_CampusAccionesPersona" />
     <FunctionImportMapping FunctionImportName="sp_update_CampusInvestiga" FunctionName="SpainBSCampusModel.Store.sp_update_CampusInvestiga" />
+    <EntitySetMapping Name="ClienteRoles">
+      <EntityTypeMapping TypeName="SpainBSCampusModel.ClienteRole">
+        <MappingFragment StoreEntitySet="ClienteRoles">
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pages">
+      <EntityTypeMapping TypeName="SpainBSCampusModel.Page">
+        <MappingFragment StoreEntitySet="Pages">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsMenu" ColumnName="IsMenu" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+          <ScalarProperty Name="IconCss" ColumnName="IconCss" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolePages">
+      <EntityTypeMapping TypeName="SpainBSCampusModel.RolePage">
+        <MappingFragment StoreEntitySet="RolePages">
+          <ScalarProperty Name="CanDelete" ColumnName="CanDelete" />
+          <ScalarProperty Name="CanEdit" ColumnName="CanEdit" />
+          <ScalarProperty Name="CanView" ColumnName="CanView" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="SpainBSCampusModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="campus_ASIG_COMERCIAL">
+      <EntityTypeMapping TypeName="SpainBSCampusModel.campus_ASIG_COMERCIAL">
+        <MappingFragment StoreEntitySet="campus_ASIG_COMERCIAL">
+          <ScalarProperty Name="acceso_por" ColumnName="acceso_por" />
+          <ScalarProperty Name="captacion_origen" ColumnName="captacion_origen" />
+          <ScalarProperty Name="captacion_tipo" ColumnName="captacion_tipo" />
+          <ScalarProperty Name="titulo_cualificam" ColumnName="titulo_cualificam" />
+          <ScalarProperty Name="titulo_sbs_do" ColumnName="titulo_sbs_do" />
+          <ScalarProperty Name="titulo_sbs_ad" ColumnName="titulo_sbs_ad" />
+          <ScalarProperty Name="titulo_ucam" ColumnName="titulo_ucam" />
+          <ScalarProperty Name="titulo_propio" ColumnName="titulo_propio" />
+          <ScalarProperty Name="metodologia" ColumnName="metodologia" />
+          <ScalarProperty Name="pertenecia" ColumnName="pertenecia" />
+          <ScalarProperty Name="PDF_Factura" ColumnName="PDF_Factura" />
+          <ScalarProperty Name="PDF_Contrato" ColumnName="PDF_Contrato" />
+          <ScalarProperty Name="EUR_PVP_Becado" ColumnName="EUR_PVP_Becado" />
+          <ScalarProperty Name="EUR_Universidad" ColumnName="EUR_Universidad" />
+          <ScalarProperty Name="EUR_Aportacion_Fundacion" ColumnName="EUR_Aportacion_Fundacion" />
+          <ScalarProperty Name="Otros_Descuentos" ColumnName="Otros_Descuentos" />
+          <ScalarProperty Name="Beca_Fundacion" ColumnName="Beca_Fundacion" />
+          <ScalarProperty Name="EUR_PVP" ColumnName="EUR_PVP" />
+          <ScalarProperty Name="Fecha_Matricula" ColumnName="Fecha_Matricula" />
+          <ScalarProperty Name="Fecha_Recep_Contrato" ColumnName="Fecha_Recep_Contrato" />
+          <ScalarProperty Name="Fecha_Env_Contrato" ColumnName="Fecha_Env_Contrato" />
+          <ScalarProperty Name="Fecha_Lead" ColumnName="Fecha_Lead" />
+          <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="idVendedor" ColumnName="idVendedor" />
+          <ScalarProperty Name="idOrigen" ColumnName="idOrigen" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="idDocencia" ColumnName="idDocencia" />
+          <ScalarProperty Name="idCurso" ColumnName="idCurso" />
+          <ScalarProperty Name="idAlumno" ColumnName="idAlumno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
