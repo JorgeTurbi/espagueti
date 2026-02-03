@@ -54,3 +54,15 @@ Parameter name: String
 16:05:34: - MSG:Value cannot be null.
 Parameter name: String
 16:05:34: - INNEREXC:
+16:41:24:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:41:24: - MSG:Value cannot be null.
+Parameter name: String
+16:41:24: - INNEREXC:
+16:48:51:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:48:51: - MSG:Value cannot be null.
+Parameter name: String
+16:48:51: - INNEREXC:
+16:53:50:  ERROR - Cookie_Page.cs::searchIdCliente()
+16:53:50: - MSG:Value cannot be null.
+Parameter name: String
+16:53:50: - INNEREXC:
