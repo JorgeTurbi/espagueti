@@ -1,4 +1,5 @@
 ﻿using campus_sbs_admin.Models;
+using campus_sbs_admin.Models.DTOS;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -6,6 +7,7 @@ using System.Data.Entity;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Script.Services;
 using System.Web.Services;
@@ -67,7 +69,8 @@ namespace campus_sbs_admin
         {
             public long idInfFinFacturas { get; set; }
             public string sociedad { get; set; }
-
+            public string cliente_nombre { get; set; }
+            public long numero { get; set; }
             public string eur_precio_str { get; set; }
             public string eur_fundacion_str { get; set; }
             public string eur_universidad_str { get; set; }
@@ -153,7 +156,8 @@ namespace campus_sbs_admin
                         {
                             idInfFinFacturas = x.idInfFinFacturas,
                             sociedad = x.sociedad,
-
+                            cliente_nombre=x.cliente_nombre,
+                            numero = x.numero,
                             eur_precio_str = (x.eur_precio).ToString("N2", es),
                             eur_fundacion_str = (x.eur_fundacion).ToString("N2", es),
                             eur_universidad_str = (x.eur_universidad).ToString("N2", es),
@@ -186,6 +190,30 @@ namespace campus_sbs_admin
             }
         }
 
+        [WebMethod]
+        public static object LoadSociedad()
+        {
+            try
+            {
+                using (var db = new SpainBS_Connection())
+                {
+                    // Ejemplo: tabla Sociedades
+                    var data = db.Socio                        
+                        .OrderBy(x => x.Nombre)
+                        .Select(x => new {
+                            Id = x.Id,
+                            Nombre = x.Nombre
+                        })
+                        .ToList();
+
+                    return new { Ok = true, Data = data };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new { Ok = false, Message = ex.Message };
+            }
+        }
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public static object DeleteFactura(long id)

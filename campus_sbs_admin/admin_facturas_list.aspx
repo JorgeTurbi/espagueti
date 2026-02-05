@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_facturas_list.aspx.cs" Inherits="campus_sbs_admin.admin_facturas_list" %>
+
 <%@ Import Namespace="System.Web.Optimization" %>
 
 <%@ Register TagPrefix="uc_header" TagName="cabecera" Src="~/controls/header.ascx" %>
@@ -8,7 +9,9 @@
 
 <!--[if IE 8]>    <html class="ie8 legacy-ie no-js" lang="es"> <![endif]-->
 <!--[if IE 9]>    <html class="ie9 legacy-ie no-js" lang="es"><![endif]-->
-<!--[if !IE]><!--> <html class="no-legacy-ie no-js" lang="es"> <!--<![endif]-->
+<!--[if !IE]><!-->
+<html class="no-legacy-ie no-js" lang="es">
+<!--<![endif]-->
 <head runat="server">
     <title>SBS | Consulta de Facturas</title>
 
@@ -17,7 +20,7 @@
     <asp:PlaceHolder runat="server">
         <%: Styles.Render("~/bundles/bootstrap_css") %>
         <%: Styles.Render("~/bundles/fonts_css") %>
-        <%: Styles.Render("~/bundles/general_admin_css") %>        
+        <%: Styles.Render("~/bundles/general_admin_css") %>
         <%: Styles.Render("~/bundles/jquery_ui_css") %>
         <%: Styles.Render("~/bundles/datatables_css") %>
     </asp:PlaceHolder>
@@ -25,7 +28,7 @@
     <!-- DataTables Buttons -->
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" />
 
-    <!-- Modernizr -->	
+    <!-- Modernizr -->
     <script type="text/javascript" src="/App_Themes/support/js/modernizr.js" async></script>
 
     <!-- HTML5 IE8 -->
@@ -40,7 +43,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
         <uc_menu:menu ID="menu" runat="server" />
-        <header id="header" class="bg-color-primary affix">        
+        <header id="header" class="bg-color-primary affix">
             <uc_header:cabecera ID="cabecera" runat="server" />
         </header>
 
@@ -53,11 +56,11 @@
                 <div class="col pt-2">
                     <fieldset>
                         <legend class="text-color-primary">
-                            <i class="fas fa-search"></i> Búsqueda de Facturas
+                            <i class="fas fa-search"></i>Búsqueda de Facturas
                             <a href='admin_facturas.aspx' title='Registrar factura' class='pull-right bold padding-r-5'>
-                                <small class='text-color-primary'><i class='fas fa-plus'></i> Registrar factura</small>
+                                <small class='text-color-primary'><i class='fas fa-plus'></i>Registrar factura</small>
                             </a>
-                        </legend>                    
+                        </legend>
                     </fieldset>
 
                     <!-- Fila 1: Sociedad, Desde, Hasta, Año -->
@@ -67,9 +70,6 @@
                             <div class="form-group">
                                 <label class="sr-only" for="fSociedad">Sociedad</label>
                                 <select id="fSociedad" class="form-control" title="Sociedad">
-                                    <option value="">Todas</option>
-                                    <option value="SBS">SBS</option>
-                                    <option value="SBSCS">SBSCS</option>
                                 </select>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                 <div class="col pt-2">
                     <fieldset>
                         <legend class="text-color-primary">
-                            <i class="far fa-list-alt"></i> Listado de Facturas
+                            <i class="far fa-list-alt"></i>Listado de Facturas
                         </legend>
                     </fieldset>
 
@@ -146,19 +146,20 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th>Sociedad</th>
+                                    <th>Cli.</th>
+                                    <th>Soc</th>
                                     <th>Descripción</th>
-                                    <th>Atribución</th>
+                                    <th>Atri</th>
                                     <th>Precio</th>
-                                    <th>Fundación</th>
-                                    <th>Universidad</th>
-                                    <th>Tripartita</th>
+                                    <th>Fund</th>
+                                    <th>Uni</th>
+                                    <th>Tri</th>
                                     <th>IVA</th>
                                     <th>IRPF</th>
                                     <th>Total</th>
                                     <th>F. Venc.</th>
                                     <th>F. Cobro</th>
-                                    <th>Acciones</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
@@ -166,11 +167,11 @@
                     </div>
                 </div>
 
-            </div>       
+            </div>
         </section>
 
         <!-- Modal: Cargando -->
-        <div class="modal fade" id="wait_modal" tabindex="-1" role="dialog" aria-labelledby="wait_modal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <%--   <div class="modal fade" id="wait_modal" tabindex="-1" role="dialog" aria-labelledby="wait_modal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body text-center">
@@ -180,7 +181,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
 
         <!-- Modal: Confirmar eliminar -->
         <div class="modal fade" id="confirm_modal" tabindex="-1" role="dialog" aria-labelledby="confirm_modal" aria-hidden="true">
@@ -198,7 +199,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                         <button type="button" class="btn btn-danger" id="btnConfirmDelete">
-                            <i class="fas fa-trash"></i> Sí, eliminar
+                            <i class="fas fa-trash"></i>Sí, eliminar
                         </button>
                     </div>
                 </div>
@@ -226,8 +227,8 @@
     </form>
 
     <!-- Scripts
-    =================================================== --> 
-    <asp:PlaceHolder runat="server">        
+    =================================================== -->
+    <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/general_admin_js") %>
         <%: Scripts.Render("~/bundles/jquery_ui_js") %>
         <%: Scripts.Render("~/bundles/menu_nav_js") %>
@@ -304,6 +305,43 @@
         // ===========================
         // Cargar tabla
         // ===========================
+
+        function LoadSocios() {
+            $.ajax({
+                url: 'admin_facturas_list.aspx/LoadSociedad',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                data: '{}',
+                success: function (res) {
+
+                    // WebForms normalmente devuelve en res.d
+                    var result = res.d || res;
+
+                    console.log("====>", result);
+
+                    if (result && result.Ok) {
+
+                        var $select = $('#fSociedad');
+
+                        $select.empty();
+                        $select.append('<option value="">Seleccione una Sociedad</option>');
+
+                        for (var i = 0; i < result.Data.length; i++) {
+                            $select.append(
+                                '<option value="' + result.Data[i].Id + '">' +
+                                result.Data[i].Nombre +
+                                '</option>'
+                            );
+                        }
+                    }
+                },
+                error: function (xhr) {
+                    console.error(xhr.responseText || xhr);
+                    showInfo('Error', 'No se pudo cargar el listado.');
+                }
+            });
+        }
         function loadTable() {
             var filtros = getFiltros();
             showLoading();
@@ -346,22 +384,15 @@
             dt = $('#tblFacturas').DataTable({
                 data: rows,
                 columns: [
-                    {
-                        data: null,
-                        title: 'No.',
-                        orderable: false,
-                        searchable: false,
-                        width: '45px',
-                        className: 'text-center',
-                        render: function () { return ''; }
-                    },
-                    { data: 'sociedad', title: 'Sociedad' },
+                    { data: 'numero', title: 'No.' },
+                    { data: 'cliente_nombre', title: 'Cli' },
+                    { data: 'sociedad', title: 'SOC' },
                     { data: 'descripcion', title: 'Descripción' },
-                    { data: 'atribucion', title: 'Atribución' },
+                    { data: 'atribucion', title: 'Atri' },
                     { data: 'eur_precio_str', title: 'Precio', className: 'text-right' },
-                    { data: 'eur_fundacion_str', title: 'Fundación', className: 'text-right' },
-                    { data: 'eur_universidad_str', title: 'Universidad', className: 'text-right' },
-                    { data: 'eur_tripartita_str', title: 'Tripartita', className: 'text-right' },
+                    { data: 'eur_fundacion_str', title: 'Fund', className: 'text-right' },
+                    { data: 'eur_universidad_str', title: 'Uni', className: 'text-right' },
+                    { data: 'eur_tripartita_str', title: 'Tri', className: 'text-right' },
                     { data: 'eur_iva_str', title: 'IVA', className: 'text-right' },
                     { data: 'eur_irpf_str', title: 'IRPF', className: 'text-right' },
                     { data: 'eur_total_str', title: 'Total', className: 'text-right bold' },
@@ -369,11 +400,13 @@
                     { data: 'fecha_cobro_str', title: 'F. Cobro', className: 'text-nowrap' },
                     {
                         data: null,
-                        title: 'Acciones',
+                        title: '',
                         orderable: false,
                         searchable: false,
                         className: 'text-nowrap',
-                        render: function (data, type, row) { return buildActions(row); }
+                        render: function (data, type, row) {
+                            return buildActions(row);
+                        }
                     }
                 ],
                 pageLength: 10,
@@ -389,17 +422,10 @@
                 deferRender: true,
                 language: {
                     url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
-                },
-                drawCallback: function () {
-                    var api = this.api();
-                    var start = api.page.info().start;
-
-                    api.column(0, { page: 'current' }).nodes().each(function (cell, i) {
-                        cell.innerHTML = start + i + 1;
-                    });
                 }
             });
         }
+
 
         // ===========================
         // Eliminar factura
@@ -491,6 +517,7 @@
 
         $(document).ready(function () {
             initDatepickers();
+            LoadSocios();
 
             var y = $('#<%= ddlyear.ClientID %>').val();
             if (y) {

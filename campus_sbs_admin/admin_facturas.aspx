@@ -50,7 +50,7 @@
                     <fieldset>
                         <legend class="text-color-primary">
                             <i class="fas fa-file-invoice-dollar"></i> Registro de Facturas
-                            <a href='consultar_facturas.aspx' title='Consultar facturas' class='pull-right bold padding-r-5'>
+                            <a href='admin_facturas_list.aspx' title='Consultar facturas' class='pull-right bold padding-r-5'>
                                 <small class='text-color-primary'><i class='fas fa-search'></i> Consultar</small>
                             </a>
                         </legend>                    
