@@ -36,6 +36,9 @@ bld/
 *.docx
 *.xlsx  
 *.rar
+*.zip
+*.log
+*.logs
 
 ## ReSharper
 _ReSharper*/
