@@ -12,8 +12,6 @@
 <head runat="server">
     <title>SBS | Gastos</title>
 
-    <!-- CSS 
-    =================================================== -->
     <asp:PlaceHolder runat="server">
         <%: Styles.Render("~/bundles/bootstrap_css") %>
         <%: Styles.Render("~/bundles/fonts_css") %>
@@ -21,13 +19,19 @@
         <%: Styles.Render("~/bundles/jquery_ui_css") %>
     </asp:PlaceHolder>
 
-    <!-- Modernizr -->	
     <script type="text/javascript" src="/App_Themes/support/js/modernizr.js" async></script>
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" async></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" async></script>
     <![endif]-->
+
+    <style type="text/css">
+        /* jQuery UI Datepicker - forzar z-index alto */
+        .ui-datepicker {
+            z-index: 99999 !important;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -95,7 +99,7 @@
                             <label>Fecha Emisión *</label>
                             <div class="form-group">
                                 <label class="sr-only" for="date_emision">Fecha Emisión</label>
-                                <input type="text" id="date_emision" runat="server" class="form-control js-date" placeholder="Fecha Emisión" title="Fecha Emisión" />
+                                <input type="text" id="date_emision" runat="server" class="form-control" placeholder="dd/mm/aaaa" title="Fecha Emisión" autocomplete="off" />
                             </div>
                         </div>
                     </div>
@@ -284,7 +288,7 @@
                             <label>Fecha Pago</label>
                             <div class="form-group">
                                 <label class="sr-only" for="date_pay">Fecha Pago</label>
-                                <input type="text" id="date_pay" runat="server" class="form-control js-date" placeholder="Fecha Pago" title="Fecha Pago" />
+                                <input type="text" id="date_pay" runat="server" class="form-control" placeholder="dd/mm/aaaa" title="Fecha Pago" autocomplete="off" />
                             </div>
                         </div>
                         <div class="col-4">
@@ -397,7 +401,7 @@
         </section>
 
         <!-- Modal: Guardando -->
-        <div class="modal fade" id="wait_modal" tabindex="-1" role="dialog" aria-labelledby="wait_modal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal fade" id="wait_modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body text-center">
@@ -410,14 +414,12 @@
         </div>
 
         <!-- Modal: Confirmar eliminar -->
-        <div class="modal fade" id="confirm_modal" tabindex="-1" role="dialog" aria-labelledby="confirm_modal" aria-hidden="true">
+        <div class="modal fade" id="confirm_modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-color-primary">Confirmar eliminación</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                     </div>
                     <div class="modal-body">
                         ¿Seguro que deseas eliminar este gasto? (Se eliminará el archivo adjunto si existe)
@@ -433,14 +435,12 @@
         </div>
 
         <!-- Modal: Info -->
-        <div class="modal fade" id="info_modal" tabindex="-1" role="dialog" aria-labelledby="info_modal" aria-hidden="true">
+        <div class="modal fade" id="info_modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title text-color-primary" id="info_modal_title">Mensaje</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                     </div>
                     <div class="modal-body" id="info_modal_body"></div>
                     <div class="modal-footer">
@@ -452,8 +452,7 @@
 
     </form>
 
-    <!-- Scripts
-    =================================================== --> 
+    <!-- Scripts --> 
     <asp:PlaceHolder runat="server">        
         <%: Scripts.Render("~/bundles/general_admin_js") %>
         <%: Scripts.Render("~/bundles/jquery_ui_js") %>
@@ -461,13 +460,9 @@
         <%: Scripts.Render("~/bundles/bootstrap_bundle_js") %>
     </asp:PlaceHolder>
 
-    <!-- Datepicker -->
-    <script type="text/javascript" src="App_Themes/support/js/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="App_Themes/support/js/bootstrap-datepicker.es.js"></script>
-
     <script type="text/javascript">
         // ===========================
-        // Helpers UI (Modal)
+        // Helpers UI
         // ===========================
         function showSaving() {
             if (window.jQuery && $.fn.modal) $('#wait_modal').modal('show');
@@ -486,6 +481,12 @@
             if (reloadOnClose) {
                 $('#info_modal').one('hidden.bs.modal', function () { window.location.reload(); });
             }
+        }
+
+        function hideLoadingForce() {
+            try { $('#wait_modal').modal('hide'); } catch (e) { }
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open').css('padding-right', '');
         }
 
         // ===========================
@@ -638,17 +639,6 @@
             );
         }
 
-        function hideLoadingForce() {
-            try { $('#wait_modal').modal('hide'); } catch (e) { }
-
-            // Por si Bootstrap deja backdrop pegado
-            $('.modal-backdrop').remove();
-            $('body').removeClass('modal-open').css('padding-right', '');
-
- 
-        }
-
-
         // ===========================
         // Build request + Save
         // ===========================
@@ -701,7 +691,7 @@
                 data: JSON.stringify({ r: req }),
                 success: function (res) {
                     hideSaving();
-                    hideLoadingForce()
+                    hideLoadingForce();
                     var payload = (res && res.d) ? res.d : null;
 
                     if (!payload || payload.ok !== true) {
@@ -769,16 +759,47 @@
         // Eventos
         // ===========================
         $(document).ready(function () {
-            // Datepicker
-            $('.js-date').datepicker({
-                language: "es",
-                autoclose: true,
-                todayHighlight: true,
-                format: "dd/mm/yyyy",
-                
+            
+            // =============================================
+            // DATEPICKER - Usando jQuery UI
+            // =============================================
+            $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '&#x3C;Ant',
+                nextText: 'Sig&#x3E;',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+                    'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+            $.datepicker.setDefaults($.datepicker.regional['es']);
+
+            // Inicializar ambos datepickers con jQuery UI
+            $('#<%= date_emision.ClientID %>').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '2020:2030'
             });
 
+            $('#<%= date_pay.ClientID %>').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '2020:2030'
+            });
+
+            // =============================================
             // File input display
+            // =============================================
             var fileInput = document.getElementById('<%= fuFile.ClientID %>');
             if (fileInput) {
                 fileInput.addEventListener('change', function () {
@@ -791,18 +812,26 @@
                 });
             }
 
+            // =============================================
             // Toggles
+            // =============================================
             $('#<%= basic_chk.ClientID %>').on('change', toggleLH);
             $('#<%= basic_tax_chk.ClientID %>').on('change', toggleTax);
 
+            // =============================================
             // Cálculo automático
+            // =============================================
             $('#<%= basic_subtotal.ClientID %>,#<%= basic_iva.ClientID %>,#<%= basic_irpf.ClientID %>')
                 .on('input', recalcTotalGasto);
 
+            // =============================================
             // Sociedad change
+            // =============================================
             $('#<%= basic_sociedad.ClientID %>').on('change', loadSecuence);
 
+            // =============================================
             // Año change
+            // =============================================
             $('#<%= ddlyear.ClientID %>').on('change', function () {
                 var y = $(this).val();
                 if (!y) return;
@@ -810,12 +839,13 @@
                 var newDate = '01/01/' + y;
                 var $emision = $('#<%= date_emision.ClientID %>');
                 $emision.val(newDate);
-                if ($emision.data('datepicker')) $emision.datepicker('update', newDate);
 
                 loadSecuence();
             });
 
+            // =============================================
             // Áreas cascada
+            // =============================================
             $('#<%= ddlArea.ClientID %>').on('change', function () {
                 loadSub('SUBAREA', $(this).val(), '<%= ddlSubArea.ClientID %>');
                 loadSub('SUBAREA2', '', '<%= ddlSubArea2.ClientID %>');
@@ -825,17 +855,23 @@
                 loadSub('SUBAREA2', $(this).val(), '<%= ddlSubArea2.ClientID %>');
             });
 
+            // =============================================
             // Guardar
+            // =============================================
             $('#btnSaveAjax').on('click', saveGastoAjax);
 
+            // =============================================
             // Eliminar
+            // =============================================
             $('#btnDeleteAjax').on('click', openDeleteModal);
             $('#btnConfirmDelete').on('click', function () {
                 $('#confirm_modal').modal('hide');
                 deleteGastoAjax();
             });
 
+            // =============================================
             // Init
+            // =============================================
             toggleLH();
             toggleTax();
             recalcTotalGasto();
