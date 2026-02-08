@@ -30,6 +30,12 @@ bld/
 *.vsp
 *.vspx
 *.sap
+*.csv
+*.doc
+*.pdf
+*.docx
+*.xlsx  
+*.rar
 
 ## ReSharper
 _ReSharper*/
