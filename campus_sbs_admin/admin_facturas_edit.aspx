@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_facturas_edit.aspx.cs" Inherits="campus_sbs_admin.admin_facturas_edit" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_facturas_edit.aspx.cs" Inherits="campus_sbs_admin.admin_facturas_edit" %>
 
 <%@ Register TagPrefix="uc_header" TagName="cabecera" Src="~/controls/header.ascx" %>
 <%@ Register TagPrefix="uc_menu" TagName="menu" Src="~/controls/nav.ascx" %>
@@ -597,4 +597,4 @@
         });
     </script>
 </body>
-</html>
+</html>--%>

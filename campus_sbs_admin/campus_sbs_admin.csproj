@@ -1626,7 +1626,6 @@
     <Content Include="App_Code\DTOs\TotalFacturaSocioDTO.cs" />
     <Compile Include="admin_facturas_edit.aspx.cs">
       <DependentUpon>admin_facturas_edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin_facturas_edit.aspx.designer.cs">
       <DependentUpon>admin_facturas_edit.aspx</DependentUpon>

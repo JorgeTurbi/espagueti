@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_facturas.aspx.cs" Inherits="campus_sbs_admin.admin_facturas" %>
+
 <%@ Import Namespace="System.Web.Optimization" %>
 
 <%@ Register TagPrefix="uc_header" TagName="cabecera" Src="~/controls/header.ascx" %>
@@ -8,7 +9,9 @@
 
 <!--[if IE 8]>    <html class="ie8 legacy-ie no-js" lang="es"> <![endif]-->
 <!--[if IE 9]>    <html class="ie9 legacy-ie no-js" lang="es"><![endif]-->
-<!--[if !IE]><!--> <html class="no-legacy-ie no-js" lang="es"> <!--<![endif]-->
+<!--[if !IE]><!-->
+<html class="no-legacy-ie no-js" lang="es">
+<!--<![endif]-->
 <head runat="server">
     <title>SBS | Registro de Facturas</title>
 
@@ -17,12 +20,12 @@
     <asp:PlaceHolder runat="server">
         <%: Styles.Render("~/bundles/bootstrap_css") %>
         <%: Styles.Render("~/bundles/fonts_css") %>
-        <%: Styles.Render("~/bundles/general_admin_css") %>        
+        <%: Styles.Render("~/bundles/general_admin_css") %>
         <%: Styles.Render("~/bundles/jquery_ui_css") %>
         <%: Styles.Render("~/bundles/datatables_css") %>
     </asp:PlaceHolder>
 
-    <!-- Modernizr -->	
+    <!-- Modernizr -->
     <script type="text/javascript" src="/App_Themes/support/js/modernizr.js" async></script>
 
     <!-- HTML5 IE8 -->
@@ -35,9 +38,9 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
-        
+
         <uc_menu:menu ID="menu" runat="server" />
-        <header id="header" class="bg-color-primary affix">        
+        <header id="header" class="bg-color-primary affix">
             <uc_header:cabecera ID="cabecera" runat="server" />
         </header>
 
@@ -48,15 +51,16 @@
                      =========================== -->
                 <div class="col pt-2">
                     <fieldset>
+                        <input type="hidden" id="hfFacturaId" />
                         <legend class="text-color-primary">
-                            <i class="fas fa-file-invoice-dollar"></i> Registro de Facturas
+                            <i class="fas fa-file-invoice-dollar"></i>Registro de Facturas
                             <a href='admin_facturas_list.aspx' title='Consultar facturas' class='pull-right bold padding-r-5'>
-                                <small class='text-color-primary'><i class='fas fa-search'></i> Consultar</small>
+                                <small class='text-color-primary'><i class='fas fa-search'></i>Consultar</small>
                             </a>
-                        </legend>                    
+                        </legend>
                     </fieldset>
 
-                    <div class="col-12 pt-2">
+                    <div class="col-12 pt-2" id="mtButtons">
                         <div class="col-3">
                             <label>Año Fiscal</label>
                             <div class="form-group">
@@ -77,8 +81,18 @@
                                 <span class="bold text-color-primary">SBSCS: </span>
                                 <span id="sbscs_total" class="border-primary bold text-color-black" title="Total SBSCS">0</span>
                             </div>
-                        </div>
+                      
                     </div>
+                   <div class="col-3">
+           <div id="btnAccion">
+      <button id="btnSave" type="button" class="btn btn-success ml-3" title="Registrar">
+          <i class="fas fa-save"></i>Registrar
+      </button>
+      <button id="btnUpdate" type="button" class="btn btn-info ml-3" title="Registrar">
+          <i class="fas fa-save"></i>Actualizar
+      </button>
+           </div>
+  </div>
                 </div>
 
                 <!-- ===========================
@@ -87,7 +101,7 @@
                 <div class="col pt-2">
                     <fieldset>
                         <legend class="text-color-primary">
-                            <i class="fas fa-edit"></i> Datos de la Factura
+                            <i class="fas fa-edit"></i>Datos de la Factura
                         </legend>
                     </fieldset>
 
@@ -153,7 +167,7 @@
                 <div class="col pt-2">
                     <fieldset>
                         <legend class="text-color-primary">
-                            <i class="fas fa-euro-sign"></i> Importes
+                            <i class="fas fa-euro-sign"></i>Importes
                         </legend>
                     </fieldset>
 
@@ -246,7 +260,7 @@
                 <div class="col pt-2">
                     <fieldset>
                         <legend class="text-color-primary">
-                            <i class="fas fa-calendar-alt"></i> Fechas y Datos Adicionales
+                            <i class="fas fa-calendar-alt"></i>Fechas y Datos Adicionales
                         </legend>
                     </fieldset>
 
@@ -275,7 +289,7 @@
                             <div class="form-group">
                                 <asp:FileUpload ID="fuFactura" runat="server" Style="display: none;" />
                                 <a href="javascript:void(0);" onclick="document.getElementById('<%= fuFactura.ClientID %>').click();" title="Cargar archivo" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-upload"></i> Cargar archivo
+                                    <i class="fas fa-upload"></i>Cargar archivo
                                 </a>
                                 <span id="fileName" class="text-muted small ml-2"></span>
                             </div>
@@ -301,22 +315,10 @@
                     </div>
                 </div>
 
-                <!-- ===========================
-                     BOTONES DE ACCIÓN
-                     =========================== -->
-                <div class="col pt-4 pb-4">
-                    <div class="col-12 text-center">
-                        <button type="button" runat="server" id="btnCancel" class="btn btn-danger" title="Cancelar">
-                            <i class="fas fa-times"></i> Cancelar
-                        </button>
-                        <button id="btnSave" type="button" class="btn btn-success ml-3" title="Registrar">
-                            <i class="fas fa-save"></i> Registrar
-                        </button>
-                        <asp:Button ID="btnSearch" runat="server" CssClass="btn btn-primary ml-3" Text="Consultar" OnClick="btnSearch_Click" />
-                    </div>
-                </div>
+             
+            </div>
 
-            </div>       
+            </div>
         </section>
 
         <!-- Modal: Guardando -->
@@ -353,8 +355,8 @@
     </form>
 
     <!-- Scripts
-    =================================================== --> 
-    <asp:PlaceHolder runat="server">        
+    =================================================== -->
+    <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/general_admin_js") %>
         <%: Scripts.Render("~/bundles/jquery_ui_js") %>
         <%: Scripts.Render("~/bundles/menu_nav_js") %>
@@ -370,15 +372,177 @@
             if ($.fn.modal) $('#wait_modal').modal('show');
         }
 
+        //function hideSaving() {
+        //    if ($.fn.modal) $('#wait_modal').modal('hide');
+        //}
         function hideSaving() {
-            if ($.fn.modal) $('#wait_modal').modal('hide');
+            try {
+                if ($.fn.modal) $('#wait_modal').modal('hide');
+            } catch (e) { }
+
+            // Limpieza extra (por si queda pegado el overlay)
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open');
+            $('body').css('padding-right', '');
         }
+
 
         function showInfo(title, htmlOrText) {
             $('#info_modal_title').text(title || 'Mensaje');
             $('#info_modal_body').html(htmlOrText || '');
             if ($.fn.modal) $('#info_modal').modal('show');
             else alert((title ? title + ': ' : '') + $(htmlOrText).text());
+        }
+
+        // ===============================
+        // SweetAlert2 safe wrappers
+        // ===============================
+        function swalLoading(title) {
+            title = title || 'Cargando...';
+
+            if (typeof Swal !== 'undefined' && Swal.fire) {
+                Swal.fire({
+                    title: title,
+                    allowOutsideClick: false,
+                    didOpen: () => Swal.showLoading()
+                });
+                return;
+            }
+
+            // Fallback: si tienes modal propio, úsalo (opcional)
+            // Si no quieres mostrar nada, puedes dejarlo vacío.
+        }
+
+        function swalClose() {
+            if (typeof Swal !== 'undefined') {
+                try { Swal.close(); } catch (e) { }
+            }
+        }
+
+        // ========= Load (GetFactura) =========
+        function loadFactura() {
+            const id = getIdFromQuery();
+            if (!id) return
+            // swalError('ID inválido en la URL.');
+            swalLoading('Cargando...')
+            /* Swal.fire({ title: 'Cargando...', allowOutsideClick: false, didOpen: () => Swal.showLoading() });*/
+
+            $.ajax({
+                url: 'admin_facturas.aspx/GetFactura',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify({ id: id }),
+                success: function (res) {
+                    swalClose()
+                    console.log('=====>', res);
+                    $('#btnUpdate').show();
+                    $('#btnSave').remove();
+
+                    const r = (res && res.d) ? res.d : null;
+                    if (!r || !r.ok) return swalError((r && r.message) ? r.message : 'No se pudo cargar.');
+
+                    const f = r.data;
+
+                    // Guardar ID para edición
+                    $('#hfFacturaId').val(f.idInfFinFacturas || 0);
+
+                    // Cabecera
+                    $('#<%= slSociedad.ClientID %>').val(f.sociedad || '');
+                    $('#<%= secuencia.ClientID %>').val(f.numero || '');
+                    $('#<%= femision.ClientID %>').val(f.fecha_emision || '');
+
+                    // Cliente
+                    $('#<%= basic_client.ClientID %>').val(f.cliente_nombre || '');
+                    $('#<%= basic_nif.ClientID %>').val(f.cliente_nif || '');
+                    $('#<%= descripcion.ClientID %>').val(f.descripcion || '');
+
+                    // Importes
+                    $('#<%= basic_pvp.ClientID %>').val(f.eur_pvp_str || '0');
+                    $('#<%= basic_beca.ClientID %>').val(f.eur_beca_str || '0');
+                    $('#<%= basic_dto.ClientID %>').val(f.eur_dto_str || '0');
+                    $('#<%= basic_precio.ClientID %>').val(f.eur_precio_str || '0');
+
+                    $('#<%= basic_fund.ClientID %>').val(f.eur_fundacion_str || '0');
+                    $('#<%= basic_uni.ClientID %>').val(f.eur_universidad_str || '0');
+                    $('#<%= basic_trip.ClientID %>').val(f.eur_tripartita_str || '0');
+
+                    $('#<%= basic_iva.ClientID %>').val(f.eur_iva_str || '0');
+                    $('#<%= basic_irpf.ClientID %>').val(f.eur_irpf_str || '0');
+                    $('#<%= basic_total.ClientID %>').val(f.eur_total_str || '0');
+
+                    // Fechas
+                    $('#<%= date_venc.ClientID %>').val(f.fecha_vencimiento || '');
+                    $('#<%= date_payment.ClientID %>').val(f.fecha_cobro || '');
+
+                    // Otros
+                    $('#<%= comentario.ClientID %>').val(f.comentarios || '');
+                    $('#<%= ddlAtribucion.ClientID %>').val(f.atribucion || '');
+
+                    setCurrentFile(f.fichero || null);
+                },
+                error: function (xhr) {
+                    console.error(xhr);
+                    Swal.close();
+                    swalError('No se pudo cargar la factura.');
+                }
+            });
+        }
+        // ===============================
+        // SweetAlert helper (error)
+        // ===============================
+        function swalError(message) {
+            message = message || 'Ocurrió un error inesperado.';
+
+            // Si SweetAlert2 está disponible
+            if (typeof Swal !== 'undefined' && Swal.fire) {
+                try { Swal.close(); } catch (e) { }
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: message
+                });
+                return;
+            }
+
+            // Si tienes tu modal personalizado
+            if (typeof showInfo === 'function') {
+                showInfo('Error', message);
+                return;
+            }
+
+            // Último recurso
+            alert(message);
+        }
+
+        // ===== Archivo actual (solo UI / estado) =====
+        var currentFacturaFileName = null;
+
+        // Muestra el archivo actual en el span #fileName
+        function setCurrentFile(fileName) {
+            currentFacturaFileName = fileName || null;
+
+            var fileNameSpan = document.getElementById('fileName');
+            if (!fileNameSpan) return;
+
+            if (currentFacturaFileName) {
+                fileNameSpan.textContent = currentFacturaFileName;
+            } else {
+                fileNameSpan.textContent = '';
+            }
+        }
+
+        // Obtiene el archivo actual (si lo necesitas al guardar)
+        function getCurrentFile() {
+            return currentFacturaFileName;
+        }
+
+        //obtener id por URL
+
+        function getIdFromQuery() {
+            const p = new URLSearchParams(window.location.search);
+            const id = p.get('id');
+            return id ? Number(id) : 0;
         }
 
         // ===========================
@@ -464,7 +628,7 @@
             showInfo('Revisa el formulario', html);
         }
 
-        function validateFacturaForm() {
+        function validateFacturaForm(skipRecalc) {
             var errors = [];
 
             var sociedad = $('#<%= slSociedad.ClientID %>').val();
@@ -474,7 +638,10 @@
             var nif = $('#<%= basic_nif.ClientID %>').val();
             var descripcion = $('#<%= descripcion.ClientID %>').val();
 
-            recalcFactura();
+            if (skipRecalc==false) {
+                recalcFactura();
+            }
+           
 
             var pvp = parseLocaleNumber($('#<%= basic_pvp.ClientID %>').val());
             var precio = parseLocaleNumber($('#<%= basic_precio.ClientID %>').val());
@@ -510,7 +677,7 @@
                 { n: 'Beca', v: beca }, { n: 'Descuento', v: dto }, { n: 'Fundación', v: fund }, { n: 'Universidad', v: uni },
                 { n: 'IVA', v: iva }, { n: 'IRPF', v: irpf }
             ];
-            
+
             for (var i = 0; i < pairs.length; i++) {
                 if (!isNaN(pairs[i].v) && pairs[i].v < 0) {
                     errors.push(pairs[i].n + ' no puede ser negativo.');
@@ -576,7 +743,7 @@
                 data: fd,
                 processData: false,
                 contentType: false
-            }).then(function(resp) {
+            }).then(function (resp) {
                 var r = resp;
                 if (typeof resp === 'string') {
                     try { r = JSON.parse(resp); } catch (e) { r = null; }
@@ -585,7 +752,7 @@
                     return { ok: false, message: (r && r.message) ? r.message : 'No se pudo subir el archivo.' };
                 }
                 return { ok: true, fileName: r.fileName || null, relativePath: r.relativePath || null };
-            }).fail(function() {
+            }).fail(function () {
                 return { ok: false, message: 'No se pudo subir el archivo.' };
             });
         }
@@ -634,6 +801,8 @@
 
         $(document).ready(function () {
             bindAutoCalc();
+            loadFactura();
+            $('#btnUpdate').hide();
 
             var selectedYear = $('#<%= ddlyear.ClientID %>').val();
             if (selectedYear) loadYears(selectedYear);
@@ -654,7 +823,7 @@
 
             // Botón guardar
             $('#btnSave').on('click', function () {
-                var v = validateFacturaForm();
+                var v = validateFacturaForm(false);
                 if (!v.ok) {
                     showValidationErrors(v.errors);
                     return;
@@ -662,7 +831,7 @@
 
                 showSaving();
 
-                uploadFacturaIfAny().then(function(up) {
+                uploadFacturaIfAny().then(function (up) {
                     if (!up.ok) {
                         hideSaving();
                         showInfo('Error', up.message || 'No se pudo subir el archivo.');
@@ -671,12 +840,113 @@
 
                     v.data.fichero = up.fileName || null;
                     saveFacturaAjax(v.data);
-                }).fail(function(e) {
+                }).fail(function (e) {
                     console.error(e);
                     hideSaving();
                     showInfo('Error', 'Error inesperado.');
                 });
             });
+
+            $('#btnUpdate').on('click', function () {
+
+                var v = validateFacturaForm(true); // no recalc
+                if (!v.ok) {
+                    showValidationErrors(v.errors);
+                    return;
+                }
+
+                v.data.idInfFinFacturas = Number($('#hfFacturaId').val() || 0);
+
+                showSaving();
+
+                uploadFacturaIfAny()
+                    .then(function (up) {
+                        if (!up.ok) {
+                            showInfo('Error', up.message || 'No se pudo subir el archivo.');
+                            return $.Deferred().reject('upload_failed'); // fuerza ir al fail
+                        }
+
+                        v.data.fichero = up.fileName ? up.fileName : getCurrentFile();
+
+                        return $.ajax({
+                            url: 'admin_facturas.aspx/UpdateFactura',
+                            type: 'POST',
+                            contentType: 'application/json; charset=utf-8',
+                            dataType: 'json',
+                            data: JSON.stringify({ dto: v.data })
+                        });
+                    })
+                    .done(function (res) {
+                        var r = res && res.d ? res.d : null;
+
+                        if (r && r.ok) {
+                            showInfo('Éxito', r.message || 'Actualizado.');
+                        } else {
+                            showValidationErrors((r && r.errors) ? r.errors : [(r && r.message) ? r.message : 'No se pudo actualizar.']);
+                        }
+                    })
+                    .fail(function (err) {
+                        // aquí caen errores de upload o ajax
+                        if (err !== 'upload_failed') {
+                            console.error(err);
+                            showInfo('Error', 'No se pudo conectar con el servidor.');
+                        }
+                    })
+                    .always(function () {
+                        hideSaving(); // ✅ SIEMPRE se ejecuta
+                    });
+            });
+
+
+
+            //$('#btnUpdate').on('click', function () {
+              
+            //    var v = validateFacturaForm(true);
+            //    if (!v.ok) {
+            //        showValidationErrors(v.errors);
+            //        return;
+            //    }
+
+            //    v.data.idInfFinFacturas = Number($('#hfFacturaId').val() || 0);
+
+            //    showSaving();
+
+            //    uploadFacturaIfAny().then(function (up) {
+            //        if (!up.ok) {
+            //            hideSaving();
+            //            showInfo('Error', up.message || 'No se pudo subir el archivo.');
+            //            return;
+            //        }
+
+            //        v.data.fichero = up.fileName ? up.fileName : getCurrentFile();
+
+            //        $.ajax({
+            //            url: 'admin_facturas.aspx/UpdateFactura',
+            //            type: 'POST',
+            //            contentType: 'application/json; charset=utf-8',
+            //            dataType: 'json',
+            //            data: JSON.stringify({ dto: v.data }),
+            //            success: function (res) {
+                           
+            //                var r = res && res.d ? res.d : null;
+
+            //                if (r && r.ok) {
+            //                    showInfo('Éxito', r.message || 'Actualizado.');
+            //                    hideSaving();
+            //                } else {
+            //                    showValidationErrors((r && r.errors) ? r.errors : [(r && r.message) ? r.message : 'No se pudo actualizar.']);
+            //                    hideSaving();
+            //                }
+            //            },
+            //            error: function (xhr) {
+            //                console.error(xhr);
+            //                hideSaving();
+            //                showInfo('Error', 'No se pudo conectar con el servidor.');
+            //            }
+            //        });
+            //    });
+            //});
+
 
             // Cliente change
             $('#<%= basic_client.ClientID %>').on('change', function () {
@@ -741,8 +1011,8 @@
         // ===========================
         // Funciones auxiliares
         // ===========================
-        function pad2(n) { 
-            return String(n).length < 2 ? '0' + n : String(n); 
+        function pad2(n) {
+            return String(n).length < 2 ? '0' + n : String(n);
         }
 
         function setFemisionYear(newYear) {

@@ -290,6 +290,15 @@
             if ($.fn.modal) $('#wait_modal').modal('hide');
         }
 
+        function hideLoadingForce() {
+            try { $('#wait_modal').modal('hide'); } catch (e) { }
+
+            // Por si Bootstrap deja backdrop pegado
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open').css('padding-right', '');
+        }
+
+
         function showInfo(title, msg) {
             $('#info_modal_title').text(title || 'Mensaje');
             $('#info_modal_body').html(msg || '');
@@ -342,6 +351,7 @@
         function loadTable(keepPage) {
             var filtros = getFiltros();
             var currentPage = (dt && keepPage) ? dt.page() : 0;
+
             showLoading();
 
             $.ajax({
@@ -350,21 +360,31 @@
                 contentType: 'application/json; charset=utf-8',
                 dataType: 'json',
                 data: JSON.stringify({ f: filtros }),
+                timeout: 30000, // ✅ evita que se quede infinito (30s)
+
                 success: function (res) {
-                    hideLoading();
                     var payload = (res && res.d) ? res.d : null;
 
+                    // Si el server devuelve {ok:false,...}
                     if (payload && payload.ok === false) {
-                        return showInfo('Error', payload.message || 'No se pudo cargar el listado.');
+                        showInfo('Error', payload.message || 'No se pudo cargar el listado.');
+                        renderDataTable([], currentPage);
+                        return;
                     }
 
                     var rows = Array.isArray(payload) ? payload : [];
                     renderDataTable(rows, currentPage);
                 },
+
                 error: function (xhr) {
-                    hideLoading();
-                    console.error(xhr);
+                    console.error('GetGastos error:', xhr.status, xhr.responseText);
                     showInfo('Error', 'No se pudo cargar el listado.');
+                    renderDataTable([], currentPage);
+                },
+
+                complete: function () {
+                    // ✅ SIEMPRE se ejecuta (success, error, timeout, abort)
+                    hideLoadingForce();
                 }
             });
         }

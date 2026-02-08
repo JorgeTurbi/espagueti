@@ -638,6 +638,17 @@
             );
         }
 
+        function hideLoadingForce() {
+            try { $('#wait_modal').modal('hide'); } catch (e) { }
+
+            // Por si Bootstrap deja backdrop pegado
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open').css('padding-right', '');
+
+ 
+        }
+
+
         // ===========================
         // Build request + Save
         // ===========================
@@ -690,6 +701,7 @@
                 data: JSON.stringify({ r: req }),
                 success: function (res) {
                     hideSaving();
+                    hideLoadingForce()
                     var payload = (res && res.d) ? res.d : null;
 
                     if (!payload || payload.ok !== true) {
@@ -762,7 +774,8 @@
                 language: "es",
                 autoclose: true,
                 todayHighlight: true,
-                format: "dd/mm/yyyy"
+                format: "dd/mm/yyyy",
+                
             });
 
             // File input display

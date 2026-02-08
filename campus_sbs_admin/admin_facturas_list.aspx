@@ -37,6 +37,99 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" async></script>
     <![endif]-->
     <!-- /HTML5 IE8 -->
+
+    <style type="text/css">
+        /* Contenedor superior */
+.dataTables_length {
+    margin-bottom: 10px;
+    margin-left:40px;
+}
+
+/* Select de cantidad de registros */
+.dataTables_length select {
+    border-radius: 6px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+/* Texto "Mostrar X registros" */
+.dataTables_length label {
+    font-weight: 600;
+    color: #444;
+}
+
+
+.dataTables_filter {
+    margin-bottom: 10px;
+}
+
+.dataTables_filter input {
+    border-radius: 6px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+}
+
+#tblFacturas {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    font-size: 14px;
+}
+
+/* Encabezado */
+#tblFacturas thead th {
+    background-color: #EFB74A;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+    color: #fff;
+}
+
+/* Filas */
+#tblFacturas tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+/* Hover elegante */
+#tblFacturas tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Bordes suaves */
+#tblFacturas td, #tblFacturas th {
+    border: none !important;
+    padding: 8px 10px;
+}
+.dataTables_paginate .paginate_button {
+    border-radius: 6px !important;
+    padding: 4px 10px !important;
+    margin: 2px;
+    border: 1px solid #ddd !important;
+    background: #fff !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: #EFB74A !important;
+    color: #fff !important;
+    border-color: #0d6efd !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: #EFB74A !important;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    display: inline-block;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+}
+
+
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -277,7 +370,7 @@
         function buildActions(row) {
             var id = row.idInfFinFacturas;
             var html = '<div class="text-center">';
-            html += '<a class="btn btn-sm btn-outline-primary" title="Ver/Editar" href="admin_facturas_edit.aspx?id=' + id + '">';
+            html += '<a class="btn btn-sm btn-outline-primary" title="Ver/Editar" href="admin_facturas.aspx?id=' + id + '">';
             html += '<i class="fas fa-eye"></i>';
             html += '</a>';
             html += ' <a href="javascript:void(0);" class="btn btn-sm btn-outline-danger btn-del" data-id="' + id + '" title="Eliminar">';
@@ -329,7 +422,7 @@
 
                         for (var i = 0; i < result.Data.length; i++) {
                             $select.append(
-                                '<option value="' + result.Data[i].Id + '">' +
+                                '<option value="' + result.Data[i].Nombre + '">' +
                                 result.Data[i].Nombre +
                                 '</option>'
                             );
@@ -409,9 +502,11 @@
                         }
                     }
                 ],
-                pageLength: 10,
+                pageLength: 50,
+            
+                lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "Todos"]],
                 order: [],
-                dom: 'Bfrtip',
+                dom: 'Blfrtip',
                 buttons: [
                     { extend: 'excelHtml5', title: 'Facturas', exportOptions: { columns: ':visible:not(:last-child)' } },
                     { extend: 'pdfHtml5', title: 'Facturas', exportOptions: { columns: ':visible:not(:last-child)' } },
@@ -421,7 +516,14 @@
                 responsive: true,
                 deferRender: true,
                 language: {
-                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
+                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
+                    search: "Buscar:",
+                    paginate: {
+                        first: "Primero",
+                        last: "Último",
+                        next: "Siguiente",
+                        previous: "Anterior"
+                    }
                 }
             });
         }
